@@ -1,0 +1,3551 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  
+  <!-- SEO & ATS Metadata -->
+  <title>Mostafa Al-Araby Shalaby | Supply & Demand Planning Engineer — Portfolio & CV</title>
+  <meta name="description" content="Official CV, Cover Letter and Engineering Portfolio of Mostafa Al-Araby Shalaby, Supply and Demand Planning Engineer with expertise in S&OP, MRP, DRP, SAP ERP, and AI-driven forecasting." />
+  <meta name="keywords" content="Mostafa Shalaby, Supply Planning Engineer, Demand Planning Engineer, S&OP, MPS, MRP, DRP, RCCP, SAP ERP, SAP PP, SAP MM, Python, KNIME, Power BI, EGIC, Tahweel" />
+  <meta name="author" content="Mostafa Al-Araby Khalil Shalaby" />
+
+  <!-- Google Fonts: Plus Jakarta Sans (Headings), Inter (Body), JetBrains Mono (Data/Tech) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- GSAP & ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    /* ==========================================================================
+       1. UNIFIED EXECUTIVE DESIGN SYSTEM (STANDARDIZED COLOR LANGUAGE)
+       ========================================================================== */
+    :root {
+      /* Dark Executive Palette (Unified & Balanced) */
+      --bg-base: #0a0e17;
+      --bg-surface: #0f172a;
+      --bg-surface-elevated: #1e293b;
+      --bg-glass: rgba(15, 23, 42, 0.85);
+      --bg-card: rgba(30, 41, 59, 0.7);
+      
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-active: rgba(14, 165, 233, 0.6);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+
+      /* Single Cohesive Accent System */
+      --accent-primary: #0ea5e9;       /* Executive Sky Blue */
+      --accent-hover: #0284c7;
+      --accent-glow: rgba(14, 165, 233, 0.18);
+      
+      --accent-whatsapp: #22c55e;      /* Clean WhatsApp Green */
+      --accent-whatsapp-hover: #16a34a;
+
+      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 9999px;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.35);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.45);
+      --shadow-glow: 0 0 28px rgba(14, 165, 233, 0.2);
+
+      --transition-smooth: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+        [data-theme="warm"] {
+      --bg-base: #141210;
+      --bg-surface: #1c1917;
+      --bg-surface-elevated: #292524;
+      --bg-glass: rgba(28, 25, 23, 0.88);
+      --bg-card: rgba(41, 37, 36, 0.75);
+      
+      --border-subtle: rgba(245, 158, 11, 0.12);
+      --border-medium: rgba(245, 158, 11, 0.22);
+      --border-active: rgba(245, 158, 11, 0.7);
+
+      --text-primary: #fef3c7;
+      --text-secondary: #e7e5e4;
+      --text-muted: #a8a29e;
+      --text-faint: #78716c;
+
+      --accent-primary: #f59e0b;       /* Warm Executive Amber / Gold */
+      --accent-hover: #d97706;
+      --accent-glow: rgba(245, 158, 11, 0.22);
+
+      --accent-whatsapp: #22c55e;
+      --accent-whatsapp-hover: #16a34a;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
+      --shadow-glow: 0 0 28px rgba(245, 158, 11, 0.22);
+    }
+
+    [data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #f1f5f9;
+      --bg-glass: rgba(224, 242, 254, 0.78);
+      --bg-card: #ffffff;
+      
+      --border-subtle: rgba(15, 23, 42, 0.08);
+      --border-medium: rgba(15, 23, 42, 0.14);
+      --border-active: rgba(2, 132, 199, 0.8);
+
+      --text-primary: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --text-faint: #94a3b8;
+
+      --accent-primary: #0284c7;
+      --accent-hover: #0369a1;
+      --accent-glow: rgba(2, 132, 199, 0.12);
+
+      --accent-whatsapp: #16a34a;
+      --accent-whatsapp-hover: #15803d;
+
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+      --shadow-glow: 0 0 24px rgba(2, 132, 199, 0.12);
+    }
+
+    /* ==========================================================================
+       2. RESET & SCREEN ALIGNMENT
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    /* Unified Ambient Radial Wash */
+    .ambient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      z-index: 0;
+      background: 
+        radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.07) 0%, transparent 45%),
+        radial-gradient(circle at 85% 65%, rgba(14, 165, 233, 0.05) 0%, transparent 45%);
+    }
+
+    .app-wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+    }
+
+    /* Fluid full-width container */
+    .container {
+      width: 100%;
+      max-width: 1360px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: clamp(16px, 3.5vw, 36px);
+      padding-right: clamp(16px, 3.5vw, 36px);
+    }
+
+    /* Scroll Anchor Offsets for Fixed Header */
+    section, .scroll-target {
+      scroll-margin-top: 96px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      color: var(--text-primary);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .font-mono {
+      font-family: var(--font-mono);
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR (PERFECTLY CENTERED GLASS CAPSULE)
+       ========================================================================== */
+    .navbar-wrapper {
+      position: fixed;
+      top: 16px;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 0 16px;
+      pointer-events: none;
+    }
+
+    .navbar-capsule {
+      pointer-events: auto;
+      background: var(--bg-glass);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-md);
+      border-radius: var(--radius-pill);
+      padding: 7px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: 1320px;
+      width: 100%;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+    }
+
+    [data-theme="light"] .navbar-capsule {
+      border-color: rgba(2, 132, 199, 0.22);
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.1);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.92rem;
+      flex-shrink: 0;
+    }
+
+    .nav-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-primary), #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.85rem;
+      border: 2px solid var(--bg-surface);
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+      flex: 1 1 auto;
+      min-width: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      transition: var(--transition-smooth);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .nav-item a:hover,
+    .nav-item a.active {
+      color: var(--text-primary);
+      background: var(--bg-surface-elevated);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 8px 16px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      font-family: var(--font-body);
+      border-radius: var(--radius-pill);
+      border: 1px solid transparent;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition-smooth);
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-primary {
+      background: var(--accent-primary);
+      color: #ffffff;
+      box-shadow: 0 0 16px var(--accent-glow);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 0 24px var(--accent-glow);
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp {
+      background: var(--accent-whatsapp);
+      color: #ffffff;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--accent-whatsapp-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border-color: var(--border-subtle);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-surface);
+      border-color: var(--border-medium);
+      transform: translateY(-1px);
+    }
+
+    .btn-icon {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .btn-icon:hover {
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      background: rgba(14, 165, 233, 0.1);
+      color: var(--accent-primary);
+      border: 1px solid rgba(14, 165, 233, 0.25);
+    }
+
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      box-shadow: 0 0 6px var(--accent-primary);
+      animation: pulse-dot 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.6; }
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      padding-top: 120px;
+      padding-bottom: 40px;
+      width: 100%;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .hero-eyebrow-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-title {
+      font-size: clamp(2.3rem, 4.6vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.1;
+      max-width: 1150px;
+      margin-bottom: 18px;
+    }
+
+    .hero-title .text-gradient {
+      color: var(--accent-primary);
+      display: inline;
+    }
+
+    .hero-subtext {
+      font-size: clamp(1.05rem, 1.6vw, 1.2rem);
+      color: var(--text-secondary);
+      max-width: 880px;
+      line-height: 1.55;
+      margin-bottom: 26px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    /* ==========================================================================
+       5. DEDICATED 3-COLUMN PERSONAL INFO & CONTACT HUB
+       ========================================================================== */
+    .personal-info-section {
+      width: 100%;
+      margin-bottom: 36px;
+      scroll-margin-top: 96px;
+    }
+
+    .personal-grid-4col {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      width: 100%;
+    }
+
+    .info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      transition: var(--transition-smooth);
+      position: relative;
+    }
+
+    .info-card:hover {
+      border-color: var(--border-active);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .info-left-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .info-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .info-texts {
+      min-width: 0;
+    }
+
+    .info-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .info-value {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .info-value a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .info-value a:hover {
+      color: var(--accent-primary);
+    }
+
+    /* Simple Minimalist Quick Copy Button */
+    .btn-copy-mini {
+      width: 32px;
+      height: 32px;
+      border-radius: 6px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .btn-copy-mini:hover {
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      background: var(--bg-surface);
+    }
+
+    .btn-copy-mini:active {
+      transform: scale(0.95);
+    }
+
+    .btn-copy-mini.copied {
+      border-color: var(--accent-primary) !important;
+      color: var(--accent-primary) !important;
+      background: var(--bg-surface) !important;
+    }
+
+    /* Key Verified Performance Metrics */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-active);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .stat-number .unit {
+      font-size: 1.05rem;
+      color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    .stat-label {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .stat-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ==========================================================================
+       6. SECTION HEADERS
+       ========================================================================== */
+    .section-chapter {
+      padding: 60px 0;
+      position: relative;
+      width: 100%;
+      scroll-margin-top: 96px;
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 2.6vw, 2.3rem);
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-desc {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 700px;
+    }
+
+    /* ==========================================================================
+       7. 2-COLUMN EXPERIENCE TIMELINE (WITH CONTINUOUS CONNECTING LINE & COLOR SPLIT)
+       ========================================================================== */
+    .timeline-wrapper {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+    }
+
+    /* Continuous Vertical Spine Line */
+    .timeline-wrapper::before {
+      content: '';
+      position: absolute;
+      left: 250px;
+      top: 24px;
+      bottom: 24px;
+      width: 2px;
+      background: linear-gradient(to bottom, #0ea5e9 0%, #6366f1 50%, #14b8a6 75%, #f59e0b 100%);
+      z-index: 1;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 220px 60px 1fr;
+      align-items: flex-start;
+      position: relative;
+      margin-bottom: 28px;
+    }
+
+    .timeline-row:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Left Column: Date, Company & Sector (Aligned to Left) */
+    .timeline-meta-left {
+      padding-top: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      gap: 6px;
+      padding-right: 14px;
+    }
+
+    .duration-badge {
+      font-size: 0.72rem;
+      font-weight: 500;
+      opacity: 0.85;
+      color: var(--text-muted);
+      margin-left: 2px;
+    }
+
+    .timeline-date-pill {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      color: var(--accent-primary);
+      white-space: normal;
+      line-height: 1.5;
+      display: inline-block;
+    }
+
+    .timeline-company-name {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+
+    .timeline-location-mode {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-group-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Middle Column: Central Node on the Continuous Line */
+    .timeline-node-col {
+      display: flex;
+      justify-content: center;
+      padding-top: 18px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .timeline-node-dot {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 3px solid var(--node-color, #0ea5e9);
+      box-shadow: 0 0 10px var(--node-color, #0ea5e9);
+      transition: var(--transition-smooth);
+    }
+
+    .timeline-row:hover .timeline-node-dot {
+      transform: scale(1.35);
+      background: var(--node-color, #0ea5e9);
+    }
+
+    /* Right Column: Experience Card */
+    .timeline-card-right {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--node-color, #0ea5e9);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-card-right:hover {
+      border-color: var(--border-active);
+      border-left-color: var(--node-color, #0ea5e9);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-glow);
+      background: var(--bg-surface);
+    }
+
+    .timeline-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .timeline-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .timeline-bullet {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .timeline-bullet::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      top: 0;
+      color: var(--node-color, #0ea5e9);
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .timeline-bullet strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    /* Color Tokens for Companies & Education */
+    .color-tahweel { --node-color: #0ea5e9; }
+    .color-egic { --node-color: #6366f1; }
+    .color-medical { --node-color: #14b8a6; }
+    .color-edu { --node-color: #f59e0b; }
+
+    /* Responsive Timeline Media Queries */
+    @media (max-width: 900px) {
+      .timeline-wrapper::before {
+        left: 18px;
+      }
+      .timeline-row {
+        grid-template-columns: 36px 1fr;
+        gap: 16px;
+      }
+      .timeline-meta-left {
+        display: none;
+      }
+      .timeline-node-col {
+        padding-top: 20px;
+      }
+      .timeline-mobile-meta {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+    }
+
+    @media (min-width: 901px) {
+      .timeline-mobile-meta {
+        display: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       8. GAPLESS BENTO GRID OF ENGINEERED SYSTEMS
+       ========================================================================== */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      grid-auto-flow: dense;
+      width: 100%;
+    }
+
+    .bento-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition-smooth);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .bento-card:hover {
+      border-color: var(--border-active);
+      box-shadow: var(--shadow-glow);
+      transform: translateY(-3px);
+    }
+
+    .bento-col-8 { grid-column: span 8; }
+    .bento-col-4 { grid-column: span 4; }
+    .bento-col-6 { grid-column: span 6; }
+
+    .bento-tag {
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .bento-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .bento-desc {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .bento-features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .bento-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+    }
+
+    .bento-feature-item svg {
+      width: 15px;
+      height: 15px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ==========================================================================
+       9. SKILLS MATRIX (SPACIOUS 2-COLUMN BALANCED LAYOUT)
+       ========================================================================== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    .skill-group-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 30px 32px;
+      transition: var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skill-group-card:hover {
+      border-color: var(--border-active);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .skill-group-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-group-title svg {
+      width: 22px;
+      height: 22px;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .skill-tags-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px 10px;
+      align-items: center;
+    }
+
+    .skill-tag {
+      font-size: 0.84rem;
+      font-weight: 500;
+      padding: 7px 14px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .skill-tag:hover {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+      background: var(--bg-surface);
+      transform: translateY(-1px);
+    }
+
+    /* Keyword chips used inside experience timeline cards */
+    .tech-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      background: var(--bg-surface-elevated);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      color: var(--text-secondary);
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      transition: var(--transition-smooth);
+      cursor: pointer;
+    }
+
+    .tech-pill:hover {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+      background: var(--bg-surface);
+      transform: translateY(-1px);
+      box-shadow: 0 0 12px var(--accent-glow);
+    }
+
+    /* ==========================================================================
+       KEYWORD INFO POPUP
+       ========================================================================== */
+    .keyword-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(2, 6, 15, 0.55);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      z-index: 3000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .keyword-modal-overlay.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .keyword-modal-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+      width: 100%;
+      max-width: 380px;
+      padding: 22px 22px 20px;
+      transform: translateY(10px) scale(0.98);
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+
+    .keyword-modal-overlay.show .keyword-modal-box {
+      transform: translateY(0) scale(1);
+    }
+
+    .keyword-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: var(--bg-surface-elevated);
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .keyword-modal-close:hover {
+      color: var(--text-primary);
+      background: var(--border-subtle);
+    }
+
+    .keyword-modal-title {
+      font-family: var(--font-display);
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      padding-right: 26px;
+      margin-bottom: 14px;
+      line-height: 1.3;
+    }
+
+    .keyword-modal-section {
+      margin-bottom: 12px;
+    }
+
+    .keyword-modal-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .keyword-modal-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .keyword-modal-text {
+      font-size: 0.86rem;
+      line-height: 1.55;
+      color: var(--text-secondary);
+    }
+
+    /* ==========================================================================
+       10. COVER LETTER SECTION (EXECUTIVE LETTERHEAD)
+       ========================================================================== */
+    .cover-letter-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: clamp(24px, 4.5vw, 48px);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+
+    .cover-letter-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--accent-primary);
+    }
+
+    .letterhead-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .letterhead-sender h3 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .letterhead-sender p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .letterhead-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .letter-body {
+      font-size: 0.98rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .letter-body p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .letter-signoff {
+      margin-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .signoff-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    /* ==========================================================================
+       11. CONTACT TERMINAL & FOOTER
+       ========================================================================== */
+    .contact-terminal {
+      background: var(--bg-card);
+      border: 1px solid var(--border-active);
+      border-radius: var(--radius-md);
+      padding: clamp(28px, 4.5vw, 48px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .contact-terminal-info h3 {
+      font-size: 1.85rem;
+      margin-bottom: 6px;
+    }
+
+    .contact-terminal-info p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      max-width: 580px;
+    }
+
+    .contact-action-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .toast-capsule {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 9999;
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      border: 1px solid var(--accent-primary);
+      box-shadow: var(--shadow-md);
+      border-radius: var(--radius-pill);
+      padding: 10px 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transform: translateY(100px);
+      opacity: 0;
+      pointer-events: none;
+      transition: var(--transition-smooth);
+    }
+
+    .toast-capsule.show {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .page-footer {
+      padding: 36px 0 50px;
+      border-top: 1px solid var(--border-subtle);
+      margin-top: 50px;
+      width: 100%;
+    }
+
+    .footer-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       12. RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .personal-grid-4col {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .bento-col-8, .bento-col-4, .bento-col-6 {
+        grid-column: span 12;
+      }
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .timeline-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .timeline-meta-left {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+    }
+
+        /* ======================================================================
+       13. FINAL RESPONSIVE POLISH
+       ====================================================================== */
+    img, video, iframe {
+      max-width: 100%;
+    }
+
+    a, button, .info-value, .timeline-company-name, .role-title {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 1100px) {
+      .personal-grid-4col,
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .bento-col-8,
+      .bento-col-4,
+      .bento-col-6 {
+        grid-column: span 12;
+      }
+
+      .timeline-wrapper::before {
+        left: 207px;
+      }
+
+      .timeline-row {
+        grid-template-columns: 190px 34px minmax(0, 1fr);
+        gap: 8px;
+      }
+
+      .timeline-meta-left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 14px 8px 0 0;
+      }
+
+      .timeline-mobile-meta {
+        display: none !important;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .timeline-wrapper::before {
+        left: 18px;
+      }
+
+      .timeline-row {
+        grid-template-columns: 36px minmax(0, 1fr);
+        gap: 12px;
+      }
+
+      .timeline-meta-left {
+        display: none;
+      }
+
+      .timeline-node-col {
+        padding-top: 20px;
+      }
+
+      .timeline-mobile-meta {
+        display: flex !important;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+        margin-bottom: 8px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+
+      .navbar-wrapper {
+        top: 8px;
+        padding: 0 10px;
+      }
+
+      .navbar-capsule {
+        padding: 6px 8px;
+        gap: 6px;
+        border-radius: 16px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-brand {
+        min-width: 0;
+        gap: 7px;
+        font-size: 0.78rem;
+      }
+
+      .nav-avatar {
+        width: 32px;
+        height: 32px;
+        font-size: 0.75rem;
+      }
+
+      .nav-brand > div:last-child {
+        min-width: 0;
+      }
+
+      .nav-brand > div:last-child > div:first-child {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .nav-brand > div:last-child > div:last-child {
+        display: none;
+      }
+
+      .nav-actions .btn-icon {
+        width: 32px;
+        height: 32px;
+      }
+
+      .hero-section {
+        padding-top: 84px;
+        padding-bottom: 28px;
+      }
+
+      .hero-eyebrow-row {
+        gap: 8px;
+      }
+
+      .hero-eyebrow-row > span:last-child {
+        width: 100%;
+        font-size: 0.72rem !important;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+        overflow-wrap: anywhere;
+      }
+
+      .hero-subtext {
+        font-size: 0.98rem;
+        margin-bottom: 22px;
+      }
+
+      .hero-cta-group {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin-bottom: 26px;
+      }
+
+      .hero-cta-group .btn {
+        width: 100%;
+        min-height: 44px;
+      }
+
+      .personal-grid-4col {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .info-card {
+        min-width: 0;
+        padding: 13px 12px;
+        gap: 8px;
+        align-items: flex-start;
+      }
+
+      .info-left-group {
+        min-width: 0;
+        gap: 9px;
+        align-items: flex-start;
+      }
+
+      .info-icon-box {
+        width: 34px;
+        height: 34px;
+      }
+
+      .info-label {
+        font-size: 0.64rem;
+      }
+
+      .info-value {
+        font-size: 0.78rem;
+        white-space: normal;
+        overflow: visible;
+      }
+
+      .btn-copy-mini {
+        width: 28px;
+        height: 28px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+      }
+
+      .stat-card {
+        min-width: 0;
+        padding: 15px;
+      }
+
+      .stat-number {
+        font-size: 1.55rem;
+        flex-wrap: wrap;
+      }
+
+      .stat-number .unit {
+        font-size: 0.78rem;
+      }
+
+      .stat-label {
+        font-size: 0.78rem;
+      }
+
+      .stat-desc {
+        font-size: 0.7rem;
+      }
+
+      .section-chapter {
+        padding: 40px 0;
+      }
+
+      .section-header {
+        margin-bottom: 24px;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .section-desc {
+        font-size: 0.88rem;
+      }
+
+      .timeline-card-right {
+        min-width: 0;
+        padding: 16px;
+      }
+
+      .timeline-card-header {
+        gap: 8px;
+      }
+
+      .role-title {
+        font-size: 1rem;
+      }
+
+      .timeline-bullet {
+        font-size: 0.82rem;
+        padding-left: 16px;
+      }
+
+      .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .bento-card {
+        padding: 20px;
+      }
+
+      .skills-grid {
+        gap: 12px;
+      }
+
+      .skill-group-card {
+        padding: 20px;
+      }
+
+      .skill-tags-flex {
+        gap: 8px;
+      }
+
+      .skill-tag,
+      .tech-pill {
+        font-size: 0.76rem;
+        padding: 6px 10px;
+        white-space: normal;
+      }
+
+      .cover-letter-card,
+      .contact-terminal {
+        padding: 22px 16px;
+      }
+
+      .letterhead-header,
+      .letter-signoff,
+      .contact-terminal {
+        align-items: stretch;
+      }
+
+      .letterhead-actions,
+      .contact-action-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .letterhead-actions .btn,
+      .contact-action-buttons .btn {
+        width: 100%;
+      }
+
+      .contact-terminal-info h3 {
+        font-size: 1.45rem;
+      }
+
+      .toast-capsule {
+        right: 12px;
+        bottom: 12px;
+        left: 12px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .footer-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .personal-grid-4col,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .info-card {
+        min-height: 72px;
+      }
+
+      .timeline-mobile-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-title {
+        font-size: clamp(1.8rem, 9.5vw, 2.5rem);
+      }
+
+      .letter-body {
+        font-size: 0.9rem;
+      }
+    }
+
+    /* ======================================================================
+       14. CONTENT-DENSITY & QUICK-READ MODE
+       ====================================================================== */
+    .mobile-section-nav {
+      display: none;
+    }
+
+    .timeline-toggle,
+    .letter-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-top: 10px;
+      padding: 6px 11px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      background: var(--bg-surface-elevated);
+      color: var(--accent-primary);
+      font: 600 0.74rem/1 var(--font-body);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .timeline-toggle:hover,
+    .letter-toggle:hover {
+      border-color: var(--accent-primary);
+      background: var(--bg-surface);
+      transform: translateY(-1px);
+    }
+
+    .timeline-card-right.is-collapsed .timeline-bullet:nth-child(n+4) {
+      display: none;
+    }
+
+    .cover-letter-card.is-collapsed .letter-body p:nth-child(n+3) {
+      display: none;
+    }
+
+    @media (min-width: 769px) {
+      .hero-section {
+        padding-top: 104px;
+        padding-bottom: 24px;
+      }
+
+      .section-chapter {
+        padding: 38px 0;
+      }
+
+      .section-header {
+        margin-bottom: 22px;
+      }
+
+      .timeline-row {
+        margin-bottom: 16px;
+      }
+
+      .timeline-card-right {
+        padding: 18px 22px;
+      }
+
+      .timeline-bullets {
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+
+      .bento-grid {
+        gap: 12px;
+      }
+
+      .bento-card {
+        padding: 20px;
+      }
+
+      .skills-grid {
+        gap: 14px;
+      }
+
+      .skill-group-card {
+        padding: 22px 24px;
+      }
+
+      .cover-letter-card {
+        padding: 28px 34px;
+      }
+
+      .page-footer {
+        margin-top: 28px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .timeline-card-right.is-collapsed .timeline-bullet:nth-child(n+3) {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-section-nav {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        display: flex;
+        gap: 6px;
+        padding: 5px 10px 6px;
+        overflow-x: auto;
+        overscroll-behavior-x: contain;
+        scrollbar-width: none;
+        background: linear-gradient(to bottom, var(--bg-base), rgba(10,14,23,0.82));
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+
+      .mobile-section-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-section-nav a {
+        flex: 0 0 auto;
+        padding: 6px 10px;
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-pill);
+        color: var(--text-muted);
+        background: var(--bg-glass);
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .mobile-section-nav a:active,
+      .mobile-section-nav a:hover {
+        color: var(--text-primary);
+        border-color: var(--accent-primary);
+      }
+
+      .hero-section {
+        padding-top: 112px;
+        padding-bottom: 20px;
+      }
+
+      .section-chapter {
+        padding: 28px 0;
+      }
+
+      .section-header {
+        margin-bottom: 18px;
+      }
+
+      .timeline-row {
+        margin-bottom: 12px;
+      }
+
+      .timeline-bullets {
+        gap: 5px;
+        margin-bottom: 8px;
+      }
+
+      .bento-card {
+        padding: 16px;
+      }
+
+      .bento-desc {
+        margin-bottom: 10px;
+      }
+
+      .bento-features-list {
+        gap: 5px;
+        margin-bottom: 10px;
+      }
+
+      .skill-group-card {
+        padding: 17px;
+      }
+
+      .skill-group-title {
+        margin-bottom: 12px;
+      }
+
+      .cover-letter-card {
+        padding: 18px 14px;
+      }
+
+      .cover-letter-card.is-collapsed .letter-body {
+        gap: 10px;
+      }
+
+      .timeline-toggle,
+      .letter-toggle {
+        width: 100%;
+        min-height: 34px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .mobile-section-nav {
+        top: 52px;
+      }
+
+      .hero-section {
+        padding-top: 108px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Light Field -->
+  <div class="ambient-bg"></div>
+
+  <!-- Toast Notification Capsule -->
+  <div id="toast" class="toast-capsule">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+    <span id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Keyword Info Popup -->
+  <div id="keywordModalOverlay" class="keyword-modal-overlay">
+    <div class="keyword-modal-box" role="dialog" aria-modal="true" aria-labelledby="keywordModalTitle">
+      <button type="button" class="keyword-modal-close" id="keywordModalClose" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+      <div class="keyword-modal-title" id="keywordModalTitle">Keyword</div>
+      <div class="keyword-modal-section">
+        <div class="keyword-modal-label">Why it matters</div>
+        <div class="keyword-modal-text" id="keywordModalWhy"></div>
+      </div>
+      <div class="keyword-modal-section">
+        <div class="keyword-modal-label">What I did with it</div>
+        <div class="keyword-modal-text" id="keywordModalExp"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="app-wrapper">
+
+    <!-- ==========================================================================
+         NAVIGATION CAPSULE (CENTERED FLOATING GLASS)
+         ========================================================================== -->
+    <header class="navbar-wrapper">
+      <nav class="navbar-capsule" aria-label="Main Navigation">
+        
+        <a href="#overview" class="nav-brand">
+          <div class="nav-avatar">MS</div>
+          <div>
+            <div style="line-height: 1.1;">Mostafa Al-Araby Shalaby</div>
+            <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 500;">Supply & Demand Planning</div>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li class="nav-item"><a href="#overview" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Overview</a></li>
+          <li class="nav-item"><a href="#personal-info"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Personal Info</a></li>
+          <li class="nav-item"><a href="#experience"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Experience</a></li>
+          <li class="nav-item"><a href="#projects"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path><circle cx="12" cy="13" r="2"></circle><path d="M14 13h3"></path><path d="M7 13h3"></path></svg> Projects</a></li>
+          <li class="nav-item"><a href="#credentials"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> Credentials</a></li>
+          <li class="nav-item"><a href="#skills"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Skills</a></li>
+          <li class="nav-item"><a href="#cover-letter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Cover Letter</a></li>
+          <li class="nav-item"><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="btn btn-icon" id="themeToggle" title="Toggle Dark / Warm / Light Theme" aria-label="Toggle Theme">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="mobile-section-nav" aria-label="Quick section navigation">
+      <a href="#overview">Overview</a>
+      <a href="#experience">Experience</a>
+      <a href="#systems">Systems</a>
+      <a href="#projects">Projects</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#skills">Skills</a>
+      <a href="#cover-letter">Cover Letter</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <main>
+
+      <!-- ==========================================================================
+           HERO SECTION (ATTENTION & IMPACT)
+           ========================================================================== -->
+      <section id="overview" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            
+            <div class="hero-eyebrow-row">
+              <span class="status-badge">
+                <span class="status-dot"></span>
+                Open to Relocation / Remote
+              </span>
+              <span style="font-size: 0.82rem; color: var(--text-muted); font-family: var(--font-mono);">
+                Cairo, Egypt &bull; (+20) 1555540680
+              </span>
+            </div>
+
+            <!-- Iron Rule: Max 2 lines H1 with fluid typography -->
+            <h1 class="hero-title">
+              Supply & Demand <span class="text-gradient">Planning Engineer</span> & Supply Chain Excellence
+            </h1>
+
+            <p class="hero-subtext">
+              Transforming enterprise manufacturing supply chains with end-to-end expertise in S&OP, MPS, MRP, DRP, SAP ERP, and AI-driven predictive forecasting.
+            </p>
+
+            <div class="hero-cta-group" style="justify-content: flex-start;">
+              <!-- Primary Drive CV Download -->
+              <a data-link="cv" href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 7px 14px; font-size: 0.78rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                  <path d="M12 12v9"></path>
+                  <path d="m8 17 4 4 4-4"></path>
+                </svg>
+                <span>Download CV</span>
+              </a>
+
+              <!-- Drive Cover Letter Download -->
+              <a data-link="cover-letter" href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 7px 14px; font-size: 0.78rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M10 9H8"></path>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                </svg>
+                <span>Cover Letter</span>
+              </a>
+
+              <!-- Direct WhatsApp (Simplified text without number) -->
+              <a data-link="whatsapp" href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 11px 22px; font-size: 0.92rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+            </div>
+
+            <!-- ==========================================================================
+                 DEDICATED 3-COLUMN PERSONAL INFO & CONTACT CONTAINER
+                 ========================================================================== -->
+                                                            <div id="personal-info" class="personal-info-section">
+              <div class="personal-grid-4col">
+                
+                <!-- 1. Mobile & WhatsApp -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-whatsapp);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Mobile & WhatsApp</div>
+                      <div class="info-value">
+                        <a href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" title="Open WhatsApp Chat">(+20) 1555540680</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('+201555540680', 'Phone number copied!', this)" title="Copy Phone Number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 2. Official Email -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Official Email</div>
+                      <div class="info-value">
+                        <a href="mailto:mostafashalaby@engineer.com" title="Send Email">mostafashalaby@engineer.com</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('mostafashalaby@engineer.com', 'Email copied!', this)" title="Copy Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 3. Location & Mobility -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Location</div>
+                      <div class="info-value">Cairo (Relocate/Remote)</div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('Cairo, Egypt (Open to Relocation / Remote)', 'Location copied!', this)" title="Copy Location">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 4. Languages -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                        <path d="M2 12h20"></path>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Languages</div>
+                      <div class="info-value">Arabic &bull; English (B2)</div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('Arabic (Native) | English (B2)', 'Languages copied!', this)" title="Copy Languages">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 5. Nationality -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                        <line x1="4" x2="4" y1="22" y2="15"></line>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Nationality</div>
+                      <div class="info-value">Egyptian</div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('Egyptian', 'Nationality copied!', this)" title="Copy Nationality">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 6. Marital Status -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <polyline points="16 11 18 13 22 9"></polyline>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Marital Status</div>
+                      <div class="info-value">Married</div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('Married', 'Marital Status copied!', this)" title="Copy Status">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 7. Military Service -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                        <path d="m9 12 2 2 4-4"></path>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">Military Service</div>
+                      <div class="info-value">Exempted</div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('Military Service: Exempted', 'Military status copied!', this)" title="Copy Military Status">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+                <!-- 8. LinkedIn Profile -->
+                <div class="info-card">
+                  <div class="info-left-group">
+                    <div class="info-icon-box" style="color: var(--accent-primary);">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                      </svg>
+                    </div>
+                    <div class="info-texts">
+                      <div class="info-label">LinkedIn Profile</div>
+                      <div class="info-value">
+                        <a data-link="linkedin" href="https://linkedin.com/in/MostafaAShalaby" target="_blank" rel="noopener noreferrer" title="Open LinkedIn Profile">MostafaAShalaby</a>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn-copy-mini" onclick="copySpecificText('https://linkedin.com/in/MostafaAShalaby', 'LinkedIn URL copied!', this)" title="Copy LinkedIn URL">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                  </button>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Key Verified Performance Metrics -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number">
+                  <span class="counter" data-target="380">380</span>
+                  <span class="unit">M+ SAR</span>
+                </div>
+                <div class="stat-label">Material Spend Managed</div>
+                <div class="stat-desc">End-to-end procurement and rolling coverage across global suppliers.</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">
+                  <span class="counter" data-target="85">85</span>
+                  <span class="unit">%</span>
+                </div>
+                <div class="stat-label">Cycle Time Reduction</div>
+                <div class="stat-desc">Accelerated demand planning cycles via Python, KNIME & RapidMiner AI.</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">
+                  <span>8,000+</span>
+                  <span class="unit">SKUs</span>
+                </div>
+                <div class="stat-label">Forecast Optimization</div>
+                <div class="stat-desc">ABC-XYZ & BCG matrix segmentation boosted accuracy from 63% to 82%.</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="stat-number">
+                  <span class="counter" data-target="4">4</span>
+                  <span class="unit">Roles</span>
+                </div>
+                <div class="stat-label">Rapid Progression</div>
+                <div class="stat-desc">Promoted through 4 planning roles in under 3 years across EGIC & Tahweel.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           2-COLUMN CAREER TIMELINE (DATES ON LEFT + HOVER GLOW)
+           ========================================================================== -->
+            <!-- ==========================================================================
+           CAREER & EDUCATION TIMELINE (WITH CONTINUOUS LINE & COLOR SPLIT)
+           ========================================================================== -->
+            <!-- ==========================================================================
+           CAREER & EDUCATION TIMELINE (WITH CONTINUOUS LINE & COLOR SPLIT)
+           ========================================================================== -->
+      <section id="experience" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><line x1="3" x2="9" y1="12" y2="12"></line><line x1="15" x2="21" y1="12" y2="12"></line></svg>
+              Work History
+            </div>
+            <h2 class="section-title">Work Experience & Education</h2>
+            <p class="section-desc">
+              4 planning roles at EGIC & Tahweel Group, medical device exports, plus my university engineering background.
+            </p>
+          </div>
+
+          <div class="timeline-wrapper">
+
+            <!-- 1. Regional Supply & Demand Planning (Tahweel / Sister Company of EGIC) -->
+            <div class="timeline-row color-tahweel">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #0ea5e9;">
+                  May 2026 – Present <span class="duration-badge">• Ongoing</span>
+                </div>
+                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
+                <span class="timeline-group-tag" style="background: rgba(14,165,233,0.15); color: #0ea5e9;">Sister Company of EGIC</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #0ea5e9;">May 2026 – Present • Ongoing</span>
+                  <span style="font-weight: 700; color: #0ea5e9;">Tahweel (Sister Company of EGIC) &bull; KSA Remotely</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Regional Supply and Demand Planning Engineer & Supply Chain Excellence</h3>
+                  <span class="tech-pill" style="color: #0ea5e9; border-color: rgba(14,165,233,0.3);">Regional Scope</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>AI-Driven Demand Forecasting:</strong> Designed an AI-driven forecasting architecture utilizing Python, KNIME, and RapidMiner to support cross-border S&OP and Finished Goods planning, <strong>reducing demand planning cycle time by 85%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>SKU Segmentation Framework:</strong> Categorized 8,000+ active SKUs using ABC-XYZ segmentation, BCG Matrix, and lifecycle modeling, <strong>improving forecast accuracy from 63% to 82%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Risk-Based Safety Stock Optimization:</strong> Improved inventory planning through Monte Carlo simulations and demand cleansing, <strong>reducing stockouts by 35% and cutting inventory carrying costs by 22%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Executive S&OP Consensus:</strong> Led monthly S&OP consensus reviews across Sales, Production, Procurement, and Logistics, governing Forecast Accuracy, Bias, MAPE, and WAPE KPIs.
+                  </li>
+                </ul>
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">S&OP Consensus</span>
+                  <span class="tech-pill">Python ML</span>
+                  <span class="tech-pill">KNIME</span>
+                  <span class="tech-pill">RapidMiner</span>
+                  <span class="tech-pill">Monte Carlo</span>
+                  <span class="tech-pill">ABC-XYZ</span>
+                  <span class="tech-pill">MAPE / WAPE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Inventory & Stock Planning (Tahweel / Sister Company of EGIC) -->
+            <div class="timeline-row color-tahweel">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #0ea5e9;">
+                  Feb 2026 – May 2026 <span class="duration-badge">• 4 mos</span>
+                </div>
+                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
+                <span class="timeline-group-tag" style="background: rgba(14,165,233,0.15); color: #0ea5e9;">Sister Company of EGIC</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #0ea5e9;">Feb 2026 – May 2026 • 4 mos</span>
+                  <span style="font-weight: 700; color: #0ea5e9;">Tahweel &bull; Sister Company of EGIC</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Inventory & Stock Planning Engineer</h3>
+                  <span class="tech-pill" style="color: #0ea5e9; border-color: rgba(14,165,233,0.3);">DRP & STO</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>Dynamic DRP Engine:</strong> Engineered an advanced Distribution Requirements Planning engine running on dynamic matrix formulas, seamlessly synchronizing Sales forecasts with Production, MRP, and warehouse inventory.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Multi-Location Network Allocation:</strong> Optimized multi-plant supply allocation frameworks within the DRP network matrix, <strong>reducing logistics overhead by 30% and operational manpower by 30%</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>In-Transit STO Tracking:</strong> Monitored automated Stock Transport Order tracking systems, <strong>boosting in-transit tracking accuracy from 25% to 75%</strong> while eradicating inter-warehouse shipping errors.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>SLOB Inventory Control:</strong> Audited slow-moving, non-moving, and obsolete inventory to release trapped working capital and maintain peak stock turnover.
+                  </li>
+                </ul>
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">DRP Matrix Engine</span>
+                  <span class="tech-pill">STO Tracking</span>
+                  <span class="tech-pill">Safety Stock</span>
+                  <span class="tech-pill">SLOB Mitigation</span>
+                  <span class="tech-pill">Working Capital</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Material Planning Engineer (Tahweel / Sister Company of EGIC) -->
+            <div class="timeline-row color-tahweel">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #0ea5e9;">
+                  Mar 2025 – Feb 2026 <span class="duration-badge">• 1 yr</span>
+                </div>
+                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
+                <span class="timeline-group-tag" style="background: rgba(14,165,233,0.15); color: #0ea5e9;">Sister Company of EGIC</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #0ea5e9;">Mar 2025 – Feb 2026 • 1 yr</span>
+                  <span style="font-weight: 700; color: #0ea5e9;">Tahweel &bull; SAR 380M+ Spend</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Material Planning Engineer</h3>
+                  <span class="tech-pill" style="color: #0ea5e9; border-color: rgba(14,165,233,0.3);">SAR 380M+ Spend</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>SAR 380M+ Budget Governance:</strong> Managed material planning and procurement activities for annual material spend exceeding <strong>SAR 380 Million</strong>, overseeing the full procurement cycle from PR to PO and supplier delivery.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Custom MRP Simulation Engine:</strong> Designed a custom MRP Engine that simulates SAP planning functions, integrating Safety Stock, Lead Time, Capacity Planning, Batch Sizes, and MOQs for manufactured and trading goods.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>18-Month Rolling Coverage:</strong> Executed monthly, quarterly, and annual material plans with rolling coverage projections up to 18 months, tracking EOH, SOH, DOH, and potential supply shortages.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Vendor OTIF Performance:</strong> Monitored supplier lead times and On-Time In-Full (OTIF) fulfillment rates to maintain continuous factory production.
+                  </li>
+                </ul>
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">SAR 380M Material Spend</span>
+                  <span class="tech-pill">Custom MRP Run</span>
+                  <span class="tech-pill">SAP MM</span>
+                  <span class="tech-pill">EOH / SOH / DOH</span>
+                  <span class="tech-pill">OTIF Performance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Production Planning Engineer (EGIC / Sister Company of Tahweel) -->
+            <div class="timeline-row color-egic">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #6366f1;">
+                  Jul 2024 – Mar 2025 <span class="duration-badge">• 9 mos</span>
+                </div>
+                <div class="timeline-company-name">EGIC</div>
+                <div class="timeline-location-mode">Egypt, Giza &bull; On-Site</div>
+                <span class="timeline-group-tag" style="background: rgba(99,102,241,0.15); color: #6366f1;">Sister Company of Tahweel</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #6366f1;">Jul 2024 – Mar 2025 • 9 mos</span>
+                  <span style="font-weight: 700; color: #6366f1;">EGIC &bull; Egypt On-Site</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Production Planning Engineer</h3>
+                  <span class="tech-pill" style="color: #6366f1; border-color: rgba(99,102,241,0.3);">MPS & BOM Hub</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>MPS & Capacity Scheduling:</strong> Managed monthly Master Production Schedules and Rough-Cut Capacity Planning (RCCP), achieving <strong>90% plan accuracy for Make-to-Stock (MTS) and 78% for Make-to-Order (MTO)</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Automated BOM Explosion Engine:</strong> Engineered a centralized Master Data Hub that reduced SAP forecast upload duration <strong>from 8 hours down to 15 seconds</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>OEE & Work Center Optimization:</strong> Monitored Overall Equipment Effectiveness (OEE) and shop-floor throughput to balance labor shifts and eliminate bottleneck work centers.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Zero Dropped Sales:</strong> Coordinated JIT fulfillment and export manufacturing batches, eliminating dropped sales through agile daily shop-floor scheduling.
+                  </li>
+                </ul>
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">MPS Planning</span>
+                  <span class="tech-pill">BOM Hub (8h &rarr; 15s)</span>
+                  <span class="tech-pill">SAP PP</span>
+                  <span class="tech-pill">OEE Analytics</span>
+                  <span class="tech-pill">RCCP Capacity</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Export Planning Engineer (Q Medical Industries) -->
+            <div class="timeline-row color-medical">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #14b8a6;">
+                  Sept 2023 – Jul 2024 <span class="duration-badge">• 11 mos</span>
+                </div>
+                <div class="timeline-company-name">Q Medical Industries</div>
+                <div class="timeline-location-mode">Badr City, Cairo &bull; On-Site</div>
+                <span class="timeline-group-tag" style="background: rgba(20,184,166,0.15); color: #14b8a6;">Medical Devices</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #14b8a6;">Sept 2023 – Jul 2024 • 11 mos</span>
+                  <span style="font-weight: 700; color: #14b8a6;">Q Medical Industries &bull; Healthcare</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Export Planning Engineer</h3>
+                  <span class="tech-pill" style="color: #14b8a6; border-color: rgba(20,184,166,0.3);">Global Exports</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>End-to-End Export Operations:</strong> Managed global medical device manufacturing schedules via SAP ERP, monitoring daily material consumption and batch releases for flawless export deliveries.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>International Trade Events:</strong> Directed new product launch timelines and represented the enterprise at annual medical trade events in the UAE and Saudi Arabia.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Regulatory & Customs Compliance:</strong> Aligned operations across Procurement, Logistics, Quality, and Production to resolve bottlenecks and ensure medical regulatory standards and export packaging mandates.
+                  </li>
+                </ul>
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">Medical Exports</span>
+                  <span class="tech-pill">SAP ERP</span>
+                  <span class="tech-pill">Global Compliance</span>
+                  <span class="tech-pill">International Logistics</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Dedicated Graduation Project Milestone -->
+            <div class="timeline-row color-edu">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #f59e0b;">
+                  2022 – 2023 <span class="duration-badge">• 1 yr</span>
+                </div>
+                <div class="timeline-company-name">Zagazig University</div>
+                <div class="timeline-location-mode">Graduation Project</div>
+                <span class="timeline-group-tag" style="background: rgba(245,158,11,0.15); color: #f59e0b;">Grade: 99% (Excellent)</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #f59e0b;">2022 – 2023 • 1 yr</span>
+                  <span style="font-weight: 700; color: #f59e0b;">Graduation Project &bull; Grade: 99%</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Solar-Powered Humidification & Dehumidification (HDH) Desalination Unit</h3>
+                  <span class="tech-pill" style="color: #f59e0b; border-color: rgba(245,158,11,0.3);">Team Leader &bull; 99% (Excellent)</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li class="timeline-bullet">
+                    <strong>Project Leadership & Governance:</strong> Served as <strong>Team Leader</strong> for the university graduation project, directing project planning, financial aid acquisition, material sourcing, and team engineering coordination.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>System Modeling & Prototyping:</strong> Managed complete system thermal-fluid design, supplier negotiations, and mechanical fabrication using <strong>SOLIDWORKS 3D, AutoCAD, and Arduino embedded microcontrollers</strong>.
+                  </li>
+                  <li class="timeline-bullet">
+                    <strong>Testing & Validation:</strong> Executed data collection, performance analysis, and comprehensive technical documentation, achieving a verified <strong>Grade of 99% (Excellent)</strong>.
+                  </li>
+                </ul>
+                <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+                  <a data-link="grad-project" href="https://drive.google.com/drive/folders/1Ud7RvUbv7XgmtXniiIXl0drBqArdh4Jv" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.82rem; padding: 7px 15px;" title="View Graduation Project Files on Google Drive">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>Show Graduation Project in Drive</span>
+                  </a>
+                </div>
+                <div class="skill-tags-flex" style="margin-top: 12px;">
+                  <span class="tech-pill">Team Leader</span>
+                  <span class="tech-pill">Grade: 99% (Excellent)</span>
+                  <span class="tech-pill">SOLIDWORKS 3D</span>
+                  <span class="tech-pill">AutoCAD</span>
+                  <span class="tech-pill">Arduino Control</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7. Academic Degree (B.Sc. Mechanical Power Engineering) -->
+            <div class="timeline-row color-edu">
+              <div class="timeline-meta-left">
+                <div class="timeline-date-pill" style="color: #f59e0b;">
+                  2018 – 2023 <span class="duration-badge">• 5 yrs</span>
+                </div>
+                <div class="timeline-company-name">Zagazig University</div>
+                <div class="timeline-location-mode">Faculty of Engineering</div>
+                <span class="timeline-group-tag" style="background: rgba(245,158,11,0.15); color: #f59e0b;">B.Sc. Degree</span>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-mobile-meta">
+                  <span class="timeline-date-pill" style="color: #f59e0b;">2018 – 2023 • 5 yrs</span>
+                  <span style="font-weight: 700; color: #f59e0b;">Faculty of Engineering &bull; B.Sc.</span>
+                </div>
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Bachelor of Science (B.Sc.) in Mechanical Power Engineering</h3>
+                  <span class="tech-pill" style="color: #f59e0b; border-color: rgba(245,158,11,0.3);">Graduated with Honors</span>
+                </div>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                  Graduated from the Faculty of Engineering at Zagazig University with comprehensive foundation in thermal power systems, fluid mechanics, industrial automation, numerical modeling, and supply chain operations.
+                </p>
+                <div class="skill-tags-flex" style="margin-top: 12px;">
+                  <span class="tech-pill">Mechanical Power Engineering</span>
+                  <span class="tech-pill">Thermal & Fluid Systems</span>
+                  <span class="tech-pill">Numerical Analysis</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           ENGINEERED SYSTEMS BENTO GRID
+           ========================================================================== -->
+      <section id="systems" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+              Tools I've Built
+            </div>
+            <h2 class="section-title">Planning Tools I've Built</h2>
+            <p class="section-desc">Custom tools that replace old spreadsheets and speed up work in SAP.</p>
+          </div>
+
+          <div class="bento-grid">
+            
+            <div class="bento-card bento-col-8">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg> AI & Predictive Modeling</div>
+                <h3 class="bento-title">Autonomous S&OP Demand Forecasting Engine</h3>
+                <p class="bento-desc">
+                  An end-to-end Python, KNIME, and RapidMiner architecture that ingests multi-year sales history, strips promotional noise, and runs automated machine learning time-series forecasts with Monte Carlo risk simulations.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 85% reduction in S&OP preparation cycle time</li>
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Automatic ABC-XYZ classification for 8,000+ SKUs (63% &rarr; 82% accuracy)</li>
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Dynamic Safety Stock calculations matching executive service level targets</li>
+                </ul>
+              </div>
+              <div class="skill-tags-flex">
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">KNIME</span>
+                <span class="tech-pill">RapidMiner</span>
+                <span class="tech-pill">Monte Carlo</span>
+                <span class="tech-pill">Power BI</span>
+              </div>
+            </div>
+
+            <div class="bento-card bento-col-4">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg> SAP Automation</div>
+                <h3 class="bento-title">Centralized BOM Explosion Hub</h3>
+                <p class="bento-desc">
+                  Programmatically explodes multi-level Bills of Materials directly into SAP forecast upload templates in seconds.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> SAP upload time: 8 hours &rarr; 15 seconds</li>
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero manual transcription errors</li>
+                </ul>
+              </div>
+              <div class="skill-tags-flex">
+                <span class="tech-pill">SAP PP/MM</span>
+                <span class="tech-pill">Master Data</span>
+                <span class="tech-pill">BOM Engine</span>
+              </div>
+            </div>
+
+            <div class="bento-card bento-col-6">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg> Logistics Optimization</div>
+                <h3 class="bento-title">Automated DRP Multi-Node Matrix</h3>
+                <p class="bento-desc">
+                  Dynamically balances multi-plant inventory across central warehouses and regional distribution hubs based on real-time transit times, safety buffers, and SKU velocity.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> 30% reduction in inter-warehouse logistics costs</li>
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> STO tracking accuracy boosted from 25% to 75%</li>
+                </ul>
+              </div>
+              <div class="skill-tags-flex">
+                <span class="tech-pill">DRP Matrix</span>
+                <span class="tech-pill">STO Tracking</span>
+                <span class="tech-pill">Network Planning</span>
+              </div>
+            </div>
+
+            <div class="bento-card bento-col-6">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"></path><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"></path><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"></path></svg> Material Governance</div>
+                <h3 class="bento-title">Custom MRP & Spend Simulator</h3>
+                <p class="bento-desc">
+                  Simulates SAP MRP runs with 18-month rolling coverage projections, governing SAR 380M+ spend, supplier MOQs, and lead time variance.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Real-time EOH, SOH, DOH stock health tracking</li>
+                  <li class="bento-feature-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Comprehensive OTIF vendor fulfillment scoring</li>
+                </ul>
+              </div>
+              <div class="skill-tags-flex">
+                <span class="tech-pill">SAR 380M Spend</span>
+                <span class="tech-pill">MRP Simulation</span>
+                <span class="tech-pill">OTIF Scores</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           ENGINEERING & SUPPLY CHAIN PROJECTS SHOWCASE
+           ========================================================================== -->
+      <section id="projects" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px;">
+            <div>
+              <div class="section-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z"></path><circle cx="12" cy="13" r="2"></circle><path d="M14 13h3"></path><path d="M7 13h3"></path></svg>
+                Project Portfolio
+              </div>
+              <h2 class="section-title">Supply Chain & AI Projects</h2>
+              <p class="section-desc">Real projects in demand forecasting, automated bill-of-materials, and inventory planning.</p>
+            </div>
+            
+            <!-- Global Projects Folder CTA -->
+            <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.88rem;" title="Open All Projects Folder on Google Drive">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <span>Show All Projects (Drive Folder)</span>
+            </a>
+          </div>
+
+          <div class="bento-grid">
+            
+            <!-- Project 1: AI & Deep Learning Demand Forecasting Engine -->
+            <div class="bento-card bento-col-8">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path></svg> AI & Time-Series Engine</div>
+                <h3 class="bento-title">Autonomous S&OP Demand Forecasting Platform</h3>
+                <p class="bento-desc">
+                  An end-to-end predictive pipeline integrating state-of-the-art foundation time-series models (TimeFM 2, TimeGPT, DeepAR, PatchTST, Croston 2, XGBoost) to predict SKU demand across regional manufacturing plants with 85% cycle time reduction.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Automatic model tournament benchmarking MAPE, WAPE, and Forecast Bias across 8,000+ SKUs.</span>
+                  </li>
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Integrated Monte Carlo risk engine and automated demand signal cleansing.</span>
+                  </li>
+                </ul>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">TimeFM 2</span>
+                  <span class="tech-pill">DeepAR</span>
+                  <span class="tech-pill">PatchTST</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">KNIME</span>
+                </div>
+                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 14px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show in Drive</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2: Automated BOM Explosion Hub -->
+            <div class="bento-card bento-col-4">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg> ERP Master Data Hub</div>
+                <h3 class="bento-title">Automated BOM Explosion Engine</h3>
+                <p class="bento-desc">
+                  Centralized BOM engine executing multi-level raw material and semi-finished explosion for SAP PP/MM, slashing monthly forecast upload duration from 8 hours down to 15 seconds.
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">SAP PP/MM</span>
+                  <span class="tech-pill">VBA / SQL</span>
+                </div>
+                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 14px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show in Drive</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3: Dynamic DRP Multi-Plant Network Matrix -->
+            <div class="bento-card bento-col-6">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg> Inventory & Distribution</div>
+                <h3 class="bento-title">Dynamic DRP Multi-Plant Allocation Matrix</h3>
+                <p class="bento-desc">
+                  Distribution Requirements Planning matrix engine synchronizing regional stock transfers (STO), multi-plant inventory balancing, and reducing inter-warehouse logistics costs by 30%.
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">DRP Matrix</span>
+                  <span class="tech-pill">STO Automation</span>
+                  <span class="tech-pill">Multi-Echelon</span>
+                </div>
+                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 14px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show in Drive</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4: Graduation Project (Dedicated Card) -->
+            <div class="bento-card bento-col-6" style="border-left: 4px solid #f59e0b;">
+              <div>
+                <div class="bento-tag" style="color: #f59e0b;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg> Academic Engineering &bull; 99% Grade</div>
+                <h3 class="bento-title">Solar-Powered HDH Water Desalination Unit</h3>
+                <p class="bento-desc">
+                  Graduation Project (Team Leader): End-to-end design, embedded Arduino control, thermodynamic modeling, and physical fabrication of an energy-efficient solar water desalination unit.
+                </p>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 14px;">
+                <div class="skill-tags-flex">
+                  <span class="tech-pill">Team Leader</span>
+                  <span class="tech-pill">Grade: 99%</span>
+                  <span class="tech-pill">SOLIDWORKS 3D</span>
+                  <span class="tech-pill">Arduino</span>
+                </div>
+                <a data-link="grad-project" href="https://drive.google.com/drive/folders/1Ud7RvUbv7XgmtXniiIXl0drBqArdh4Jv" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.8rem; padding: 6px 14px;">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show Project Files (Drive)</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           VERIFIED CREDENTIALS: CERTIFICATIONS & RECOMMENDATION LETTERS
+           ========================================================================== -->
+      <section id="credentials" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              Certifications & References
+            </div>
+            <h2 class="section-title">Certifications & Recommendation Letters</h2>
+            <p class="section-desc">Industry certifications and recommendation letters from leaders I've worked with.</p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 20px; width: 100%;">
+            
+            <!-- 1. Recommendation Letters Card -->
+            <div class="bento-card" style="border-top: 4px solid var(--accent-primary);">
+              <div>
+                <div class="bento-tag"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="m9 15 2 2 4-4"></path></svg> Executive Endorsements</div>
+                <h3 class="bento-title">Letters of Recommendation</h3>
+                <p class="bento-desc">
+                  Formal endorsement letters and letters of recommendation from executive management, operations directors, and supply chain heads testifying to performance, leadership, and operational impact.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Executive management endorsements from manufacturing leadership.</span>
+                  </li>
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Verified records of project delivery, cost optimization, and teamwork.</span>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-top: 18px;">
+                <a data-link="recommendations" href="https://drive.google.com/drive/folders/1gIus9k0kRVQXdph4M3njyKFDlXcjzVU6?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 11px 20px; font-size: 0.9rem;" title="Show Letters of Recommendation on Google Drive">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show Recommendation Letters (Drive)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- 2. Professional Certifications Card -->
+            <div class="bento-card" style="border-top: 4px solid #6366f1;">
+              <div>
+                <div class="bento-tag" style="color: #6366f1;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path></svg> Accredited Credentials</div>
+                <h3 class="bento-title">Professional Certifications</h3>
+                <p class="bento-desc">
+                  Official certificates and credentials across Supply Chain Management, S&OP Governance, SAP ERP Planning, Python Data Science, Machine Learning, and Industrial Automation.
+                </p>
+                <ul class="bento-features-list">
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Accredited supply chain, demand forecasting, and inventory certifications.</span>
+                  </li>
+                  <li class="bento-feature-item">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+                    <span>Data science, KNIME, RapidMiner, Python, and ERP technical credentials.</span>
+                  </li>
+                </ul>
+              </div>
+              <div style="margin-top: 18px;">
+                <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 11px 20px; font-size: 0.9rem;" title="Show All Certifications on Google Drive">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                  <span>Show Certifications (Drive Folder)</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SKILLS MATRIX
+           ========================================================================== -->
+            <!-- ==========================================================================
+           SKILLS & ADVANCED ML / TIME-SERIES MATRIX
+           ========================================================================== -->
+            <!-- ==========================================================================
+           SKILLS & ADVANCED ML / TIME-SERIES MATRIX (SPACIOUS 2-COLUMN LAYOUT)
+           ========================================================================== -->
+      <section id="skills" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+              Skills & Tools
+            </div>
+            <h2 class="section-title">Skills & Tools</h2>
+            <p class="section-desc">Skills across forecasting tools, machine learning, supply chain planning, and ERP systems like SAP.</p>
+          </div>
+
+          <div class="skills-grid">
+            
+            <!-- 1. AI, Machine Learning & Deep Learning Time-Series Models -->
+            <div class="skill-group-card" style="border-top: 4px solid var(--accent-primary);">
+              <div class="skill-group-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path></svg>
+                AI, Deep Learning & Time-Series Models
+              </div>
+              <div class="skill-tags-flex">
+                <span class="skill-tag">TimeFM 2 (Google AI)</span>
+                <span class="skill-tag">TimeGPT (Nixtla)</span>
+                <span class="skill-tag">DeepAR (Probabilistic)</span>
+                <span class="skill-tag">PatchTST / TST Architecture</span>
+                <span class="skill-tag">TTM (Tiny Time Mixers)</span>
+                <span class="skill-tag" style="border-color: var(--accent-primary); color: var(--text-primary);"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path></svg>Kalman Filter (Forecast Smoothing)</span>
+                <span class="skill-tag">Croston 2 & Croston Method</span>
+                <span class="skill-tag">SBC (Syntetos-Boylan-Croston)</span>
+                <span class="skill-tag">XGBoost (Extreme Gradient Boost)</span>
+                <span class="skill-tag">Random Forest Regressors</span>
+                <span class="skill-tag">Isolation Forest (Anomaly Detection)</span>
+                <span class="skill-tag">ETS (Exponential Smoothing)</span>
+                <span class="skill-tag">Exponential Moving Average (EMA)</span>
+                <span class="skill-tag">Naive & Seasonal Naive</span>
+                <span class="skill-tag">Monte Carlo Risk Simulation</span>
+              </div>
+            </div>
+
+            <!-- 2. Data Science, Python & Analytics Platforms -->
+            <div class="skill-group-card" style="border-top: 4px solid #6366f1;">
+              <div class="skill-group-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="14" y="14" width="4" height="6" rx="2"></rect><rect x="6" y="4" width="4" height="6" rx="2"></rect><path d="M6 20h4"></path><path d="M14 10h4"></path><path d="M6 14h2v6"></path><path d="M14 4h2v6"></path></svg>
+                Data Engineering & Workflow Platforms
+              </div>
+              <div class="skill-tags-flex">
+                <span class="skill-tag">Automated Data Cleaning</span>
+                <span class="skill-tag">Outlier & Anomaly Cleansing</span>
+                <span class="skill-tag">Python (Pandas, NumPy, Scikit-Learn)</span>
+                <span class="skill-tag">KNIME Analytics Workflows</span>
+                <span class="skill-tag">RapidMiner Studio</span>
+                <span class="skill-tag">Power BI & DAX Calculations</span>
+                <span class="skill-tag">Power Query ETL Modeling</span>
+                <span class="skill-tag">Advanced Excel (VBA & Dynamic Matrices)</span>
+                <span class="skill-tag">Predictive Pipeline Automation</span>
+                <span class="skill-tag">Demand Signal De-Noising</span>
+              </div>
+            </div>
+
+            <!-- 3. Supply Chain & S&OP Operations -->
+            <div class="skill-group-card" style="border-top: 4px solid #14b8a6;">
+              <div class="skill-group-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14"></path><path d="m7.5 4.27 9 5.15"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" x2="12" y1="22" y2="12"></line><circle cx="18.5" cy="15.5" r="2.5"></circle><path d="M20.27 17.27 22 19"></path></svg>
+                Supply Chain & S&OP Planning
+              </div>
+              <div class="skill-tags-flex">
+                <span class="skill-tag">Sales & Operations Planning (S&OP)</span>
+                <span class="skill-tag">Master Production Schedule (MPS)</span>
+                <span class="skill-tag">Material Requirements Planning (MRP)</span>
+                <span class="skill-tag">Distribution Requirements Planning (DRP)</span>
+                <span class="skill-tag">Rough-Cut Capacity Planning (RCCP)</span>
+                <span class="skill-tag">Safety Stock Optimization</span>
+                <span class="skill-tag">ABC-XYZ SKU Segmentation</span>
+                <span class="skill-tag">BCG Matrix Lifecycle Analysis</span>
+                <span class="skill-tag">EOH / SOH / DOH Coverage</span>
+                <span class="skill-tag">SLOB Inventory Mitigation</span>
+                <span class="skill-tag">OTIF Supplier Performance</span>
+                <span class="skill-tag">Forecast Bias / MAPE / WAPE</span>
+              </div>
+            </div>
+
+            <!-- 4. Enterprise ERP & Engineering Systems -->
+            <div class="skill-group-card" style="border-top: 4px solid #f59e0b;">
+              <div class="skill-group-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M10 4v4"></path><path d="M2 8h20"></path><path d="M6 4v4"></path></svg>
+                Enterprise ERP & Engineering
+              </div>
+              <div class="skill-tags-flex">
+                <span class="skill-tag">SAP ERP (Production Planning - PP)</span>
+                <span class="skill-tag">SAP ERP (Materials Management - MM)</span>
+                <span class="skill-tag">SAP Master Data Governance</span>
+                <span class="skill-tag">Microsoft Dynamics GP</span>
+                <span class="skill-tag">Stock Transport Orders (STO)</span>
+                <span class="skill-tag">Purchase Requisitions (PR to PO)</span>
+                <span class="skill-tag">Overall Equipment Effectiveness (OEE)</span>
+                <span class="skill-tag">AutoCAD Mechanical</span>
+                <span class="skill-tag">SOLIDWORKS 3D Modeling</span>
+                <span class="skill-tag">Arduino Embedded Microcontrollers</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           COVER LETTER SECTION (EXECUTIVE LETTERHEAD + DIRECT DRIVE LINK)
+           ========================================================================== -->
+      <section id="cover-letter" class="section-chapter">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+              Cover Letter
+            </div>
+            <h2 class="section-title">Cover Letter</h2>
+            <p class="section-desc">Why I'm a strong fit for this role.</p>
+          </div>
+
+          <div class="cover-letter-card">
+            
+            <div class="letterhead-header">
+              <div class="letterhead-sender">
+                <h3>Mostafa Al-Araby Khalil Shalaby</h3>
+                <p>Supply and Demand Planning Engineer &bull; Cairo, Egypt (Open to Relocation / Remote)</p>
+                <p style="color: var(--accent-primary); font-weight: 600; margin-top: 4px;">
+                  (+20) 1555540680 &bull; mostafashalaby@engineer.com &bull; linkedin.com/in/MostafaAShalaby
+                </p>
+              </div>
+
+              <div class="letterhead-actions">
+                <a href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Open Official Drive Cover Letter">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+                  Download Cover Letter (Drive)
+                </a>
+              </div>
+            </div>
+
+            <div class="letter-body">
+              <p><strong>Dear Hiring Team,</strong></p>
+
+              <p>
+                I am writing to express my strong interest in opportunities within <strong>Supply Chain, Demand Planning, Supply Planning, Inventory Management, Production Planning, and Supply Chain Excellence</strong>. With hands-on experience across multiple planning functions and a strong background in manufacturing environments, I am confident in my ability to contribute effectively to your organization's operational and strategic objectives.
+              </p>
+
+              <p>
+                Throughout my career, I have progressed through four specialized planning roles, including <strong>Production Planning, Material Planning, Inventory Planning, and Regional Supply & Demand Planning</strong>. This journey has provided me with end-to-end exposure to Sales & Operations Planning (S&OP), Master Production Scheduling (MPS), Material Requirements Planning (MRP), Distribution Requirements Planning (DRP), Capacity Planning (RCCP), Inventory Optimization, and Supply Chain Analytics.
+              </p>
+
+              <p>
+                In my recent roles, I have successfully delivered measurable business improvements through data-driven decision-making and process optimization. Key achievements include <strong>improving forecast accuracy (from 63% to 82%), reducing inventory carrying costs by 22%, automating planning activities (reducing cycle time by 85%), enhancing supply chain visibility, and supporting large-scale procurement and inventory planning operations exceeding SAR 380 Million</strong>. In addition, I have leveraged advanced analytical tools such as <strong>SAP ERP, Python, Power BI, KNIME, RapidMiner, and Advanced Excel</strong> to develop automated planning solutions and improve operational efficiency.
+              </p>
+
+              <p>
+                What distinguishes me is my ability to combine strong analytical data science capabilities with practical manufacturing supply chain expertise. I enjoy working cross-functionally with Sales, Procurement, Production, Logistics, and Finance teams to align business objectives, solve complex planning challenges, and drive continuous improvement initiatives.
+              </p>
+
+              <p>
+                I am excited about the opportunity to bring my planning expertise, problem-solving capabilities, and passion for supply chain excellence to your organization. I would welcome the opportunity to discuss how my background and achievements can support your team’s success.
+              </p>
+
+              <p>Thank you for your time and consideration. I look forward to hearing from you.</p>
+            </div>
+
+            <div class="letter-signoff">
+              <div>
+                <div style="font-size: 0.82rem; color: var(--text-muted);">Sincerely,</div>
+                <div class="signoff-name">Mostafa Al-Araby Khalil Shalaby</div>
+                <div style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600;">Supply & Demand Planning Engineer</div>
+              </div>
+
+              <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <!-- Drive Cover Letter Direct Link -->
+                <a href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                  Download Cover Letter (Drive)
+                </a>
+
+                <!-- Drive CV Direct Link -->
+                <a href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M12 18v-6"></path><path d="m9 15 3 3 3-3"></path></svg>
+                  Download CV (Drive)
+                </a>
+
+                <!-- WhatsApp Message -->
+                <a href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                  Message on WhatsApp
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           CONTACT TERMINAL & HIRING
+           ========================================================================== -->
+      <section id="contact" class="section-chapter">
+        <div class="container">
+          
+          <div class="contact-terminal">
+            
+            <div class="contact-terminal-info">
+              <div class="status-badge" style="margin-bottom: 12px;">
+                <span class="status-dot"></span>
+                Ready for Immediate Engagement & Relocation
+              </div>
+              <h3>Let's Build Resilient Supply Chains</h3>
+              <p>
+                Available for full-time opportunities, international relocation, or high-impact remote leadership roles in Supply & Demand Planning and Operations Excellence.
+              </p>
+            </div>
+
+            <div class="contact-action-buttons">
+              <!-- WhatsApp Direct Link -->
+              <a data-link="whatsapp" href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="padding: 12px 24px; font-size: 0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                </svg>
+                <span>WhatsApp</span>
+              </a>
+
+              <!-- Direct Mailto -->
+              <a data-link="email" href="mailto:mostafashalaby@engineer.com" class="btn btn-primary" style="padding: 12px 22px; font-size: 0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+                <span>Email Mostafa</span>
+              </a>
+
+              <!-- Google Drive CV Download -->
+              <a data-link="cv" href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 12px 20px; font-size: 0.95rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M12 18v-6"></path>
+                  <path d="m9 15 3 3 3-3"></path>
+                </svg>
+                <span>Drive CV PDF</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-flex">
+          <div>
+            &copy; 2026 Mostafa Al-Araby Khalil Shalaby &bull; Supply & Demand Planning Engineer
+          </div>
+          <div style="display: flex; gap: 16px; align-items: center;">
+            <a href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" style="color: var(--accent-whatsapp); text-decoration: none; font-weight: 600;">WhatsApp (+201555540680)</a>
+            <span>&bull;</span>
+            <a href="mailto:mostafashalaby@engineer.com" style="color: var(--text-muted); text-decoration: none;">mostafashalaby@engineer.com</a>
+            <span>&bull;</span>
+            <a href="https://linkedin.com/in/MostafaAShalaby" target="_blank" rel="noopener noreferrer" style="color: var(--text-muted); text-decoration: none;">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC & GSAP ANIMATIONS
+       ========================================================================== -->
+    <script>
+    /* ==========================================================================
+       CENTRAL CONFIGURATION (EDIT LINKS HERE IN 1 PLACE)
+       ========================================================================== */
+    const PORTFOLIO_CONFIG = {
+      // 1. Official Google Drive CV Link
+      cvUrl: "https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing",
+      
+      // 2. Official Google Drive Cover Letter Link
+      coverLetterUrl: "https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing",
+      
+      // 3. Projects Drive Folder Link
+      projectsUrl: "https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing",
+      
+      // 4. Recommendation Letters Drive Folder Link
+      recommendationsUrl: "https://drive.google.com/drive/folders/1gIus9k0kRVQXdph4M3njyKFDlXcjzVU6?usp=sharing",
+      
+      // 5. Certifications Drive Folder Link
+      certificationsUrl: "https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing",
+      
+      // 6. Graduation Project Drive Folder Link
+      gradProjectUrl: "https://drive.google.com/drive/folders/1Ud7RvUbv7XgmtXniiIXl0drBqArdh4Jv",
+
+      // 7. Contact Details
+      whatsappPhone: "+201555540680",
+      whatsappDirectLink: "https://wa.me/201555540680",
+      email: "mostafashalaby@engineer.com",
+      linkedIn: "https://linkedin.com/in/MostafaAShalaby"
+    };
+
+    // Automatically bind all dynamic action buttons across the page to the central config
+    function bindDynamicLinks() {
+      document.querySelectorAll('[data-link="cv"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.cvUrl));
+      document.querySelectorAll('[data-link="cover-letter"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.coverLetterUrl));
+      document.querySelectorAll('[data-link="projects"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.projectsUrl));
+      document.querySelectorAll('[data-link="recommendations"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.recommendationsUrl));
+      document.querySelectorAll('[data-link="certifications"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.certificationsUrl));
+      document.querySelectorAll('[data-link="grad-project"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.gradProjectUrl));
+      document.querySelectorAll('[data-link="whatsapp"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.whatsappDirectLink));
+      document.querySelectorAll('[data-link="email"]').forEach(el => el.setAttribute('href', `mailto:${PORTFOLIO_CONFIG.email}`));
+      document.querySelectorAll('[data-link="linkedin"]').forEach(el => el.setAttribute('href', PORTFOLIO_CONFIG.linkedIn));
+    }
+    bindDynamicLinks();
+
+    // 2. 3-State Theme Switcher Engine (Dark -> Warm Luxury -> Light -> Dark)
+    const themes = [
+      { 
+        id: 'dark', 
+        label: 'Dark Obsidian', 
+        iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>'
+      },
+      { 
+        id: 'warm', 
+        label: 'Warm Luxury', 
+        iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"></path><path d="m4.93 4.93 2.83 2.83"></path><path d="M2 12h4"></path><path d="m4.93 19.07 2.83-2.83"></path><path d="M12 18v4"></path><path d="m19.07 19.07-2.83-2.83"></path><path d="M18 12h4"></path><path d="m19.07 4.93-2.83 2.83"></path><circle cx="12" cy="12" r="4"></circle></svg>'
+      },
+      { 
+        id: 'light', 
+        label: 'Crisp Editorial Light', 
+        iconSvg: '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>'
+      }
+    ];
+    let currentThemeIndex = 0;
+    const themeBtn = document.getElementById('themeToggle');
+
+    if (themeBtn) {
+      themeBtn.addEventListener('click', () => {
+        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+        const nextTheme = themes[currentThemeIndex];
+        document.documentElement.setAttribute('data-theme', nextTheme.id);
+        themeBtn.innerHTML = nextTheme.iconSvg;
+        showToast(`Switched to ${nextTheme.label} Theme`);
+      });
+    }
+
+    // 3. Toast Notification Helper
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast && toastMsg) {
+        toastMsg.innerText = msg;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 3000);
+      }
+    }
+
+    // 4. Simple Clean Copy Action (Subtle Checkmark Feedback)
+    function copySpecificText(textToCopy, successMsg, triggerBtn) {
+      const btn = triggerBtn || (typeof event !== 'undefined' && event ? (event.currentTarget || event.target.closest('.btn-copy-mini')) : null);
+      
+      const performFeedback = () => {
+        showToast(successMsg || "Copied to clipboard!");
+        if (btn) {
+          const originalHTML = btn.innerHTML;
+          btn.classList.add('copied');
+          btn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-primary);"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+          
+          setTimeout(() => {
+            btn.classList.remove('copied');
+            btn.innerHTML = originalHTML;
+          }, 1500);
+        }
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(textToCopy).then(performFeedback).catch(performFeedback);
+      } else {
+        const textArea = document.createElement("textarea");
+        textArea.value = textToCopy;
+        document.body.appendChild(textArea);
+        textArea.select();
+        try { document.execCommand('copy'); } catch(e) {}
+        document.body.removeChild(textArea);
+        performFeedback();
+      }
+    }
+
+    // 5. Compact reading controls: keep the page concise while preserving full details.
+    function addTimelineToggles() {
+      document.querySelectorAll('.timeline-card-right').forEach(card => {
+        const bullets = card.querySelector('.timeline-bullets');
+        if (!bullets || bullets.children.length < 3) return;
+
+        card.classList.add('is-collapsed');
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'timeline-toggle';
+        toggle.setAttribute('aria-expanded', 'false');
+
+        const hiddenCount = bullets.children.length - 2;
+        const updateLabel = () => {
+          const expanded = card.classList.contains('is-expanded');
+          toggle.innerHTML = expanded
+            ? 'Show less <span aria-hidden="true">↑</span>'
+            : `Show ${hiddenCount} more ${hiddenCount === 1 ? 'achievement' : 'achievements'} <span aria-hidden="true">↓</span>`;
+          toggle.setAttribute('aria-expanded', String(expanded));
+        };
+
+        toggle.addEventListener('click', () => {
+          const expanded = card.classList.toggle('is-expanded');
+          card.classList.toggle('is-collapsed', !expanded);
+          updateLabel();
+        });
+
+        card.appendChild(toggle);
+        updateLabel();
+      });
+    }
+
+    function addCoverLetterToggle() {
+      const card = document.querySelector('.cover-letter-card');
+      const body = card && card.querySelector('.letter-body');
+      if (!card || !body || body.children.length < 3) return;
+
+      card.classList.add('is-collapsed');
+      const toggle = document.createElement('button');
+      toggle.type = 'button';
+      toggle.className = 'letter-toggle';
+      toggle.setAttribute('aria-expanded', 'false');
+
+      const updateLabel = () => {
+        const expanded = card.classList.contains('is-expanded');
+        toggle.innerHTML = expanded
+          ? 'Show shorter summary <span aria-hidden="true">↑</span>'
+          : 'Read full cover letter <span aria-hidden="true">↓</span>';
+        toggle.setAttribute('aria-expanded', String(expanded));
+      };
+
+      toggle.addEventListener('click', () => {
+        const expanded = card.classList.toggle('is-expanded');
+        card.classList.toggle('is-collapsed', !expanded);
+        updateLabel();
+      });
+
+      body.insertAdjacentElement('afterend', toggle);
+      updateLabel();
+    }
+
+    addTimelineToggles();
+    addCoverLetterToggle();
+
+    // 7. Keyword Info Popup: click any skill/tech pill for a short explainer
+    const KEYWORD_INFO = [
+      { match: "deepar", why: "A probabilistic deep-learning model that forecasts demand with confidence ranges instead of a single number, which helps planners see best/worst-case risk.", exp: "I tested DeepAR alongside classical methods to forecast SKUs with volatile demand, using its probability ranges to set smarter safety stock levels." },
+      { match: "patchtst", why: "A transformer-based time-series model built for long-horizon forecasting on large SKU catalogs.", exp: "I evaluated PatchTST as part of an AI forecasting pipeline to push forecast accuracy higher on my highest-volume, highest-value SKUs." },
+      { match: "timefm", why: "A pretrained foundation model for time-series forecasting that works well with limited historical data.", exp: "I piloted TimeFM to speed up forecasting for newer SKUs that didn't have years of sales history to train a model from scratch." },
+      { match: "tiny time mixers", why: "A lightweight forecasting model that's fast to run across thousands of SKUs at once.", exp: "I used it to keep large-scale demand forecasting runs fast enough to fit inside a monthly S&OP cycle." },
+      { match: "isolation forest", why: "A machine-learning technique that automatically flags unusual data points, like a demand spike caused by a data-entry error.", exp: "I applied it to clean historical sales data before forecasting, so one-off spikes didn't distort the demand plan." },
+      { match: "kalman filter", why: "A statistical technique that smooths noisy data to reveal the true underlying trend.", exp: "I used it to smooth volatile demand signals before feeding them into the forecasting models." },
+      { match: "croston", why: "A forecasting method built specifically for items that sell irregularly (intermittent demand), which standard methods handle poorly.", exp: "I applied Croston-based methods to slow-moving SKUs so they weren't over- or under-forecast by a one-size-fits-all model." },
+      { match: "sbc (syntetos", why: "An improved version of the Croston method that corrects a known bias for intermittent-demand items.", exp: "I used it to get more reliable forecasts for slow-moving parts, reducing both stockouts and excess stock." },
+      { match: "ets", why: "Exponential Smoothing is a classic, reliable forecasting method that weights recent demand more heavily than older demand.", exp: "I used ETS as a fast, dependable baseline forecast to benchmark newer AI models against." },
+      { match: "naive & seasonal naive", why: "Simple baseline forecasts used to prove that more advanced models are actually adding value.", exp: "I ran naive forecasts as a control benchmark to confirm the AI/ML models I built were genuinely improving accuracy." },
+      { match: "exponential moving average", why: "A smoothing technique that reduces short-term noise in demand data.", exp: "I used it in Excel/Power BI dashboards to give planners a cleaner read on real demand trends." },
+      { match: "random forest", why: "A machine-learning method that combines many decision trees to make accurate predictions from complex data.", exp: "I used Random Forest regressors to help predict demand drivers where the relationship between variables wasn't simply linear." },
+      { match: "monte carlo", why: "A simulation technique that tests thousands of demand/supply scenarios to quantify risk instead of relying on one fixed estimate.", exp: "I ran Monte Carlo simulations to set risk-based safety stock levels, which helped reduce stockouts by 35% while also cutting inventory carrying costs." },
+      { match: "predictive pipeline automation", why: "Automating the forecasting workflow means less manual spreadsheet work and faster, more consistent updates.", exp: "I automated the demand forecasting pipeline end-to-end, cutting the planning cycle time by roughly 85%." },
+      { match: "demand signal de-noising", why: "Removing noise from raw sales data so the forecast reflects real demand, not one-off distortions.", exp: "I built data-cleansing steps into my forecasting workflow to strip out promotions, stockout gaps, and outliers before forecasting." },
+      { match: "outlier & anomaly cleansing", why: "Catching bad or unusual data points before they distort a forecast or inventory decision.", exp: "I built automated cleansing rules into my planning process to flag anomalies before they reached the forecast." },
+      { match: "automated data cleaning", why: "Clean, consistent data is the foundation every forecast and plan depends on.", exp: "I automated data-cleaning steps (in Python/KNIME) that used to be done manually in Excel, saving hours every planning cycle." },
+      { match: "abc-xyz", why: "A segmentation method that groups SKUs by value (ABC) and demand variability (XYZ), so planners can apply the right forecasting and stocking strategy to each group instead of treating every item the same.", exp: "I segmented 8,000+ active SKUs with ABC-XYZ, which helped raise forecast accuracy from 63% to 82%." },
+      { match: "bcg matrix", why: "A framework for classifying products by growth and market share, useful for lifecycle and portfolio decisions.", exp: "I used it alongside SKU segmentation to understand which products deserved more planning attention as they matured or declined." },
+      { match: "python", why: "A programming language I use to automate planning tasks and build forecasting models that would be too slow or error-prone to do by hand in Excel.", exp: "I used Python (Pandas, NumPy, Scikit-Learn) to build the AI-driven forecasting architecture that cut demand planning cycle time by 85%." },
+      { match: "knime", why: "A visual data-workflow tool that lets me build and automate data pipelines without writing everything from scratch in code.", exp: "I used KNIME to build repeatable data-cleaning and forecasting workflows shared across the planning team." },
+      { match: "rapidminer", why: "A data-science platform used to build and test predictive models quickly.", exp: "I used RapidMiner alongside Python to prototype and compare forecasting models before choosing the best one for production." },
+      { match: "power query", why: "A data-transformation tool inside Excel/Power BI that automates cleaning and reshaping data instead of doing it manually.", exp: "I used Power Query to automate recurring data-prep work that used to take hours each reporting cycle." },
+      { match: "dax", why: "The formula language behind Power BI, used to build calculated metrics and KPIs.", exp: "I used DAX to build the KPI calculations behind my Power BI planning dashboards." },
+      { match: "power bi", why: "A dashboarding tool I use to turn planning data into visuals that Sales, Production, and Finance can act on quickly.", exp: "I built Power BI dashboards to track forecast accuracy, bias, MAPE/WAPE, and inventory KPIs for monthly S&OP reviews." },
+      { match: "vba", why: "Macros and scripting inside Excel used to automate repetitive planning tasks and build dynamic planning matrices.", exp: "I built VBA-driven Excel matrices to automate MRP and DRP calculations before rolling them into SAP." },
+      { match: "sql", why: "The language used to pull and query data directly from company databases.", exp: "I used SQL to pull planning and transaction data straight from source systems instead of relying on manual exports." },
+      { match: "s&op", why: "Sales & Operations Planning is the monthly process where Sales, Production, Procurement, and Logistics align on one shared demand and supply plan.", exp: "I led monthly S&OP consensus meetings, governing Forecast Accuracy, Bias, MAPE, and WAPE KPIs across departments." },
+      { match: "sales & operations planning", why: "The monthly cross-functional process that aligns demand, supply, and financial plans into one number everyone works from.", exp: "I led S&OP consensus reviews to align Sales, Production, Procurement, and Logistics on a single agreed plan each month." },
+      { match: "mps", why: "Master Production Schedule turns the demand forecast into a concrete production plan — what to make, and when.", exp: "I built and maintained the MPS, including a BOM Hub tool that cut a task taking 8 hours down to 15 seconds." },
+      { match: "master production schedule", why: "It converts the demand forecast into an executable production plan.", exp: "I owned the MPS process and automated key parts of it to make production planning faster and more accurate." },
+      { match: "bom hub", why: "A tool I built to automate Bill of Materials lookups and calculations, replacing a slow manual process.", exp: "I built a BOM Hub that reduced a task from about 8 hours to 15 seconds, freeing up significant planning time." },
+      { match: "bom engine", why: "An automated engine for managing and calculating Bills of Materials at scale.", exp: "I engineered a BOM engine to keep material requirements accurate as products and recipes changed." },
+      { match: "mrp", why: "Material Requirements Planning calculates what raw materials and components are needed, and when, to meet the production plan without over- or under-ordering.", exp: "I ran and improved MRP processes in SAP, supporting procurement decisions across a materials spend exceeding SAR 380 million." },
+      { match: "material requirements planning", why: "It ensures the right materials arrive at the right time to support production without excess inventory.", exp: "I managed MRP runs and exception handling to keep material availability aligned with the production schedule." },
+      { match: "custom mrp run", why: "A tailored MRP process built to fit specific plant or product needs beyond the standard SAP setup.", exp: "I built a custom MRP run to handle planning scenarios the standard SAP configuration couldn't cover well." },
+      { match: "drp", why: "Distribution Requirements Planning decides how much stock to move to each location or warehouse based on forecasted demand, keeping the right inventory in the right place.", exp: "I engineered a DRP matrix engine that synced sales forecasts with production and warehouse inventory, cutting logistics overhead by 30%." },
+      { match: "distribution requirements planning", why: "It plans inventory movement across the distribution network so each location has what it needs, no more and no less.", exp: "I built and ran the DRP process to optimize multi-plant supply allocation and reduce logistics overhead by 30%." },
+      { match: "rccp", why: "Rough-Cut Capacity Planning checks early on whether a proposed production plan is actually feasible given available capacity.", exp: "I used RCCP to validate the production schedule against capacity constraints before it was finalized." },
+      { match: "rough-cut capacity planning", why: "A quick feasibility check that flags capacity bottlenecks before a production plan is locked in.", exp: "I applied RCCP to catch capacity conflicts early, avoiding late-stage scheduling surprises." },
+      { match: "safety stock", why: "Buffer inventory that protects against demand or supply variability, sized correctly it prevents stockouts without tying up excess cash.", exp: "I used Monte Carlo-based, risk-adjusted safety stock calculations that cut stockouts by 35% and inventory carrying costs by 22%." },
+      { match: "slob", why: "Slow-moving, non-moving, and obsolete inventory that ties up working capital and warehouse space if left unmanaged.", exp: "I audited SLOB inventory regularly to release trapped working capital and keep stock turnover healthy." },
+      { match: "sto", why: "Stock Transport Orders move inventory between company locations, and tracking them accurately keeps the whole supply chain visible.", exp: "I automated in-transit STO tracking, boosting accuracy from 25% to 75% and eliminating inter-warehouse shipping errors." },
+      { match: "stock transport order", why: "The document/process used to move stock between plants or warehouses within the same company.", exp: "I built automated STO tracking that significantly improved in-transit visibility and reduced shipping errors." },
+      { match: "otif", why: "On-Time-In-Full measures how often deliveries arrive complete and on schedule — a core supplier and service-level metric.", exp: "I tracked and reported OTIF performance to hold suppliers accountable and flag service issues early." },
+      { match: "eoh / soh / doh", why: "Standard inventory health metrics — inventory on hand and days of coverage — used to judge if stock levels are too high or too low.", exp: "I monitored EOH/SOH/DOH metrics to catch overstock or shortage risks before they became a problem." },
+      { match: "sap mm", why: "The SAP module for Materials Management, covering procurement, purchasing, and inventory transactions.", exp: "I worked daily in SAP MM to manage purchase requisitions, material master data, and inventory movements." },
+      { match: "sap pp", why: "The SAP module for Production Planning, covering production orders, scheduling, and the MPS/MRP engine.", exp: "I used SAP PP to run and maintain the production schedule and MRP results." },
+      { match: "microsoft dynamics gp", why: "An ERP system used for financials and operations, similar in role to SAP but on a different platform.", exp: "I worked within Microsoft Dynamics GP for planning and inventory transactions at one of my earlier roles." },
+      { match: "sap erp", why: "The core enterprise system used to run planning, procurement, production, and inventory processes company-wide.", exp: "I've worked hands-on in SAP ERP daily, from MRP and DRP runs to master data and purchase requisitions." },
+      { match: "master data", why: "The accurate underlying data (BOMs, lead times, routing) that every planning calculation depends on.", exp: "I maintained and governed SAP master data to make sure MRP and DRP calculations stayed accurate." },
+      { match: "oee", why: "Overall Equipment Effectiveness measures how well production equipment is being used versus its full potential.", exp: "I tracked OEE analytics to help identify where production capacity was being lost to downtime or slow cycles." },
+      { match: "network planning", why: "Planning how inventory and production flow across a company's full network of plants and warehouses.", exp: "I worked on network-level allocation to balance supply across multiple plants and reduce overall logistics cost." },
+      { match: "multi-echelon", why: "Managing inventory across several linked stages (like plant → regional warehouse → local warehouse) instead of one location at a time, which gives a more efficient total picture.", exp: "I built multi-echelon inventory logic into my DRP work to avoid over-stocking at one level while another ran short." },
+      { match: "forecast bias", why: "Measures whether a forecast is consistently over- or under-predicting demand, a key signal for correcting the model.", exp: "I tracked forecast bias alongside MAPE/WAPE every month in S&OP to catch systematic forecasting errors." },
+      { match: "mape / wape", why: "MAPE and WAPE are standard accuracy metrics for judging how close a forecast came to actual demand.", exp: "I used MAPE/WAPE as the core accuracy KPIs I reported to leadership, and the improvements I drove took forecast accuracy from 63% to 82%." },
+      { match: "sar 380m", why: "A large materials-spend figure showing the financial scale of the planning decisions I was responsible for.", exp: "I supported procurement and MRP planning covering more than SAR 380 million in material spend." },
+      { match: "purchase requisitions", why: "The formal request that starts the procurement process, converting a material need into a purchase order.", exp: "I managed the PR-to-PO process in SAP to keep procurement moving in line with the MRP plan." },
+      { match: "global compliance", why: "Making sure exports and materials meet the regulatory requirements of each destination market.", exp: "I supported compliance requirements for medical device exports across international markets." },
+      { match: "global exports", why: "Coordinating shipments and planning across international markets and customers.", exp: "I planned and supported medical device exports to international markets." },
+      { match: "medical exports", why: "Export planning for medical devices carries extra regulatory and quality requirements compared to general goods.", exp: "I supported supply planning for medical device exports, balancing regulatory requirements with delivery timelines." },
+      { match: "international logistics", why: "Coordinating cross-border shipping, customs, and delivery timelines.", exp: "I coordinated with logistics partners to keep international shipments on schedule for export customers." },
+      { match: "solidworks", why: "3D CAD software used to design and model mechanical parts.", exp: "I used SOLIDWORKS during my engineering studies and graduation project to design and model mechanical components." },
+      { match: "autocad", why: "2D/technical drafting software used for engineering drawings.", exp: "I used AutoCAD for technical drawings as part of my mechanical engineering coursework and projects." },
+      { match: "arduino", why: "A microcontroller platform used to build and program simple embedded/automation projects.", exp: "I used Arduino to build a hands-on embedded control project during my engineering studies." },
+      { match: "thermal & fluid systems", why: "Core mechanical engineering subject covering heat transfer and fluid flow, foundational for process and equipment understanding.", exp: "I studied thermal and fluid systems as part of my mechanical engineering degree, which supports my understanding of production equipment." },
+      { match: "mechanical power engineering", why: "My engineering specialization, giving me a technical foundation for understanding manufacturing and equipment constraints.", exp: "I graduated in Mechanical Power Engineering, which gives me a practical understanding of the production systems I plan around." },
+      { match: "numerical analysis", why: "Mathematical methods for solving real-world engineering problems, similar in spirit to the analytical work behind demand forecasting.", exp: "I studied numerical analysis during my degree, which built the analytical foundation I later applied to forecasting and planning models." },
+      { match: "team leader", why: "Leadership experience shows I can coordinate a group toward a shared goal, not just execute individual tasks.", exp: "I led a student engineering team, coordinating tasks and people to deliver our graduation project successfully." },
+      { match: "graduated with honors", why: "A strong academic record showing consistent, high-level performance.", exp: "I graduated with Honors (99%, Excellent grade) from my Mechanical Power Engineering program." },
+      { match: "grade:", why: "A strong academic record showing consistent, high-level performance.", exp: "I graduated with a 99% (Excellent) grade in Mechanical Power Engineering." },
+      { match: "working capital", why: "Cash tied up in inventory that could otherwise be used elsewhere in the business — reducing it frees up money for the company.", exp: "I audited slow-moving and obsolete inventory to release trapped working capital and improve stock turnover." }
+    ];
+
+    function getKeywordInfo(rawText) {
+      const text = (rawText || "").toLowerCase();
+      for (const entry of KEYWORD_INFO) {
+        if (text.includes(entry.match)) return entry;
+      }
+      return {
+        why: "One of the tools and concepts I apply in supply and demand planning work.",
+        exp: "I've used this as part of my day-to-day planning, forecasting, or process-improvement work across my roles."
+      };
+    }
+
+    function openKeywordModal(rawText) {
+      const overlay = document.getElementById('keywordModalOverlay');
+      const title = document.getElementById('keywordModalTitle');
+      const whyEl = document.getElementById('keywordModalWhy');
+      const expEl = document.getElementById('keywordModalExp');
+      if (!overlay || !title || !whyEl || !expEl) return;
+
+      const info = getKeywordInfo(rawText);
+      title.textContent = rawText;
+      whyEl.textContent = info.why;
+      expEl.textContent = info.exp;
+
+      overlay.classList.add('show');
+    }
+
+    function closeKeywordModal() {
+      const overlay = document.getElementById('keywordModalOverlay');
+      if (overlay) overlay.classList.remove('show');
+    }
+
+    document.querySelectorAll('.tech-pill, .skill-tag').forEach(el => {
+      el.addEventListener('click', () => openKeywordModal(el.textContent.trim()));
+    });
+
+    const kwOverlay = document.getElementById('keywordModalOverlay');
+    const kwClose = document.getElementById('keywordModalClose');
+    if (kwClose) kwClose.addEventListener('click', closeKeywordModal);
+    if (kwOverlay) {
+      kwOverlay.addEventListener('click', (e) => {
+        if (e.target === kwOverlay) closeKeywordModal();
+      });
+    }
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeKeywordModal();
+    });
+
+    // 6. Active Nav Spy on Scroll with Correct Offsets
+    window.addEventListener('scroll', () => {
+      const targets = [
+        document.getElementById('overview'),
+        document.getElementById('personal-info'),
+        document.getElementById('experience'),
+        document.getElementById('projects'),
+        document.getElementById('credentials'),
+        document.getElementById('skills'),
+        document.getElementById('cover-letter'),
+        document.getElementById('contact')
+      ];
+
+      const navLinks = document.querySelectorAll('.nav-item a');
+      let activeId = 'overview';
+
+      targets.forEach(section => {
+        if (!section) return;
+        const top = section.getBoundingClientRect().top;
+        if (top <= 140) {
+          activeId = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${activeId}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
