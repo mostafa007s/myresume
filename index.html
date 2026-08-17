@@ -2,7 +2,7 @@
 <html lang="en" data-theme="classic">
 <head>
   <meta charset="UTF-8" />
-  <meta id="viewportMeta" name="viewport" content="width=1200, initial-scale=0.35, minimum-scale=0.2, maximum-scale=5.0, user-scalable=yes" />
+  <meta id="viewportMeta" name="viewport" content="width=1280, initial-scale=0.35, minimum-scale=0.1, maximum-scale=5.0, user-scalable=yes" />
   
   <!-- SEO & ATS Metadata -->
   <title>Mostafa Al-Araby Shalaby | Regional Supply & Demand Planning Engineer — Portfolio & CV</title>
@@ -456,15 +456,19 @@
       }
     }
 
+    html, body {
+      min-width: 1240px !important;
+      width: 100%;
+      overflow-x: auto;
+    }
+
     body {
       background-color: var(--bg-base);
       color: var(--text-secondary);
       font-family: var(--font-body);
       line-height: 1.6;
-      overflow-x: hidden;
       transition: background-color 0.3s ease, color 0.3s ease;
       min-height: 100vh;
-      width: 100%;
     }
 
     .ambient-bg {
@@ -472,6 +476,7 @@
       inset: 0;
       pointer-events: none;
       z-index: 0;
+      min-width: 1240px;
       background: 
         radial-gradient(circle at 15% 15%, rgba(14, 165, 233, 0.06) 0%, transparent 45%),
         radial-gradient(circle at 85% 65%, rgba(14, 165, 233, 0.04) 0%, transparent 45%);
@@ -481,15 +486,18 @@
       position: relative;
       z-index: 1;
       width: 100%;
+      min-width: 1240px !important;
     }
 
     .container {
       width: 100%;
       max-width: 1580px;
+      min-width: 1200px !important;
       margin-left: auto;
       margin-right: auto;
-      padding-left: clamp(18px, 2.5vw, 36px);
-      padding-right: clamp(18px, 2.5vw, 36px);
+      padding-left: 32px;
+      padding-right: 32px;
+      box-sizing: border-box;
     }
 
     section {
@@ -2043,154 +2051,11 @@
       color: var(--accent-primary);
     }
 
-        /* ==========================================================================
-       12. RESPONSIVE BREAKPOINTS (DESKTOP, TABLET & MOBILE)
+    /* ==========================================================================
+       12. FORCED DESKTOP MODE (PRESERVES TRUE MULTI-COLUMN DESKTOP VIEW ON ALL DEVICES)
        ========================================================================== */
-    @media (max-width: 1200px) {
-      .personal-grid-4col, .stats-grid, .kpi-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .timeline-wrapper::before {
-        left: 230px;
-      }
-      .timeline-row {
-        grid-template-columns: 210px 40px 1fr;
-      }
-    }
-
-    @media (max-width: 960px) {
-      .bento-triple-grid {
-        grid-template-columns: 1fr;
-      }
-      .bento-card-full {
-        padding: 20px 16px;
-      }
-      .bento-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-      .timeline-wrapper::before {
-        left: 18px;
-      }
-      .timeline-row {
-        grid-template-columns: 36px 1fr;
-        gap: 12px;
-      }
-      .timeline-meta-left {
-        display: none;
-      }
-      .timeline-node-col {
-        padding-top: 16px;
-      }
-      .timeline-mobile-meta {
-        display: flex !important;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        margin-bottom: 8px;
-      }
-    }
-
-    @media (min-width: 961px) {
-      .timeline-mobile-meta {
-        display: none !important;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: flex;
-        overflow-x: auto;
-        padding: 2px 0;
-        gap: 4px;
-      }
-      .nav-item a {
-        font-size: 0.74rem;
-        padding: 4px 8px;
-      }
-      .nav-brand-texts {
-        display: none;
-      }
-      .hero-section {
-        padding-top: 85px;
-      }
-      .hero-title {
-        font-size: clamp(1.8rem, 6vw, 2.3rem);
-      }
-      .hero-cta-group {
-        flex-direction: column;
-        align-items: stretch;
-        width: 100%;
-      }
-      .hero-cta-group     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 11px 22px;
-      border-radius: var(--radius-pill);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.94rem;
-      text-decoration: none;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      border: 1px solid transparent;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-      .personal-grid-4col, .stats-grid, .kpi-grid {
-        grid-template-columns: 1fr;
-      }
-      .bento-card {
-        padding: 18px 16px;
-      }
-      .bento-footer {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-      }
-      .bento-footer     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 11px 22px;
-      border-radius: var(--radius-pill);
-      font-family: var(--font-body);
-      font-weight: 700;
-      font-size: 0.94rem;
-      text-decoration: none;
-      transition: var(--transition-smooth);
-      cursor: pointer;
-      border: 1px solid transparent;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-      .contact-terminal, .letterhead-header, .letter-signoff {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      .contact-action-buttons .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 9px;
-        padding: 11px 22px;
-        border-radius: var(--radius-pill);
-        font-family: var(--font-body);
-        font-weight: 700;
-        font-size: 0.94rem;
-        text-decoration: none;
-        transition: var(--transition-smooth);
-        cursor: pointer;
-        border: 1px solid transparent;
-        white-space: nowrap;
-        flex-shrink: 0;
-      }
+    .timeline-mobile-meta {
+      display: none !important;
     }
 
     /* ==========================================================================
@@ -4376,7 +4241,7 @@
       }
     }
 
-    // Interactive Theme Switch on Click (Auto-dismisses modal after choice)
+    // Interactive Theme Switch on Click (Switches theme live, stays open until Done is clicked)
     themeOptionBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const selectedTheme = btn.getAttribute('data-set-theme');
@@ -4394,11 +4259,6 @@
             }
             showToast(`Switched to ${themeObj.label} Theme`);
           }
-
-          // Smoothly disappear modal after user makes their choice
-          setTimeout(() => {
-            closeThemeModal();
-          }, 350);
         }
       });
     });
