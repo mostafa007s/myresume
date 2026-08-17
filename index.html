@@ -2,10 +2,10 @@
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta id="viewportMeta" name="viewport" content="width=1200, initial-scale=0.35, minimum-scale=0.2, maximum-scale=5.0, user-scalable=yes" />
   
   <!-- SEO & ATS Metadata -->
-  <title>Mostafa Al-Araby Shalaby | Supply & Demand Planning Engineer — Portfolio & CV</title>
+  <title>Mostafa Al-Araby Shalaby | Regional Supply & Demand Planning Engineer — Portfolio & CV</title>
   <meta name="description" content="Official Executive CV, Cover Letter and Engineering Portfolio of Mostafa Al-Araby Shalaby, Supply and Demand Planning Engineer with expertise in S&OP, MRP, DRP, SAP ERP, and AI-driven predictive forecasting." />
   <meta name="keywords" content="Mostafa Shalaby, Supply Planning Engineer, Demand Planning Engineer, S&OP, MPS, MRP, DRP, RCCP, SAP ERP, SAP PP, SAP MM, Python, KNIME, Power BI, EGIC, Tahweel, TimeFM, DeepAR, Kalman Filter" />
   <meta name="author" content="Mostafa Al-Araby Khalil Shalaby" />
@@ -390,6 +390,7 @@
       width: 100%;
       transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       box-sizing: border-box;
+      gap: 12px;
     }
 
     .navbar-capsule.navbar-scrolled {
@@ -427,9 +428,6 @@
       gap: 8px;
       text-decoration: none;
       color: var(--text-primary);
-      flex: 1 1 0%;
-      justify-content: flex-start;
-      min-width: 0;
       flex-shrink: 0;
     }
 
@@ -480,25 +478,39 @@
       opacity: 0.85;
     }
 
-    /* Middle Nav Links: Perfectly Centered in Top Bar Container */
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--text-primary);
+      flex-shrink: 0;
+    }
+
+    /* Distributed Navigation Links: Fills Space Gracefully Across Middle */
     .nav-links {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 5px;
+      justify-content: space-evenly;
+      gap: clamp(4px, 0.65vw, 10px);
       list-style: none;
-      margin: 0 auto;
+      margin: 0;
       padding: 0;
-      flex: 0 0 auto;
+      flex: 1 1 auto;
       flex-wrap: nowrap;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
     }
 
     .nav-item a {
       color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.76rem;
+      font-size: clamp(0.74rem, 0.78vw, 0.82rem);
       font-weight: 600;
-      padding: 5px 10px;
+      padding: 5px clamp(7px, 0.75vw, 12px);
       border-radius: var(--radius-pill);
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
@@ -562,9 +574,8 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      flex: 1 1 0%;
-      justify-content: flex-end;
-      min-width: 0;
+      flex-shrink: 0;
+      margin-left: 2px;
     }
 
     @media (max-width: 1360px) {
@@ -1988,7 +1999,7 @@
           <div class="nav-avatar">MS</div>
           <div class="nav-brand-texts">
             <div class="nav-brand-name">Mostafa Al-Araby Shalaby</div>
-            <div class="nav-brand-role">Supply & Demand Planning</div>
+            <div class="nav-brand-role">Regional Supply & Demand Planning</div>
           </div>
         </a>
 
@@ -2038,7 +2049,7 @@
             </div>
 
             <h1 class="hero-title">
-              Supply & Demand <span class="text-gradient">Planning Engineer</span> & Supply Chain Excellence
+              Regional Supply & Demand <span class="text-gradient">Planning Engineer</span> & Supply Chain Excellence
             </h1>
 
             <p class="hero-subtext">
