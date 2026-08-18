@@ -271,16 +271,21 @@
 
     [data-theme="warm"] .btn-project-view,
     [data-theme="classic"] .btn-project-view {
-      background: #efe8db !important;
-      color: #1c1917 !important;
-      border: 1px solid rgba(60, 45, 30, 0.18) !important;
+      background: #1c1917 !important;
+      color: #ffffff !important;
+      border: 1px solid #1c1917 !important;
     }
 
     [data-theme="warm"] .btn-project-view:hover,
     [data-theme="classic"] .btn-project-view:hover {
-      background: #f5eee0 !important;
-      border-color: #854d0e !important;
-      color: #854d0e !important;
+      background: #292524 !important;
+      border-color: #292524 !important;
+      color: #ffffff !important;
+    }
+
+    [data-theme="warm"] .btn-project-view svg,
+    [data-theme="classic"] .btn-project-view svg {
+      color: #ffffff !important;
     }
 
     [data-theme="warm"] .nav-avatar,
@@ -711,7 +716,7 @@
       color: var(--text-primary);
     }
 
-    /* Standardized View Project / Certificate Pill Button */
+    /* Standardized View Project / Certificate Pill Button (Solid Dark Theme) */
     .btn-project-view {
       display: inline-flex;
       align-items: center;
@@ -721,28 +726,76 @@
       font-family: var(--font-body);
       font-size: 0.80rem;
       font-weight: 600;
-      background: var(--bg-surface-elevated);
-      color: var(--text-primary);
-      border: 1px solid var(--border-subtle);
+      background: #1c1917;
+      color: #ffffff !important;
+      border: 1px solid #1c1917;
       text-decoration: none;
       transition: var(--transition-smooth);
       cursor: pointer;
+      box-shadow: var(--shadow-sm);
     }
 
     .btn-project-view svg {
       width: 14px;
       height: 14px;
-      color: var(--text-muted);
+      color: #ffffff !important;
     }
 
     .btn-project-view:hover {
-      border-color: var(--accent-primary);
-      color: var(--accent-primary);
-      background: var(--bg-surface);
+      background: #292524;
+      border-color: #292524;
+      color: #ffffff !important;
     }
 
-    .btn-project-view:hover svg {
+    [data-theme="dark"] .btn-project-view {
+      background: var(--accent-primary) !important;
+      border-color: var(--accent-primary) !important;
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .btn-project-view:hover {
+      background: var(--accent-hover) !important;
+      border-color: var(--accent-hover) !important;
+    }
+
+    [data-theme="contrast"] .btn-project-view {
+      background: #facc15 !important;
+      color: #000000 !important;
+      border-color: #facc15 !important;
+      font-weight: 800 !important;
+    }
+
+    [data-theme="contrast"] .btn-project-view svg {
+      color: #000000 !important;
+    }
+
+    .timeline-company-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      line-height: 1.25;
+    }
+
+    .timeline-company-link {
+      color: var(--text-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.15s ease;
+    }
+
+    .timeline-company-link:hover {
       color: var(--accent-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .timeline-company-link svg {
+      width: 12px;
+      height: 12px;
+      opacity: 0.6;
+      flex-shrink: 0;
     }
 
     /* Single Blue Button for specific OEE Live Web App */
@@ -1889,7 +1942,6 @@
             <div>
               <span class="theme-name">Classic Ivory</span>
               <span class="theme-tag-pill">Default</span>
-              <div class="theme-subtext">Ivory Print Broadsheet</div>
             </div>
           </div>
           <div class="theme-check-icon">
@@ -1904,7 +1956,6 @@
             </div>
             <div>
               <span class="theme-name">Dark Mode</span>
-              <div class="theme-subtext">Deep Obsidian Slate</div>
             </div>
           </div>
           <div class="theme-check-icon">
@@ -1919,7 +1970,6 @@
             </div>
             <div>
               <span class="theme-name">Light Mode</span>
-              <div class="theme-subtext">Clean Daylight Slate</div>
             </div>
           </div>
           <div class="theme-check-icon">
@@ -1934,7 +1984,6 @@
             </div>
             <div>
               <span class="theme-name">High Contrast</span>
-              <div class="theme-subtext">Pure Black &amp; Solar Gold</div>
             </div>
           </div>
           <div class="theme-check-icon">
@@ -2272,7 +2321,12 @@
             <!-- 1. Regional Supply & Demand Planning -->
             <div class="timeline-row color-tahweel">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Integrated Company (Tahweel Group)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">May 2026 – Present</span>
@@ -2323,7 +2377,12 @@
             <!-- 2. Inventory & Stock Planning -->
             <div class="timeline-row color-tahweel">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Integrated Company (Tahweel Group)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Feb 2026 – May 2026</span>
@@ -2365,7 +2424,12 @@
             <!-- 3. Material Planning Engineer -->
             <div class="timeline-row color-tahweel">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Tahweel Group</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Integrated Company (Tahweel Group)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">KSA &bull; Regional Remotely</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Mar 2025 – Feb 2026</span>
@@ -2407,7 +2471,12 @@
             <!-- 4. Production Planning Engineer -->
             <div class="timeline-row color-egic">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">EGIC</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.egic.com.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit EGIC (Egyptian German Industrial Corporate)">
+                    <span>EGIC (Egyptian German Industrial Corporate)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Egypt, Giza &bull; On-Site</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Jul 2024 – Mar 2025</span>
@@ -2455,7 +2524,12 @@
             <!-- 5. Export Planning Engineer -->
             <div class="timeline-row color-medical">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Q Medical Industries</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.qmedicalindustries.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Q Medical Industries Official Website">
+                    <span>Q Medical Industries</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Badr City, Cairo &bull; On-Site</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Sept 2023 – Jul 2024</span>
@@ -2493,7 +2567,12 @@
             <!-- 6. Dedicated Graduation Project Milestone -->
             <div class="timeline-row color-edu">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Zagazig University</div>
+                <div class="timeline-company-name">
+                  <a href="http://www.zu.edu.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Zagazig University Official Portal">
+                    <span>Zagazig University</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Graduation Project</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">2022 – 2023</span>
@@ -2536,7 +2615,12 @@
             <!-- 7. Academic Degree -->
             <div class="timeline-row color-edu">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Zagazig University</div>
+                <div class="timeline-company-name">
+                  <a href="http://www.zu.edu.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Zagazig University Official Portal">
+                    <span>Zagazig University</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Faculty of Engineering</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">2018 – 2023</span>
@@ -2573,13 +2657,23 @@
       <section id="training" class="section-chapter">
         <div class="container">
           
-          <div class="section-header">
-            <div class="section-tag">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-              Practical Field Experience
+          <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 14px;">
+            <div>
+              <div class="section-tag">
+                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                Practical Field Experience
+              </div>
+              <h2 class="section-title">Technical Training Timeline</h2>
+              <p class="section-desc">Field engineering training across global energy, construction, oil & gas, and industrial maintenance leaders.</p>
             </div>
-            <h2 class="section-title">Technical Training Timeline</h2>
-            <p class="section-desc">Field engineering training across global energy, construction, oil & gas, and industrial maintenance leaders.</p>
+
+            <div>
+              <!-- Standardized Button: View Certifications -->
+              <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="View All Certifications on Google Drive">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                <span>View Certifications</span>
+              </a>
+            </div>
           </div>
 
           <div class="timeline-wrapper">
@@ -2587,7 +2681,12 @@
             <!-- 1. Siemens Energy -->
             <div class="timeline-row color-siemens">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Siemens Energy</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.siemens-energy.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Siemens Energy Official Portal">
+                    <span>Siemens Energy</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">El-Ain El-Sokhna &bull; Training Center</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Feb 2023</span>
@@ -2622,7 +2721,12 @@
             <!-- 2. The Arab Contractors -->
             <div class="timeline-row color-arabcon">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">The Arab Contractors</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.arabcont.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Arab Contractors Official Portal">
+                    <span>The Arab Contractors</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">10th of Ramadan &bull; On-Site</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Oct 2022</span>
@@ -2661,7 +2765,12 @@
             <!-- 3. Egyptian Maintenance Company (EMC) -->
             <div class="timeline-row color-emc">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">EMC (Egyptian Maintenance Co.)</div>
+                <div class="timeline-company-name">
+                  <a href="http://www.emceg.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Egyptian Maintenance Company (EMC)">
+                    <span>EMC (San Masr)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Industrial Processes &bull; Online</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Sept 2022</span>
@@ -2697,7 +2806,12 @@
             <!-- 4. AUC — OSHA Safety -->
             <div class="timeline-row color-auc">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">AUC (American University in Cairo)</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.aucegypt.edu" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit American University in Cairo (AUC)">
+                    <span>AUC (American University in Cairo)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">OSHA Standards &bull; Online</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Sept 2021</span>
@@ -2729,7 +2843,12 @@
             <!-- 5. GASCO -->
             <div class="timeline-row color-gasco">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">GASCO (Egyptian Natural Gas)</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.gasco.com.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit GASCO Official Portal">
+                    <span>GASCO</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">10th of Ramadan &bull; On-Site</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Aug 2021</span>
@@ -2797,7 +2916,12 @@
             <!-- 1. English: Speak Up (Oct 2022) -->
             <div class="timeline-row color-siemens">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">Speak Up School</div>
+                <div class="timeline-company-name">
+                  <a href="https://speakupschool.com" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Speak Up Language School">
+                    <span>Speak Up School</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Language Center</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">Oct 2022</span>
@@ -2820,17 +2944,11 @@
                     Fluent cross-border English communication for global vendor negotiations, technical writing, and regional S&OP consensus meetings.
                   </li>
                 </ul>
-                <div class="skill-tags-flex" style="justify-content: space-between; margin-top: 10px;">
-                  <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                    <span class="tech-pill">B2 English</span>
-                    <span class="tech-pill">Level 10</span>
-                    <span class="tech-pill">Business Communication</span>
-                    <span class="tech-pill">Vendor Negotiations</span>
-                  </div>
-                  <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Certificate on Google Drive">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <span>View Certificate</span>
-                  </a>
+                <div class="skill-tags-flex" style="margin-top: 10px;">
+                  <span class="tech-pill">B2 English</span>
+                  <span class="tech-pill">Level 10</span>
+                  <span class="tech-pill">Business Communication</span>
+                  <span class="tech-pill">Vendor Negotiations</span>
                 </div>
               </div>
             </div>
@@ -2838,7 +2956,12 @@
             <!-- 2. Soft Skills: AUC (May 2022) -->
             <div class="timeline-row color-auc">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">AUC (American University in Cairo)</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.aucegypt.edu" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit American University in Cairo (AUC)">
+                    <span>AUC (American University in Cairo)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Professional Certificate</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">May 2022</span>
@@ -2861,17 +2984,11 @@
                     Mastered cross-functional team communication, time management, root-cause problem solving, and conflict resolution across operations.
                   </li>
                 </ul>
-                <div class="skill-tags-flex" style="justify-content: space-between; margin-top: 10px;">
-                  <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                    <span class="tech-pill">AUC Soft Skills</span>
-                    <span class="tech-pill">Leadership</span>
-                    <span class="tech-pill">Cross-Functional</span>
-                    <span class="tech-pill">Problem Solving</span>
-                  </div>
-                  <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Certificate on Google Drive">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <span>View Certificate</span>
-                  </a>
+                <div class="skill-tags-flex" style="margin-top: 10px;">
+                  <span class="tech-pill">AUC Soft Skills</span>
+                  <span class="tech-pill">Leadership</span>
+                  <span class="tech-pill">Cross-Functional</span>
+                  <span class="tech-pill">Problem Solving</span>
                 </div>
               </div>
             </div>
@@ -2879,7 +2996,12 @@
             <!-- 3. Technical Writing: AUC (May 2022) -->
             <div class="timeline-row color-auc">
               <div class="timeline-meta-left">
-                <div class="timeline-company-name">AUC (American University in Cairo)</div>
+                <div class="timeline-company-name">
+                  <a href="https://www.aucegypt.edu" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit American University in Cairo (AUC)">
+                    <span>AUC (American University in Cairo)</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
                 <div class="timeline-location-mode">Professional Certificate</div>
                 <div class="timeline-date-wrap">
                   <span class="timeline-date-pill">May 2022</span>
@@ -2902,17 +3024,11 @@
                     Streamlined communication protocols for executive stakeholders, operations directors, and non-technical cross-functional teams.
                   </li>
                 </ul>
-                <div class="skill-tags-flex" style="justify-content: space-between; margin-top: 10px;">
-                  <div style="display: flex; flex-wrap: wrap; gap: 6px;">
-                    <span class="tech-pill">Technical Writing</span>
-                    <span class="tech-pill">Executive Reporting</span>
-                    <span class="tech-pill">AUC</span>
-                    <span class="tech-pill">Engineering Documentation</span>
-                  </div>
-                  <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Certificate on Google Drive">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <span>View Certificate</span>
-                  </a>
+                <div class="skill-tags-flex" style="margin-top: 10px;">
+                  <span class="tech-pill">Technical Writing</span>
+                  <span class="tech-pill">Executive Reporting</span>
+                  <span class="tech-pill">AUC</span>
+                  <span class="tech-pill">Engineering Documentation</span>
                 </div>
               </div>
             </div>
@@ -2923,7 +3039,7 @@
       </section>
 
       <!-- ==========================================================================
-           STANDARDIZED REDESIGNED PROJECTS SECTION
+           STANDARDIZED REDESIGNED PROJECTS SECTION (CHRONOLOGICAL TIMELINE)
            ========================================================================== -->
       <section id="systems" class="section-chapter">
         <div id="projects" style="scroll-margin-top: 85px;"></div>
@@ -2936,7 +3052,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
                 Sequential Engineering Evolution
               </div>
-              <h2 class="section-title">Planning Systems, Engines & Projects</h2>
+              <h2 class="section-title">Planning Systems, Engines & Projects Timeline</h2>
               <p class="section-desc">Chronological sequence of proprietary mathematical engines, ERP automated frameworks, shop-floor OEE governance, and predictive time-series models engineered to eliminate planning latency.</p>
             </div>
             
@@ -2949,20 +3065,33 @@
             </div>
           </div>
 
-          <!-- STANDARDIZED PROJECT CARDS STACK -->
-          <div class="projects-stack-list">
+          <!-- STANDARDIZED PROJECT CHRONOLOGICAL TIMELINE -->
+          <div class="timeline-wrapper">
 
             <!-- PROJECT 1: Centralized BOM Explosion Engine -->
-            <div class="project-standard-card">
-              <div>
-                <div class="project-card-header">
-                  <div>
-                    <div class="project-tag">Phase 1 &bull; Master Data Hub &bull; Jul 2024 – Mar 2025</div>
-                    <h3 class="project-title">Centralized BOM Explosion Hub & Master Data Engine</h3>
-                  </div>
+            <div class="timeline-row color-egic">
+              <div class="timeline-meta-left">
+                <div class="timeline-company-name">
+                  <a href="https://www.egic.com.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit EGIC (Egyptian German Industrial Corporate)">
+                    <span>EGIC</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+                <div class="timeline-location-mode">Master Data &bull; BOM Hub</div>
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date-pill">Jul 2024 – Mar 2025</span>
+                  <span class="duration-badge">Phase 1</span>
+                </div>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Centralized BOM Explosion Hub & Master Data Engine</h3>
                   <span class="tech-pill">SAP PP/MM Hub</span>
                 </div>
-                <p class="project-desc">
+                <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 12px 0;">
                   Centralized BOM architecture executing multi-level raw material and semi-finished explosion for SAP PP/MM, slashing monthly forecast upload duration from 8 hours down to 15 seconds.
                 </p>
                 <div class="project-triple-grid">
@@ -2988,33 +3117,46 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="project-card-footer">
-                <div class="skill-tags-flex">
-                  <span class="tech-pill">SAP PP/MM</span>
-                  <span class="tech-pill">BOM Hub</span>
-                  <span class="tech-pill">Master Data</span>
-                  <span class="tech-pill">Automation</span>
+                <div class="project-card-footer">
+                  <div class="skill-tags-flex">
+                    <span class="tech-pill">SAP PP/MM</span>
+                    <span class="tech-pill">BOM Hub</span>
+                    <span class="tech-pill">Master Data</span>
+                    <span class="tech-pill">Automation</span>
+                  </div>
+                  <!-- Standard View Project Button -->
+                  <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>View Project</span>
+                  </a>
                 </div>
-                <!-- Standard View Project Button -->
-                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                  <span>View Project</span>
-                </a>
               </div>
             </div>
 
             <!-- PROJECT 2: Custom MRP Simulation Engine -->
-            <div class="project-standard-card">
-              <div>
-                <div class="project-card-header">
-                  <div>
-                    <div class="project-tag">Phase 2 &bull; Material Planning &bull; Mar 2025 – Feb 2026</div>
-                    <h3 class="project-title">Custom MRP Simulation & Multi-Echelon Run Engine</h3>
-                  </div>
+            <div class="timeline-row color-tahweel">
+              <div class="timeline-meta-left">
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Group</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+                <div class="timeline-location-mode">Material Planning &bull; Engine</div>
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date-pill">Mar 2025 – Feb 2026</span>
+                  <span class="duration-badge">Phase 2</span>
+                </div>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Custom MRP Simulation & Multi-Echelon Run Engine</h3>
                   <span class="tech-pill">SAR 380M+ Spend</span>
                 </div>
-                <p class="project-desc">
+                <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 12px 0;">
                   Designed a custom MRP engine that simulates SAP planning functions, integrating Safety Stock, Lead Time, Capacity, Batch Sizes, and MOQs for manufactured and trading goods.
                 </p>
                 <div class="project-triple-grid">
@@ -3040,34 +3182,47 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="project-card-footer">
-                <div class="skill-tags-flex">
-                  <span class="tech-pill">Custom MRP Run</span>
-                  <span class="tech-pill">EOH / SOH / DOH</span>
-                  <span class="tech-pill">SAP MM</span>
-                  <span class="tech-pill">MOQs</span>
-                  <span class="tech-pill">OTIF</span>
+                <div class="project-card-footer">
+                  <div class="skill-tags-flex">
+                    <span class="tech-pill">Custom MRP Run</span>
+                    <span class="tech-pill">EOH / SOH / DOH</span>
+                    <span class="tech-pill">SAP MM</span>
+                    <span class="tech-pill">MOQs</span>
+                    <span class="tech-pill">OTIF</span>
+                  </div>
+                  <!-- Standard View Project Button -->
+                  <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>View Project</span>
+                  </a>
                 </div>
-                <!-- Standard View Project Button -->
-                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                  <span>View Project</span>
-                </a>
               </div>
             </div>
 
             <!-- PROJECT 3: Dynamic DRP Multi-Node Matrix -->
-            <div class="project-standard-card">
-              <div>
-                <div class="project-card-header">
-                  <div>
-                    <div class="project-tag">Phase 3 &bull; Network &amp; Inventory Planning &bull; Feb 2026 – May 2026</div>
-                    <h3 class="project-title">Dynamic DRP Multi-Node Matrix & STO Tracking Engine</h3>
-                  </div>
-                  <span class="tech-pill">Logistics Overhead: -30%</span>
+            <div class="timeline-row color-arabcon">
+              <div class="timeline-meta-left">
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Group</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
                 </div>
-                <p class="project-desc">
+                <div class="timeline-location-mode">Regional Hubs &bull; DRP Matrix</div>
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date-pill">Feb 2026 – May 2026</span>
+                  <span class="duration-badge">Phase 3</span>
+                </div>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Dynamic DRP Multi-Node Matrix & STO Tracking Engine</h3>
+                  <span class="tech-pill">Logistics: -30%</span>
+                </div>
+                <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 12px 0;">
                   Distribution Requirements Planning matrix balancing multi-plant inventory across central warehouses and regional hubs based on lead times and SKU demand velocity.
                 </p>
                 <div class="project-triple-grid">
@@ -3093,33 +3248,46 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="project-card-footer">
-                <div class="skill-tags-flex">
-                  <span class="tech-pill">DRP Matrix</span>
-                  <span class="tech-pill">STO Tracking</span>
-                  <span class="tech-pill">Multi-Node</span>
-                  <span class="tech-pill">SLOB Control</span>
+                <div class="project-card-footer">
+                  <div class="skill-tags-flex">
+                    <span class="tech-pill">DRP Matrix</span>
+                    <span class="tech-pill">STO Tracking</span>
+                    <span class="tech-pill">Multi-Node</span>
+                    <span class="tech-pill">SLOB Control</span>
+                  </div>
+                  <!-- Standard View Project Button -->
+                  <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>View Project</span>
+                  </a>
                 </div>
-                <!-- Standard View Project Button -->
-                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                  <span>View Project</span>
-                </a>
               </div>
             </div>
 
             <!-- PROJECT 4: EGIC Manufacturing KPI & OEE Catalog (TWO BUTTONS: VIEW PROJECT + OPEN KPI WEB APP) -->
-            <div class="project-standard-card" style="border-left: 3px solid #0284c7;">
-              <div>
-                <div class="project-card-header">
-                  <div>
-                    <div class="project-tag" style="color: #0284c7;">Phase 4 &bull; Interactive Web Application &bull; Live Project</div>
-                    <h3 class="project-title">EGIC — Manufacturing KPI &amp; OEE Production Planning Catalog</h3>
-                  </div>
+            <div class="timeline-row color-medical">
+              <div class="timeline-meta-left">
+                <div class="timeline-company-name">
+                  <a href="https://www.egic.com.eg" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit EGIC (Egyptian German Industrial Corporate)">
+                    <span>EGIC</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+                <div class="timeline-location-mode">Shop-Floor &bull; Live Portal</div>
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date-pill">Jul 2024 – Present</span>
+                  <span class="duration-badge" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">Phase 4 &bull; Live</span>
+                </div>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right" style="border-left: 3px solid #0284c7;">
+                <div class="timeline-card-header">
+                  <h3 class="role-title">EGIC — Manufacturing KPI &amp; OEE Production Planning Catalog</h3>
                   <span class="tech-pill" style="color: #0284c7;">Live Web Portal</span>
                 </div>
-                <p class="project-desc">
+                <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 12px 0;">
                   A comprehensive digital manufacturing system developed to govern <strong>Overall Equipment Effectiveness (OEE)</strong>, shop-floor work center throughput, downtime classification, and production planning KPIs.
                 </p>
                 <div class="project-triple-grid">
@@ -3148,41 +3316,54 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="project-card-footer">
-                <div class="skill-tags-flex">
-                  <span class="tech-pill">OEE KPI Catalog</span>
-                  <span class="tech-pill">18-Mo Rolling MPS</span>
-                  <span class="tech-pill">RCCP Matrix</span>
-                  <span class="tech-pill">EGIC Production</span>
-                  <span class="tech-pill">SAP PP</span>
-                </div>
-                <!-- Two Action Buttons Side-by-Side: View Project + Launch KPI Web App -->
-                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
-                  <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details on Google Drive">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                    <span>View Project</span>
-                  </a>
+                <div class="project-card-footer">
+                  <div class="skill-tags-flex">
+                    <span class="tech-pill">OEE KPI Catalog</span>
+                    <span class="tech-pill">18-Mo Rolling MPS</span>
+                    <span class="tech-pill">RCCP Matrix</span>
+                    <span class="tech-pill">EGIC Production</span>
+                    <span class="tech-pill">SAP PP</span>
+                  </div>
+                  <!-- Two Action Buttons Side-by-Side: View Project + Launch KPI Web App -->
+                  <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                    <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details on Google Drive">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                      <span>View Project</span>
+                    </a>
 
-                  <a data-link="oeeCatalog" href="https://mostafa007s.github.io/OEE/" target="_blank" rel="noopener noreferrer" class="btn-project-live-blue" title="Open Live KPI Web Application">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                    <span>Launch Web App ↗</span>
-                  </a>
+                    <a data-link="oeeCatalog" href="https://mostafa007s.github.io/OEE/" target="_blank" rel="noopener noreferrer" class="btn-project-live-blue" title="Open Live KPI Web Application">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                      <span>Launch Web App ↗</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
             <!-- PROJECT 5: Autonomous S&OP AI Demand Forecasting Platform -->
-            <div class="project-standard-card">
-              <div>
-                <div class="project-card-header">
-                  <div>
-                    <div class="project-tag">Phase 5 &bull; AI Time-Series Forecasting &bull; May 2026 – Present</div>
-                    <h3 class="project-title">Autonomous S&OP Demand Forecasting Platform & Risk Simulator</h3>
-                  </div>
+            <div class="timeline-row color-emc">
+              <div class="timeline-meta-left">
+                <div class="timeline-company-name">
+                  <a href="https://www.linkedin.com/company/tahweel-integrated-company/" target="_blank" rel="noopener noreferrer" class="timeline-company-link" title="Visit Tahweel Integrated Company (Tahweel Group)">
+                    <span>Tahweel Group</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+                <div class="timeline-location-mode">S&OP Consensus &bull; AI Platform</div>
+                <div class="timeline-date-wrap">
+                  <span class="timeline-date-pill">May 2026 – Present</span>
+                  <span class="duration-badge">Phase 5</span>
+                </div>
+              </div>
+              <div class="timeline-node-col">
+                <div class="timeline-node-dot"></div>
+              </div>
+              <div class="timeline-card-right">
+                <div class="timeline-card-header">
+                  <h3 class="role-title">Autonomous S&OP Demand Forecasting Platform & Risk Simulator</h3>
                   <span class="tech-pill">Cycle Time: -85%</span>
                 </div>
-                <p class="project-desc">
+                <p style="font-size: 0.90rem; color: var(--text-secondary); line-height: 1.6; margin: 8px 0 12px 0;">
                   An end-to-end predictive intelligence platform engineered in Python, KNIME, and RapidMiner. Automates multi-plant SKU demand forecasting, stripping noise via Kalman filtering, selecting optimal models via tournament cross-validation, and governing S&OP consensus.
                 </p>
                 <div class="project-triple-grid">
@@ -3211,22 +3392,22 @@
                     </ul>
                   </div>
                 </div>
-              </div>
-              <div class="project-card-footer">
-                <div class="skill-tags-flex">
-                  <span class="tech-pill">TimeFM 2</span>
-                  <span class="tech-pill">DeepAR</span>
-                  <span class="tech-pill">PatchTST</span>
-                  <span class="tech-pill">Croston 2</span>
-                  <span class="tech-pill">Kalman Filter</span>
-                  <span class="tech-pill">Monte Carlo</span>
-                  <span class="tech-pill">WAPE / MAPE</span>
+                <div class="project-card-footer">
+                  <div class="skill-tags-flex">
+                    <span class="tech-pill">TimeFM 2</span>
+                    <span class="tech-pill">DeepAR</span>
+                    <span class="tech-pill">PatchTST</span>
+                    <span class="tech-pill">Croston 2</span>
+                    <span class="tech-pill">Kalman Filter</span>
+                    <span class="tech-pill">Monte Carlo</span>
+                    <span class="tech-pill">WAPE / MAPE</span>
+                  </div>
+                  <!-- Standard View Project Button -->
+                  <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                    <span>View Project</span>
+                  </a>
                 </div>
-                <!-- Standard View Project Button -->
-                <a data-link="projects" href="https://drive.google.com/drive/folders/1VmeMhtby7L_rXXFHlDFiNfFROcQY2GVd?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-project-view" title="View Project Details">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                  <span>View Project</span>
-                </a>
               </div>
             </div>
 
@@ -3239,23 +3420,13 @@
       <section id="credentials" class="section-chapter">
         <div class="container">
           
-          <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 14px;">
-            <div>
-              <div class="section-tag">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
-                Certifications & Endorsements
-              </div>
-              <h2 class="section-title">Certifications & Recommendation Letters</h2>
-              <p class="section-desc">Official verification documents, accredited industry certifications, and executive letters of recommendation from senior leadership.</p>
+          <div class="section-header">
+            <div class="section-tag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              Certifications & Endorsements
             </div>
-
-            <div>
-              <!-- Standardized Button: View Certifications -->
-              <a data-link="certifications" href="https://drive.google.com/drive/folders/15SgJRogJiKIn3afwyzTjZq5wUvEAlqt0?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Show All Certifications on Google Drive">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                <span>View Certifications</span>
-              </a>
-            </div>
+            <h2 class="section-title">Certifications & Recommendation Letters</h2>
+            <p class="section-desc">Official verification documents, accredited industry certifications, and executive letters of recommendation from senior leadership.</p>
           </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; width: 100%;">
