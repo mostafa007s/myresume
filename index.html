@@ -884,8 +884,9 @@
       flex-shrink: 0;
     }
 
-    /* Single Blue Button for specific OEE Live Web App */
-    .btn-project-live-blue {
+    /* Unified Black Pill Button for OEE Live Web App (Matches View Project button) */
+    .btn-project-live-blue,
+    .btn-project-live {
       display: inline-flex;
       align-items: center;
       gap: 6px;
@@ -894,23 +895,65 @@
       font-family: var(--font-body);
       font-size: 0.80rem;
       font-weight: 700;
-      background: #0284c7;
+      background: #0f172a;
       color: #ffffff !important;
-      border: 1px solid #0284c7;
+      border: 1px solid #0f172a;
       text-decoration: none;
       transition: var(--transition-smooth);
-      box-shadow: var(--shadow-sm);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
     }
 
-    .btn-project-live-blue svg {
+    .btn-project-live-blue svg,
+    .btn-project-live svg {
       width: 14px;
       height: 14px;
       color: #ffffff;
+      flex-shrink: 0;
     }
 
-    .btn-project-live-blue:hover {
-      background: #0369a1;
-      border-color: #0369a1;
+    .btn-project-live-blue:hover,
+    .btn-project-live:hover {
+      background: #1e293b;
+      border-color: #1e293b;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    [data-theme="warm"] .btn-project-live-blue,
+    [data-theme="classic"] .btn-project-live-blue {
+      background: #1c1917 !important;
+      color: #ffffff !important;
+      border-color: #1c1917 !important;
+      box-shadow: 0 2px 6px rgba(28, 25, 23, 0.20) !important;
+    }
+
+    [data-theme="warm"] .btn-project-live-blue:hover,
+    [data-theme="classic"] .btn-project-live-blue:hover {
+      background: #292524 !important;
+      border-color: #292524 !important;
+      box-shadow: 0 4px 10px rgba(28, 25, 23, 0.30) !important;
+    }
+
+    [data-theme="dark"] .btn-project-live-blue {
+      background: #ffffff !important;
+      color: #0f172a !important;
+      border-color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .btn-project-live-blue svg {
+      color: #0f172a !important;
+    }
+
+    [data-theme="dark"] .btn-project-live-blue:hover {
+      background: #f1f5f9 !important;
+      border-color: #f1f5f9 !important;
+    }
+
+    [data-theme="contrast"] .btn-project-live-blue {
+      background: #000000 !important;
+      color: #ffffff !important;
+      border: 2px solid #000000 !important;
     }
 
     .btn-icon {
@@ -2093,6 +2136,230 @@
       border-color: var(--accent-primary) !important;
       color: #ffffff !important;
     }
+  
+    
+    /* Mobile Navigation Dropdown */
+    /* Unified Menu Action */
+
+    @media (max-width: 992px) {
+      .mobile-menu-toggle {
+        display: inline-flex !important;
+      }
+    }
+
+    body.mobile-view-active .mobile-menu-toggle {
+      display: inline-flex !important;
+    }
+
+    .mobile-nav-dropdown {
+      display: none;
+      position: fixed;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 380px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-active);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.25);
+      z-index: 9999;
+      padding: 14px 16px;
+      backdrop-filter: blur(16px);
+      animation: modalFadeIn 0.2s ease-out forwards;
+    }
+
+    .mobile-nav-dropdown.show {
+      display: block;
+    }
+
+    .mobile-nav-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--text-primary);
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+    }
+
+    .mobile-nav-list a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface-elevated);
+      transition: all 0.2s ease;
+    }
+
+    .mobile-nav-list a:hover,
+    .mobile-nav-list a.active {
+      background: var(--accent-primary);
+      color: #ffffff;
+    }
+
+    .mobile-nav-list a svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    
+    
+    /* Fixed Bottom-Right Floating Exit Button for Mobile Mode */
+    .mobile-float-exit-btn {
+      display: none;
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999999;
+      background: rgba(15, 23, 42, 0.92);
+      color: #ffffff !important;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 11px 22px;
+      border-radius: var(--radius-pill);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(16px);
+      cursor: pointer;
+      align-items: center;
+      gap: 9px;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-float-exit-btn:hover {
+      background: #0284c7;
+      border-color: #38bdf8;
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 16px 40px rgba(2, 132, 199, 0.5);
+    }
+
+    .mobile-float-exit-btn svg {
+      width: 15px;
+      height: 15px;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    body.mobile-view-active .mobile-float-exit-btn {
+      display: inline-flex !important;
+      animation: modalFadeIn 0.3s ease-out forwards;
+    }
+
+    /* Modernized Floating Exit Button for Mobile Simulator */
+    .mobile-sim-exit-btn {
+      display: none;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.90);
+      color: #ffffff !important;
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 9px 20px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(14px);
+      cursor: pointer;
+      margin: 0 auto 16px auto;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-sim-exit-btn:hover {
+      background: #0284c7;
+      border-color: #38bdf8;
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(2, 132, 199, 0.45);
+    }
+
+    .mobile-sim-exit-btn svg {
+      width: 15px;
+      height: 15px;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    body.mobile-view-active {
+      background: #0b0f19 !important;
+      padding: 24px 12px 60px 12px !important;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    body.mobile-view-active .mobile-sim-exit-btn {
+      display: inline-flex !important;
+    }
+
+    body.mobile-view-active .app-wrapper {
+      max-width: 440px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      border-radius: 32px !important;
+      border: 2px solid rgba(255, 255, 255, 0.14) !important;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7) !important;
+      overflow-x: hidden !important;
+      background: var(--bg-surface) !important;
+      position: relative !important;
+    }
+
+    /* Keep Top Bar Nav Actions in the Exact Same Horizontal Line */
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .nav-actions .btn-icon {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-surface-elevated);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .nav-actions .btn-icon:hover {
+      background: var(--bg-card);
+      color: var(--accent-primary);
+      border-color: var(--accent-primary);
+      transform: translateY(-1px);
+    }
+
+    .nav-actions .btn-icon.active {
+      background: var(--accent-primary) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-primary) !important;
+    }
+
+
+
   </style>
 </head>
 <body>
@@ -2140,10 +2407,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
       </button>
 
-      <div style="margin-bottom: 14px; text-align: left;">
-        <div style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.70rem; font-weight: 700; text-transform: uppercase; color: var(--accent-primary); background: var(--bg-surface-elevated); padding: 2px 8px; border-radius: var(--radius-pill); margin-bottom: 4px;">
-          Display Theme
-        </div>
+      <div style="margin-bottom: 12px; text-align: left;">
         <h2 style="font-size: 1.18rem; font-weight: 800; color: var(--text-primary); margin: 0;" id="themeModalTitle">Select Visual Theme</h2>
       </div>
 
@@ -2206,11 +2470,54 @@
         </button>
       </div>
 
-      <div style="display: flex; width: 100%;">
+      <!-- Viewport Device Switcher inside Popup Window -->
+      <div style="margin: 18px 0 10px 0; text-align: left;">
+        <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary); margin: 0;" id="viewportTitle">Display Layout</h3>
+      </div>
+
+      <div class="theme-options-grid" style="margin-bottom: 16px;">
+        <button type="button" class="theme-card-option view-mode-btn active" id="viewModeDesktop" data-set-view="desktop">
+          <div class="theme-option-left">
+            <div class="theme-option-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+            </div>
+            <div>
+              <span class="theme-name">Desktop View</span>
+              <span class="theme-tag-pill">Full Width</span>
+            </div>
+          </div>
+          <div class="theme-check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </button>
+
+        <button type="button" class="theme-card-option view-mode-btn" id="viewModeMobile" data-set-view="mobile">
+          <div class="theme-option-left">
+            <div class="theme-option-icon" style="color: var(--accent-primary);">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+            </div>
+            <div>
+              <span class="theme-name">Mobile View</span>
+              <span class="theme-tag-pill">Simulator</span>
+            </div>
+          </div>
+          <div class="theme-check-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+        </button>
+      </div>
+      <div style="display: flex; width: 100%; margin-top: 18px;">
         <button type="button" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 9px 18px; font-size: 0.88rem; border-radius: var(--radius-pill);" id="themeModalConfirm" onclick="closeThemeModal()">Done</button>
       </div>
     </div>
   </div>
+
+    <!-- Modern Floating Exit Pill for Mobile Simulator -->
+  <button type="button" class="mobile-sim-exit-btn" id="mobileSimExitBtn" onclick="toggleMobileView(false)">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+    <span>Exit Mobile View (Return to Desktop)</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+  </button>
 
   <div class="app-wrapper">
 
@@ -2240,16 +2547,38 @@
         </ul>
 
         <div class="nav-actions">
-          <button class="btn btn-icon" id="themeToggle" title="Toggle Theme" aria-label="Toggle Theme">
+          <button class="btn btn-icon" id="themeToggle" title="Theme & Display Settings" aria-label="Theme & Display Settings" onclick="openThemeModal()">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
-              <path d="M6 6h10"></path>
-              <path d="M6 10h10"></path>
+              <line x1="4" x2="20" y1="12" y2="12"/>
+              <line x1="4" x2="20" y1="6" y2="6"/>
+              <line x1="4" x2="20" y1="18" y2="18"/>
             </svg>
           </button>
         </div>
       </nav>
     </header>
+    <!-- Mobile Slide-Down Navigation Menu -->
+    <div id="mobileNavDropdown" class="mobile-nav-dropdown">
+      <div class="mobile-nav-header">
+        <span>Quick Navigation</span>
+        <button type="button" class="btn-icon" id="closeMobileNavBtn" style="width: 24px; height: 24px; border: none; background: transparent; cursor: pointer;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#overview" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg> Overview</a></li>
+        <li><a href="#personal-info" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="#experience" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Experience</a></li>
+        <li><a href="#training" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Training</a></li>
+        <li><a href="#courses" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg> Courses</a></li>
+        <li><a href="#systems" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg> Projects</a></li>
+        <li><a href="#credentials" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Credentials</a></li>
+        <li><a href="#skills" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> Skills</a></li>
+        <li><a href="#cover-letter" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg> Cover Letter</a></li>
+        <li><a href="#contact" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Contact</a></li>
+      </ul>
+    </div>
+
 
     <main>
 
@@ -4121,12 +4450,9 @@
     const themeBtn = document.getElementById('themeToggle');
 
     if (themeBtn) {
-      themeBtn.addEventListener('click', () => {
-        currentThemeIndex = (currentThemeIndex + 1) % themes.length;
-        const nextTheme = themes[currentThemeIndex];
-        document.documentElement.setAttribute('data-theme', nextTheme.id);
-        themeBtn.innerHTML = nextTheme.iconSvg;
-        showToast(`Switched to ${nextTheme.label} Theme`);
+      themeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openThemeModal();
       });
     }
 
@@ -4298,10 +4624,15 @@
       });
     });
 
+        // Theme Modal Controls
     const themeModalOverlay = document.getElementById('themeModalOverlay');
     const themeModalClose = document.getElementById('themeModalClose');
     const themeModalConfirm = document.getElementById('themeModalConfirm');
-    const themeOptionBtns = document.querySelectorAll('.theme-card-option');
+    const themeOptionBtns = document.querySelectorAll('.theme-card-option[data-set-theme]');
+    const viewModeDesktopBtn = document.getElementById('viewModeDesktop');
+    const viewModeMobileBtn = document.getElementById('viewModeMobile');
+    const mobileToggleBtn = document.getElementById('mobileViewToggle');
+    const mobileSimExitBtn = document.getElementById('mobileSimExitBtn');
 
     function updateActiveThemeCard(themeId) {
       themeOptionBtns.forEach(btn => {
@@ -4318,6 +4649,18 @@
       if (!overlay) return;
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'classic';
       updateActiveThemeCard(currentTheme);
+      
+      const isCurrentlyMobile = document.body.classList.contains('mobile-view-active');
+      if (viewModeMobileBtn && viewModeDesktopBtn) {
+        if (isCurrentlyMobile) {
+          viewModeMobileBtn.classList.add('active');
+          viewModeDesktopBtn.classList.remove('active');
+        } else {
+          viewModeDesktopBtn.classList.add('active');
+          viewModeMobileBtn.classList.remove('active');
+        }
+      }
+      
       overlay.style.display = 'flex';
       void overlay.offsetWidth;
       overlay.classList.add('show');
@@ -4345,14 +4688,117 @@
           if (themeIndex !== -1) {
             currentThemeIndex = themeIndex;
             const themeObj = themes[currentThemeIndex];
-            if (themeBtn && themeObj) {
-              themeBtn.innerHTML = themeObj.iconSvg;
-            }
+            // keep menu icon intact
             showToast(`Switched to ${themeObj.label} Theme`);
           }
         }
       });
     });
+
+    // Mobile View Toggle Implementation
+    function updateViewModeUI(isMobile) {
+      const mToggle = document.getElementById('mobileViewToggle');
+      const vDesktop = document.getElementById('viewModeDesktop');
+      const vMobile = document.getElementById('viewModeMobile');
+
+      if (isMobile) {
+        document.body.classList.add('mobile-view-active');
+        if (mToggle) mToggle.classList.add('active');
+        if (vMobile) vMobile.classList.add('active');
+        if (vDesktop) vDesktop.classList.remove('active');
+      } else {
+        document.body.classList.remove('mobile-view-active');
+        if (mToggle) mToggle.classList.remove('active');
+        if (vMobile) vMobile.classList.remove('active');
+        if (vDesktop) vDesktop.classList.add('active');
+      }
+    }
+
+    function toggleMobileView(forceState) {
+      const isCurrentlyMobile = document.body.classList.contains('mobile-view-active');
+      const newState = typeof forceState === 'boolean' ? forceState : !isCurrentlyMobile;
+      updateViewModeUI(newState);
+      localStorage.setItem('portfolio_view_mode', newState ? 'mobile' : 'desktop');
+      showToast(newState ? '📱 Mobile View Simulator Activated' : '🖥️ Desktop View Restored');
+    }
+
+    if (mobileToggleBtn) {
+      mobileToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMobileView();
+      });
+    }
+
+    if (mobileSimExitBtn) {
+      mobileSimExitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMobileView(false);
+      });
+    }
+
+    if (viewModeDesktopBtn) {
+      viewModeDesktopBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMobileView(false);
+      });
+    }
+
+    if (viewModeMobileBtn) {
+      viewModeMobileBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleMobileView(true);
+      });
+    }
+
+    
+    // Mobile Nav Drawer Toggle Logic
+    const mobileNavToggle = document.getElementById('mobileNavToggle');
+    const mobileNavDropdown = document.getElementById('mobileNavDropdown');
+    const closeMobileNavBtn = document.getElementById('closeMobileNavBtn');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function closeMobileNav() {
+      if (mobileNavDropdown) mobileNavDropdown.classList.remove('show');
+    }
+
+    function toggleMobileNav() {
+      if (mobileNavDropdown) mobileNavDropdown.classList.toggle('show');
+    }
+
+    if (mobileNavToggle) {
+      mobileNavToggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleMobileNav();
+      });
+    }
+
+    if (closeMobileNavBtn) {
+      closeMobileNavBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        closeMobileNav();
+      });
+    }
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMobileNav();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (mobileNavDropdown && mobileNavDropdown.classList.contains('show')) {
+        if (!mobileNavDropdown.contains(e.target) && e.target !== mobileNavToggle && !mobileNavToggle.contains(e.target)) {
+          closeMobileNav();
+        }
+      }
+    });
+
+    // Restore saved view mode preference
+    const savedViewMode = localStorage.getItem('portfolio_view_mode');
+    if (savedViewMode === 'mobile') {
+      updateViewModeUI(true);
+    }
 
     if (themeModalClose) themeModalClose.addEventListener('click', closeThemeModal);
     if (themeModalConfirm) themeModalConfirm.addEventListener('click', closeThemeModal);
@@ -4362,5 +4808,12 @@
       });
     }
   </script>
+  <!-- Fixed Bottom-Right Floating Exit Button for Mobile View -->
+  <button type="button" class="mobile-float-exit-btn" id="mobileFloatExitBtn" onclick="toggleMobileView(false)" title="Exit Mobile Mode (Return to Desktop)">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+    <span>Exit Mobile Mode</span>
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+  </button>
+
 </body>
 </html>
