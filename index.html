@@ -15,10 +15,386 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- GSAP CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  
 
   <style>
+
+            /* ==========================================================================
+       HERO COMPACT 1-ROW KEYWORD CHIPS & PROFESSIONAL SUMMARY CARD
+       ========================================================================== */
+    .hero-competencies-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin: 14px 0 24px 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 4px 0 6px 0 !important;
+      overflow: visible !important;
+    }
+
+    .hero-competencies-row {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      width: 100% !important;
+      gap: 6px;
+      box-sizing: border-box !important;
+      overflow: visible !important;
+    }
+
+    .competency-chip-compact {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      padding: 7px 9px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-primary);
+      font-size: 0.725rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      text-decoration: none;
+      transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      box-sizing: border-box !important;
+      flex: 1 1 auto;
+      min-width: max-content;
+      text-align: center;
+      position: relative;
+    }
+
+    .competency-chip-compact span {
+      white-space: nowrap;
+      overflow: visible;
+    }
+
+    .competency-chip-compact:hover {
+      border-color: var(--accent-primary);
+      background: var(--bg-surface-elevated);
+      color: var(--text-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px var(--accent-glow);
+      z-index: 10;
+    }
+
+    .competency-chip-compact svg {
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    /* Executive Professional Summary Card */
+    .hero-summary-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--accent-primary);
+      border-radius: var(--radius-md, 12px);
+      padding: 22px 26px;
+      margin: 0 0 26px 0;
+      width: 100% !important;
+      max-width: 100% !important;
+      box-sizing: border-box;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .hero-summary-header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 9px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-primary);
+    }
+
+    .hero-summary-text {
+      font-size: clamp(0.88rem, 2vw, 0.94rem);
+      line-height: 1.88 !important;
+      color: var(--text-secondary);
+      margin: 0;
+      text-align: left;
+      letter-spacing: 0.01em;
+    }
+
+    .hero-summary-text strong,
+    .hero-summary-text .highlight-accent {
+      color: var(--accent-primary);
+      font-weight: 700;
+    }
+
+    .hero-summary-text .highlight-bold {
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+        /* ==========================================================================
+       HERO NAME & CTA ACTIONS ROW (EXACT SAME VERTICAL LEVEL)
+       ========================================================================== */
+    /* Hero Header Block (Name, Actions & Subtitle) */
+    .hero-header-block {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto;
+      align-items: center;
+      width: 100%;
+      margin: 4px 0 0 0;
+      gap: 4px 16px;
+    }
+
+    .hero-header-block .hero-name {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    .hero-header-block .hero-header-actions {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-self: end;
+    }
+
+    .hero-header-block .hero-header-actions .btn {
+      padding: 6px 11px;
+      font-size: 0.77rem;
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      white-space: nowrap;
+      gap: 5px;
+    }
+
+    .hero-header-block .hero-role-title {
+      grid-column: 1 / 3;
+      grid-row: 2 / 3;
+      margin-top: 2px;
+      margin-bottom: 14px;
+    }
+
+        
+    /* ==========================================================================
+       THEME & VIEW SWITCHER INTERACTIVE CALLOUT HINT
+       ========================================================================== */
+    .nav-actions {
+      position: relative !important;
+    }
+
+    .theme-callout-hint {
+      position: absolute;
+      top: calc(100% + 14px);
+      right: -2px;
+      z-index: 9999999 !important;
+      background: var(--bg-surface-elevated, #ffffff);
+      border: 1.5px solid var(--accent-primary);
+      border-radius: var(--radius-pill, 9999px);
+      box-shadow: 0 10px 30px var(--accent-glow), 0 4px 14px rgba(0, 0, 0, 0.16);
+      padding: 6px 12px 6px 14px;
+      white-space: nowrap;
+      cursor: pointer;
+      display: none;
+      opacity: 0;
+      transform: translateY(-8px) scale(0.95);
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      animation: callout-pulse 3s infinite ease-in-out;
+    }
+
+    .theme-callout-hint.show {
+      display: flex !important;
+      align-items: center;
+      opacity: 1 !important;
+      transform: translateY(0) scale(1) !important;
+      pointer-events: auto !important;
+    }
+
+    .callout-arrow {
+      position: absolute;
+      top: -6px;
+      right: 14px;
+      width: 10px;
+      height: 10px;
+      background: var(--bg-surface-elevated, #ffffff);
+      border-top: 1.5px solid var(--accent-primary);
+      border-left: 1.5px solid var(--accent-primary);
+      transform: rotate(45deg);
+    }
+
+    .callout-content {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .callout-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent-primary);
+      animation: callout-wiggle 2.5s infinite ease-in-out;
+    }
+
+    .callout-icon svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--accent-primary);
+    }
+
+    .callout-text {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .callout-close-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1;
+      cursor: pointer;
+      padding: 0 2px 0 4px;
+      font-family: inherit;
+      transition: color 0.15s ease;
+    }
+
+    .callout-close-btn:hover {
+      color: var(--accent-primary);
+    }
+
+    @keyframes callout-pulse {
+      0%, 100% { box-shadow: 0 8px 24px var(--accent-glow), 0 4px 12px rgba(0, 0, 0, 0.12); }
+      50% { box-shadow: 0 10px 30px var(--accent-glow), 0 0 0 3px var(--accent-glow); }
+    }
+
+    @keyframes callout-wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+    }
+
+    
+    /* ==========================================================================
+       PROGRESSIVE SCROLL REVEAL (EXECUTIVE JOURNEY ANIMATION)
+       ========================================================================== */
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .scroll-reveal.revealed {
+      opacity: 1 !important;
+      transform: translateY(0) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .scroll-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+    }
+
+    /* ==========================================================================
+       SECTION CONTAINERS: LUXURIOUS BREATHABLE SPACING
+       ========================================================================== */
+    .section-chapter {
+      margin-bottom: 38px !important;
+      padding-top: 75px !important;
+      padding-bottom: 0 !important;
+      scroll-margin-top: 85px;
+    }
+
+    #contact.section-chapter {
+      margin-top: 28px !important;
+      margin-bottom: 48px !important;
+      padding-top: 20px !important;
+    }
+
+    .cover-letter-card {
+      margin-bottom: 24px;
+    }
+
+    .contact-terminal {
+      margin-top: 14px;
+      box-shadow: var(--shadow-sm);
+    }
+
+        /* ==========================================================================
+       LUXURY INTERACTIVE CONTAINER HOVER EFFECTS
+       ========================================================================== */
+    .hero-summary-card,
+    .cover-letter-card,
+    .contact-terminal,
+    .kpi-card,
+    .experience-card,
+    .system-card,
+    .credential-card,
+    .course-category-card {
+      transition: border-color 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .hero-summary-card:hover {
+      border-color: var(--accent-primary) !important;
+      border-left-color: var(--accent-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--accent-glow), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .cover-letter-card:hover {
+      border-color: var(--accent-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--accent-glow), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .contact-terminal:hover {
+      border-color: var(--accent-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--accent-glow), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .kpi-card:hover {
+      border-color: var(--accent-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px var(--accent-glow), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .experience-card:hover,
+    .system-card:hover,
+    .credential-card:hover,
+    .course-category-card:hover {
+      border-color: var(--accent-primary) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px var(--accent-glow), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    
+    /* Smooth Hover Background & Elevation for all containers */
+    .cover-letter-card:hover,
+    .contact-terminal:hover,
+    .hero-summary-card:hover {
+      background: var(--bg-surface-elevated, #ffffff) !important;
+      border-color: var(--accent-primary, #854d0e) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 24px var(--accent-glow, rgba(40, 30, 20, 0.08)) !important;
+    }
 
     /* ==========================================================================
        1. STANDARDIZED EXECUTIVE DESIGN TOKENS (5 LUXURY THEMES)
@@ -66,6 +442,17 @@
       --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.35);
 
       --transition-smooth: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+
+      /* Theme Color Family Tokens: Executive Cobalt/Azure Spectrum */
+      --color-tahweel: #0284c7;
+      --color-egic: #2563eb;
+      --color-qmed: #0ea5e9;
+      --color-edu: #38bdf8;
+      --color-siemens: #0284c7;
+      --color-arabcon: #1d4ed8;
+      --color-emc: #0369a1;
+      --color-auc: #2563eb;
+      --color-gasco: #0ea5e9;
     }
 
     [data-theme="warm"],
@@ -95,7 +482,16 @@
       --accent-whatsapp-hover: #166534;
 
       --shadow-sm: 0 1px 4px rgba(40, 30, 20, 0.05);
-      --shadow-md: 0 6px 20px rgba(40, 30, 20, 0.08);
+            /* Theme Color Family Tokens: Editorial Warm Amber/Bronze Spectrum */
+      --color-tahweel: #854d0e;
+      --color-egic: #78350f;
+      --color-qmed: #9a3412;
+      --color-edu: #a16207;
+      --color-siemens: #713f12;
+      --color-arabcon: #92400e;
+      --color-emc: #b45309;
+      --color-auc: #78350f;
+      --color-gasco: #854d0e;
     }
 
     [data-theme="light"] {
@@ -124,7 +520,16 @@
       --accent-whatsapp-hover: #15803d;
 
       --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
+            /* Theme Color Family Tokens: Clean Slate Navy Spectrum */
+      --color-tahweel: #0284c7;
+      --color-egic: #1d4ed8;
+      --color-qmed: #0369a1;
+      --color-edu: #2563eb;
+      --color-siemens: #0284c7;
+      --color-arabcon: #1e40af;
+      --color-emc: #0369a1;
+      --color-auc: #1d4ed8;
+      --color-gasco: #0284c7;
     }
 
     [data-theme="contrast"] {
@@ -153,7 +558,16 @@
       --accent-whatsapp-hover: #16a34a;
 
       --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.8);
-      --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.9);
+            /* Theme Color Family Tokens: Solar Gold Spectrum */
+      --color-tahweel: #facc15;
+      --color-egic: #eab308;
+      --color-qmed: #fde047;
+      --color-edu: #fef08a;
+      --color-siemens: #facc15;
+      --color-arabcon: #ca8a04;
+      --color-emc: #eab308;
+      --color-auc: #facc15;
+      --color-gasco: #fde047;
     }
 
     /* THEME OVERRIDES FOR CARDS & MODULES */
@@ -172,6 +586,7 @@
     [data-theme="warm"] .contact-terminal,
     [data-theme="classic"] .contact-terminal {
       background: #fbf8f1 !important;
+      border-top: 3px solid var(--accent-primary);
       border: 1.5px solid rgba(60, 45, 30, 0.12) !important;
       box-shadow: 0 1px 4px rgba(40, 30, 20, 0.04) !important;
     }
@@ -185,7 +600,13 @@
     [data-theme="warm"] .project-standard-card:hover,
     [data-theme="classic"] .project-standard-card:hover,
     [data-theme="warm"] .skill-group-card:hover,
-    [data-theme="classic"] .skill-group-card:hover {
+    [data-theme="classic"] .skill-group-card:hover,
+    [data-theme="warm"] .cover-letter-card:hover,
+    [data-theme="classic"] .cover-letter-card:hover,
+    [data-theme="warm"] .contact-terminal:hover,
+    [data-theme="classic"] .contact-terminal:hover,
+    [data-theme="warm"] .hero-summary-card:hover,
+    [data-theme="classic"] .hero-summary-card:hover {
       background: #ffffff !important;
       border-color: #854d0e !important;
       box-shadow: 0 4px 14px rgba(40, 30, 20, 0.08) !important;
@@ -202,7 +623,7 @@
     [data-theme="warm"] .timeline-node-dot,
     [data-theme="classic"] .timeline-node-dot {
       background: #fbf8f1;
-      border-color: #854d0e;
+      border-color: var(--node-color, #854d0e);
     }
 
     [data-theme="warm"] .timeline-date-pill,
@@ -439,80 +860,8 @@
       display: inline-block !important;
     }
 
-    /* ==========================================================================
-       PAGE LOADER OVERLAY (FIXED & HIGH Z-INDEX)
-       ========================================================================== */
-    .page-loader {
-      position: fixed !important;
-      inset: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      z-index: 999999 !important;
-      background-color: var(--bg-base) !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      transition: opacity 0.35s ease, visibility 0.35s ease !important;
-    }
-
-    .page-loader.hidden {
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-
-    .loader-card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 14px;
-      padding: 24px;
-    }
-
-    .loader-avatar {
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      background: var(--accent-primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 800;
-    }
-
-    .loader-name {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--text-primary);
-    }
-
-    .loader-role {
-      font-size: 0.90rem;
-      color: var(--text-muted);
-      font-family: var(--font-mono);
-      font-weight: 500;
-    }
-
-    .loader-progress-track {
-      width: 200px;
-      height: 3px;
-      background: var(--border-subtle);
-      border-radius: var(--radius-pill);
-      overflow: hidden;
-      margin-top: 6px;
-    }
-
-    .loader-progress-bar {
-      width: 0%;
-      height: 100%;
-      background: var(--accent-primary);
-      border-radius: var(--radius-pill);
-      animation: loader-fill 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    
+      100% { transform: translateX(0); }
     }
 
     @keyframes loader-fill {
@@ -831,17 +1180,37 @@
       font-weight: 800;
       font-size: 0.82rem;
       flex-shrink: 0;
+      transition: transform 0.25s ease;
+    }
+
+    .nav-brand:hover .nav-avatar {
+      transform: scale(1.05);
     }
 
     .nav-brand-texts {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      white-space: nowrap;
+      transform: translateX(-8px);
+      transition: max-width 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), margin 0.35s ease;
+    }
+
+    .navbar-capsule.show-name .nav-brand-texts {
+      max-width: 280px;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(0);
+      margin-right: 4px;
     }
 
     .nav-brand-name {
       font-family: var(--font-display);
-      font-size: 0.90rem;
+      font-size: 0.86rem;
       font-weight: 800;
       color: var(--text-primary);
       line-height: 1.15;
@@ -849,20 +1218,21 @@
     }
 
     .nav-brand-role {
-      font-size: 0.64rem;
+      font-size: 0.62rem;
       color: var(--text-muted);
-      font-weight: 500;
+      font-weight: 600;
       white-space: nowrap;
+      line-height: 1.1;
     }
 
     .nav-links {
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important;
-      gap: 4px !important;
+      justify-content: space-between !important;
+      gap: 3px !important;
       list-style: none !important;
       margin: 0 !important;
-      padding: 2px 4px !important;
+      padding: 2px !important;
       flex: 1 1 auto !important;
       flex-wrap: nowrap !important;
       overflow-x: auto !important;
@@ -878,22 +1248,28 @@
     .nav-item {
       display: flex;
       align-items: center;
+      flex: 1 1 0;
+      justify-content: center;
     }
 
     .nav-item a {
       color: var(--text-secondary);
       text-decoration: none;
-      font-size: 0.74rem;
+      font-size: 0.73rem;
       font-weight: 600;
-      padding: 5px 8px;
+      padding: 5px 7px;
       border-radius: var(--radius-pill);
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
       transition: var(--transition-smooth);
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 4px;
       white-space: nowrap;
+      width: 100%;
+      box-sizing: border-box;
+      text-align: center;
     }
 
     .nav-item a svg {
@@ -1146,6 +1522,95 @@
       flex-shrink: 0;
     }
 
+        .hero-name {
+      font-size: clamp(2rem, 5.2vw, 2.85rem);
+      font-weight: 900;
+      color: var(--text-primary);
+      line-height: 1.15;
+      margin-bottom: 6px;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-role-title {
+      font-size: clamp(1.15rem, 3.2vw, 1.55rem);
+      font-weight: 700;
+      color: var(--text-secondary);
+      line-height: 1.42 !important;
+      margin-top: 4px;
+      margin-bottom: 16px !important;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 10px;
+      margin: 16px 0 20px 0;
+      max-width: 1020px;
+    }
+
+    .competency-chip {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-subtle);
+      color: var(--text-primary);
+      font-size: 0.86rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      font-family: inherit;
+      box-sizing: border-box;
+      width: 100%;
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .competency-chip:hover {
+      border-color: var(--accent-primary);
+      background: var(--bg-surface-elevated);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
+    .competency-chip svg {
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .competency-chip svg {
+      width: 13px !important;
+      height: 13px !important;
+      color: var(--accent-primary);
+      flex-shrink: 0;
+    }
+
+    .competency-chip:hover {
+      border-color: var(--accent-primary);
+      color: var(--text-primary);
+      background: var(--bg-card);
+      transform: translateY(-1px);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    [data-theme="warm"] .competency-chip,
+    [data-theme="classic"] .competency-chip {
+      background: #efe8db !important;
+      border: 1px solid rgba(60, 45, 30, 0.14) !important;
+      color: #292524 !important;
+    }
+
+    [data-theme="warm"] .competency-chip:hover,
+    [data-theme="classic"] .competency-chip:hover {
+      background: #ffffff !important;
+      border-color: #854d0e !important;
+      color: #854d0e !important;
+    }
+
     .hero-title {
       font-size: clamp(1.6rem, 5vw, 2.35rem);
       font-weight: 800;
@@ -1153,6 +1618,42 @@
       line-height: 1.22;
       margin-bottom: 12px;
       letter-spacing: -0.02em;
+    }
+
+        .hero-highlights-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      max-width: 1000px;
+    }
+
+    .hero-highlight-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: clamp(0.86rem, 2.2vw, 0.93rem);
+      color: var(--text-secondary);
+      line-height: 1.52;
+    }
+
+    .hero-bullet-dot {
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      min-height: 6px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      box-shadow: 0 0 6px var(--accent-glow);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    .hero-highlight-item strong {
+      color: var(--text-primary);
+      font-weight: 700;
     }
 
     .hero-subtext {
@@ -1176,7 +1677,8 @@
     .personal-grid-4col {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+      gap: 14px !important;
+      margin-bottom: 26px !important;
     }
 
     .info-card {
@@ -1185,36 +1687,38 @@
       justify-content: space-between;
       background: var(--bg-card, #ffffff);
       border: 1.5px solid var(--border-subtle, rgba(0, 0, 0, 0.08));
-      border-radius: 12px;
-      padding: 8px 10px;
-      gap: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      border-radius: 14px;
+      padding: 13px 14px;
+      min-height: 64px;
+      gap: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
       transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
       min-width: 0;
       overflow: hidden;
+      box-sizing: border-box;
     }
 
     .info-card:hover {
       border-color: var(--border-active, #0284c7);
-      transform: translateY(-1.5px);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 16px rgba(0, 0, 0, 0.07);
     }
 
     .info-left-group {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       min-width: 0;
       flex: 1;
       overflow: hidden;
     }
 
     .info-icon-box {
-      width: 32px;
-      height: 32px;
-      min-width: 32px;
-      min-height: 32px;
-      border-radius: 9px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
+      border-radius: 10px;
       background: var(--bg-surface-elevated, #f3f4f6);
       border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.08));
       display: flex;
@@ -1224,7 +1728,7 @@
       flex-shrink: 0;
     }
 
-    .info-icon-box svg { width: 15px; height: 15px; color: currentColor; }
+    .info-icon-box svg { width: 17px; height: 17px; color: currentColor; }
 
     .info-texts {
       display: flex;
@@ -1352,14 +1856,14 @@
     }
 
     .kpi-desc {
-      font-size: 0.76rem;
-      color: var(--text-secondary);
-      line-height: 1.45;
+      font-size: 0.81rem;
+      color: var(--text-muted);
+      line-height: 1.62 !important;
       margin: 0;
     }
 
     /* SECTION HEADERS */
-    .section-chapter { padding: 36px 0; scroll-margin-top: 85px; }
+    
     .section-header { margin-bottom: 22px; }
     .section-tag {
       display: inline-flex;
@@ -1399,43 +1903,60 @@
     }
 
         /* ==========================================================================
-       PROFESSIONAL MONOCHROME TIMELINE ARCHITECTURE (UNIFIED & CLEAN)
+       PROFESSIONAL TIMELINE ARCHITECTURE (HOLLOW RING WITH AURA HALO)
        ========================================================================== */
+    .timeline-wrapper {
+      position: relative;
+      margin: 28px 0 16px 0;
+      isolation: isolate;
+    }
+
     .timeline-wrapper::before {
       content: '';
       position: absolute;
-      top: 12px;
-      bottom: 12px;
+      top: 22px;
+      bottom: 24px;
       left: 390px;
       transform: translateX(-50%);
-      width: 2.5px;
+      width: 2px;
       border-radius: var(--radius-pill, 9999px);
-      background: linear-gradient(180deg, var(--accent-primary) 0%, var(--border-medium) 100%) !important;
-      box-shadow: 0 0 8px var(--accent-glow, rgba(2, 132, 199, 0.15));
-      z-index: 1;
+      background: var(--accent-primary) !important;
+      opacity: 0.85;
+      z-index: 1 !important;
+      pointer-events: none;
+    }
+
+    .timeline-node-col {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 4px;
+      position: relative;
+      z-index: 3 !important;
     }
 
     .timeline-node-dot {
-      width: 14px;
-      height: 14px;
-      min-width: 14px;
-      min-height: 14px;
+      width: 17px;
+      height: 17px;
+      min-width: 17px;
+      min-height: 17px;
       border-radius: 50%;
-      background: var(--bg-surface, var(--bg-card, #ffffff));
-      border: 2.5px solid var(--accent-primary, #0284c7);
-      box-shadow: 0 0 0 3px var(--accent-glow, rgba(2, 132, 199, 0.12));
+      background: transparent !important;
+      border: 3px solid var(--accent-primary) !important;
+      box-shadow: 0 0 0 6px var(--accent-glow, rgba(184, 115, 51, 0.20)) !important;
       transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
+      z-index: 4 !important;
+      box-sizing: border-box;
     }
 
-    /* FILLED SOLID MONOCHROME CIRCLE ON HOVER & SELECTION */
     .timeline-row:hover .timeline-node-dot,
     .timeline-row.active .timeline-node-dot,
     .timeline-row:focus-within .timeline-node-dot {
-      background: var(--accent-primary, #0284c7) !important;
-      border-color: var(--accent-primary, #0284c7) !important;
-      transform: scale(1.3);
-      box-shadow: 0 0 0 5px var(--accent-glow, rgba(2, 132, 199, 0.25)) !important;
+      transform: scale(1.22);
+      border-color: var(--accent-primary) !important;
+      background: transparent !important;
+      box-shadow: 0 0 0 8.5px var(--accent-glow, rgba(184, 115, 51, 0.28)) !important;
     }
 
     .timeline-row {
@@ -1515,41 +2036,11 @@
       border-radius: var(--radius-pill, 9999px);
       background: var(--bg-surface-elevated, #efe8db);
       border: 1px solid var(--border-subtle, rgba(0, 0, 0, 0.08));
-      color: var(--text-secondary);
+      color: var(--node-color, var(--text-secondary));
       white-space: nowrap;
     }
 
-    .timeline-node-col {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding-top: 6px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .timeline-node-dot {
-      width: 16px;
-      height: 16px;
-      min-width: 16px;
-      min-height: 16px;
-      border-radius: 50%;
-      background: var(--bg-surface, var(--bg-card, #ffffff));
-      border: 3px solid var(--node-color, var(--accent-primary, #0284c7));
-      box-shadow: 0 0 0 4px var(--accent-glow, rgba(2, 132, 199, 0.15));
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-    }
-
-    /* FILLED SOLID CIRCLE EFFECT ON HOVER & SELECTION */
-    .timeline-row:hover .timeline-node-dot,
-    .timeline-row.active .timeline-node-dot,
-    .timeline-row:focus-within .timeline-node-dot {
-      background: var(--node-color, var(--accent-primary, #0284c7)) !important;
-      border-color: var(--node-color, var(--accent-primary, #0284c7)) !important;
-      transform: scale(1.35);
-      box-shadow: 0 0 0 6px var(--accent-glow, rgba(2, 132, 199, 0.25)), 0 0 14px var(--node-color, var(--accent-primary, #0284c7)) !important;
-    }
+    /* Timeline Node styled cleanly above */
 
             /* LOGO CARD: DYNAMIC THEME-MATCHED CARD BACKGROUND */
     .timeline-logo-card {
@@ -1833,19 +2324,16 @@
       white-space: nowrap;
     }
 
-        /* Unified Professional Theme Color Bindings (Monochrome Discipline) */
-    .color-tahweel,
-    .color-egic,
-    .color-medical,
-    .color-qmed,
-    .color-edu,
-    .color-siemens,
-    .color-arabcon,
-    .color-emc,
-    .color-auc,
-    .color-gasco {
-      --node-color: var(--accent-primary);
-    }
+        /* Harmonic Color Family Bindings (Coordinated & Unified) */
+    .color-tahweel { --node-color: var(--color-tahweel, var(--accent-primary)); }
+    .color-egic { --node-color: var(--color-egic, var(--accent-primary)); }
+    .color-medical, .color-qmed { --node-color: var(--color-qmed, var(--accent-primary)); }
+    .color-edu { --node-color: var(--color-edu, var(--accent-primary)); }
+    .color-siemens { --node-color: var(--color-siemens, var(--accent-primary)); }
+    .color-arabcon { --node-color: var(--color-arabcon, var(--accent-primary)); }
+    .color-emc { --node-color: var(--color-emc, var(--accent-primary)); }
+    .color-auc { --node-color: var(--color-auc, var(--accent-primary)); }
+    .color-gasco { --node-color: var(--color-gasco, var(--accent-primary)); }
 
     /* CREDENTIALS & PROJECTS STANDARD CARDS */
     .project-standard-card {
@@ -1931,6 +2419,7 @@
     /* COVER LETTER & CONTACT */
     .cover-letter-card {
       background: var(--bg-card);
+      border-top: 3px solid var(--accent-primary);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
       padding: clamp(18px, 3.5vw, 32px);
@@ -2065,6 +2554,13 @@
 
     .footer-link-item:hover { color: var(--accent-primary); }
 
+    
+    @media (max-width: 1100px) {
+      .hero-competencies-row {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 8px !important;
+      }
+    }
     /* ==========================================================================
        MEDIA QUERIES FOR TABLET & PHONE WIDTH
        ========================================================================== */
@@ -2098,8 +2594,8 @@
       .timeline-wrapper::before {
         display: block !important;
         position: absolute !important;
-        top: 10px !important;
-        bottom: 10px !important;
+        top: 16px !important;
+        bottom: 16px !important;
         left: 10px !important;
         transform: none !important;
         width: 2.5px !important;
@@ -2191,14 +2687,60 @@
       }
     }
 
+    
+    @media (max-width: 768px) {
+      .hero-header-block {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 6px !important;
+        width: 100% !important;
+      }
+      .hero-header-block .hero-name {
+        order: 1 !important;
+      }
+      .hero-header-block .hero-role-title {
+        order: 2 !important;
+        margin: 2px 0 8px 0 !important;
+      }
+      .hero-header-block .hero-header-actions {
+        order: 3 !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        margin-bottom: 12px !important;
+      }
+      .hero-competencies-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+      }
+      .competency-chip-compact {
+        font-size: 0.71rem !important;
+        padding: 6.5px 6px !important;
+      }
+      .competency-chip-compact span {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        max-width: calc(100% - 16px) !important;
+      }
+    }
+
     @media (max-width: 640px) {
       .hero-section {
         padding-top: 75px !important;
         padding-bottom: 16px !important;
       }
-      .hero-title {
-        font-size: 1.6rem !important;
-        line-height: 1.22 !important;
+      .hero-name {
+        font-size: 1.75rem !important;
+        line-height: 1.2 !important;
+      }
+      .hero-role-title {
+        font-size: 1.05rem !important;
+        line-height: 1.3 !important;
+      }
+      .competency-chip {
+        font-size: 0.72rem !important;
+        padding: 4px 9px !important;
       }
       .hero-subtext {
         font-size: 0.88rem !important;
@@ -2283,23 +2825,542 @@
       }
     }
 
+  
+    /* ==========================================================================
+       VIEW MODE SWITCHER & MOBILE FRAME SIMULATOR
+       ========================================================================== */
+    .view-mode-card-btn.active {
+      background: var(--accent-primary) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-primary) !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px var(--accent-glow) !important;
+    }
+    .view-mode-card-btn.active svg {
+      stroke: #ffffff !important;
+    }
+
+    body.mobile-view-active {
+      background: #0f172a !important;
+      padding: 24px 10px 70px 10px !important;
+    }
+
+    [data-theme="warm"] body.mobile-view-active,
+    [data-theme="classic"] body.mobile-view-active {
+      background: #1c1917 !important;
+    }
+
+    [data-theme="light"] body.mobile-view-active {
+      background: #334155 !important;
+    }
+
+    body.mobile-view-active .app-wrapper {
+      max-width: 430px !important;
+      width: 100% !important;
+      margin: 0 auto !important;
+      border-radius: 40px !important;
+      box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.7), 0 0 0 10px #1e293b, 0 0 0 12px #334155 !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      background: var(--bg-base) !important;
+      color: var(--text-primary) !important;
+      overflow-x: hidden !important;
+      position: relative !important;
+      padding-top: 8px !important;
+    }
+
+    [data-theme="warm"] body.mobile-view-active .app-wrapper,
+    [data-theme="classic"] body.mobile-view-active .app-wrapper {
+      background: #f7f3eb !important;
+      color: #1c1917 !important;
+      box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.6), 0 0 0 10px #292524, 0 0 0 12px #44403c !important;
+    }
+
+    body.mobile-view-active main,
+    body.mobile-view-active .hero-section,
+    body.mobile-view-active .section-chapter {
+      background: var(--bg-base) !important;
+      color: var(--text-primary) !important;
+    }
+
+    [data-theme="warm"] body.mobile-view-active main,
+    [data-theme="warm"] body.mobile-view-active .hero-section,
+    [data-theme="warm"] body.mobile-view-active .section-chapter,
+    [data-theme="classic"] body.mobile-view-active main,
+    [data-theme="classic"] body.mobile-view-active .hero-section,
+    [data-theme="classic"] body.mobile-view-active .section-chapter {
+      background: #f7f3eb !important;
+      color: #1c1917 !important;
+    }
+
+    body.mobile-view-active .navbar-wrapper {
+      max-width: 430px !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      padding: 0 8px !important;
+    }
+
+    body.mobile-view-active .nav-brand-texts {
+      display: none !important;
+    }
+
+    body.mobile-view-active .nav-links {
+      display: flex !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+
+    body.mobile-view-active .timeline-wrapper {
+      position: relative !important;
+      padding-left: 28px !important;
+      margin: 20px 0 16px 0 !important;
+    }
+    body.mobile-view-active .timeline-wrapper::before {
+      display: block !important;
+      position: absolute !important;
+      top: 16px !important;
+      bottom: 16px !important;
+      left: 10px !important;
+      transform: none !important;
+      width: 2px !important;
+      border-radius: 9999px !important;
+      background: var(--accent-primary) !important;
+      opacity: 0.85 !important;
+      z-index: 1 !important;
+    }
+    body.mobile-view-active .timeline-node-col {
+      display: flex !important;
+      position: absolute !important;
+      top: 6px !important;
+      left: -28px !important;
+      width: 20px !important;
+      height: 20px !important;
+      justify-content: center !important;
+      align-items: center !important;
+      z-index: 2 !important;
+      padding: 0 !important;
+    }
+    body.mobile-view-active .timeline-node-dot {
+      width: 16px !important;
+      height: 16px !important;
+      min-width: 16px !important;
+      min-height: 16px !important;
+      border-radius: 50% !important;
+      background: transparent !important;
+      border: 3px solid var(--accent-primary) !important;
+      box-shadow: 0 0 0 5px var(--accent-glow, rgba(184, 115, 51, 0.20)) !important;
+      position: relative !important;
+      z-index: 4 !important;
+    }
+    body.mobile-view-active .timeline-row {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      gap: 8px !important;
+      margin-bottom: 24px !important;
+      position: relative !important;
+    }
+    body.mobile-view-active .timeline-meta-left {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-right: 0 !important;
+      text-align: left !important;
+      align-items: flex-start !important;
+    }
+    body.mobile-view-active .timeline-card-right {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      padding: 14px 14px !important;
+    }
+    body.mobile-view-active .project-triple-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* Comprehensive Mobile Simulator Rules (430px Frame) */
+    body.mobile-view-active .personal-grid-4col {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 8px !important;
+    }
+
+    body.mobile-view-active .info-card {
+      min-height: 56px !important;
+      padding: 9px 10px !important;
+      border-radius: 12px !important;
+      gap: 6px !important;
+    }
+
+    body.mobile-view-active .info-icon-box {
+      width: 32px !important;
+      height: 32px !important;
+      min-width: 32px !important;
+      min-height: 32px !important;
+    }
+
+    body.mobile-view-active .info-icon-box svg {
+      width: 15px !important;
+      height: 15px !important;
+    }
+
+    body.mobile-view-active .info-label {
+      font-size: 0.64rem !important;
+    }
+
+    body.mobile-view-active .info-value,
+    body.mobile-view-active .info-value a {
+      font-size: 0.75rem !important;
+      word-break: break-word !important;
+    }
+
+    body.mobile-view-active .kpi-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 8px !important;
+    }
+
+    body.mobile-view-active .kpi-card {
+      padding: 12px 10px !important;
+    }
+
+    body.mobile-view-active .kpi-number {
+      font-size: 1.40rem !important;
+    }
+
+        body.mobile-view-active .hero-header-block {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 6px !important;
+      width: 100% !important;
+    }
+
+    body.mobile-view-active .hero-header-block .hero-name {
+      order: 1 !important;
+      font-size: 1.65rem !important;
+      line-height: 1.2 !important;
+    }
+
+    body.mobile-view-active .hero-header-block .hero-role-title {
+      order: 2 !important;
+      font-size: 1.02rem !important;
+      line-height: 1.35 !important;
+      margin: 2px 0 8px 0 !important;
+    }
+
+    body.mobile-view-active .hero-header-block .hero-header-actions {
+      order: 3 !important;
+      width: 100% !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 5px !important;
+      margin-bottom: 12px !important;
+    }
+
+    body.mobile-view-active .hero-header-block .hero-header-actions .btn {
+      font-size: 0.72rem !important;
+      padding: 5px 8px !important;
+    }
+
+    body.mobile-view-active .hero-competencies-stack {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 6px !important;
+      margin: 10px 0 16px 0 !important;
+    }
+
+    body.mobile-view-active .hero-competencies-row {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 6px !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 0 !important;
+    }
+
+    body.mobile-view-active .competency-chip-compact {
+      font-size: 0.69rem !important;
+      font-weight: 700 !important;
+      padding: 6.5px 5px !important;
+      width: 100% !important;
+      min-width: 0 !important;
+      box-sizing: border-box !important;
+      justify-content: center !important;
+      flex: none !important;
+    }
+
+    body.mobile-view-active .competency-chip-compact span {
+      overflow: hidden !important;
+      text-overflow: ellipsis !important;
+      white-space: nowrap !important;
+      max-width: calc(100% - 14px) !important;
+    }
+
+    body.mobile-view-active .skills-grid {
+      grid-template-columns: 1fr !important;
+      gap: 10px !important;
+    }
+
+    body.mobile-view-active .cover-letter-card {
+      padding: 16px 12px !important;
+    }
+
+    body.mobile-view-active .contact-terminal {
+      padding: 16px 12px !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      gap: 12px !important;
+    }
+
+    body.mobile-view-active .contact-action-buttons {
+      width: 100% !important;
+      flex-direction: column !important;
+      gap: 8px !important;
+    }
+
+    body.mobile-view-active .contact-action-buttons .btn {
+      width: 100% !important;
+      justify-content: center !important;
+    }
+
+
+    body.mobile-view-active .mobile-sim-banner {
+      display: flex !important;
+    }
+
+    
+    /* ==========================================================================
+       FLOATING DEVICE VIEW SWITCHER CAPSULE (MINIMALIST 3-ICON BAR)
+       ========================================================================== */
+    .floating-view-capsule {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-surface-elevated, #ffffff);
+      border: 1.5px solid var(--border-medium, rgba(0, 0, 0, 0.15));
+      border-radius: var(--radius-pill, 9999px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border-subtle);
+      padding: 4px 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      z-index: 999999;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    [data-theme="warm"] .floating-view-capsule,
+    [data-theme="classic"] .floating-view-capsule {
+      background: #fbf8f1 !important;
+      border: 1.5px solid rgba(60, 45, 30, 0.22) !important;
+      box-shadow: 0 10px 28px rgba(40, 30, 20, 0.25) !important;
+    }
+
+    .floating-view-btn {
+      width: 32px;
+      height: 32px;
+      min-width: 32px;
+      min-height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid transparent;
+      background: transparent;
+      color: var(--text-muted, #64748b);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.18s ease;
+    }
+
+    .floating-view-btn:hover {
+      background: var(--bg-surface, #f1f5f9);
+      color: var(--text-primary);
+      border-color: var(--border-subtle);
+      transform: scale(1.08);
+    }
+
+    .floating-view-btn.active {
+      background: var(--accent-primary) !important;
+      color: #ffffff !important;
+      border-color: var(--accent-primary) !important;
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+
+    .floating-view-btn.active svg {
+      stroke: #ffffff !important;
+    }
+
+    .floating-view-divider {
+      width: 1px;
+      height: 18px;
+      background: var(--border-subtle, rgba(0, 0, 0, 0.12));
+      margin: 0 2px;
+    }
+
+    .floating-view-close:hover {
+      color: #ef4444 !important;
+      background: rgba(239, 68, 68, 0.1) !important;
+    }
+
+  
+    /* HERO DIRECT VIEW MODE SWITCHER CAPSULE */
+    .hero-view-switch-capsule {
+      display: inline-flex;
+      align-items: center;
+      background: var(--bg-surface-elevated, #ffffff);
+      border: 1.5px solid var(--border-subtle, rgba(0, 0, 0, 0.12));
+      border-radius: var(--radius-pill, 9999px);
+      padding: 3px 4px;
+      gap: 4px;
+      box-shadow: var(--shadow-sm);
+      margin-left: 8px;
+    }
+
+    .hero-view-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill, 9999px);
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .hero-view-btn svg {
+      width: 12px;
+      height: 12px;
+    }
+    .hero-view-btn:hover {
+      color: var(--text-primary);
+    }
+    .hero-view-btn.active {
+      background: var(--accent-primary) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 6px var(--accent-glow) !important;
+    }
+    .hero-view-btn.active svg {
+      stroke: #ffffff !important;
+    }
+      /* ==========================================================================
+       PAGE LOADER OVERLAY (2-SECOND EXECUTIVE ANIMATED INTRO)
+       ========================================================================== */
+    .page-loader {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: 999999 !important;
+      background-color: var(--bg-base) !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      animation: loaderAutoDismiss 0.45s ease 2.0s forwards !important;
+      transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.45s ease !important;
+    }
+
+    @keyframes loaderAutoDismiss {
+      0% { opacity: 1; visibility: visible; }
+      99% { opacity: 0; visibility: visible; }
+      100% { opacity: 0; visibility: hidden; pointer-events: none; display: none !important; }
+    }
+
+    .page-loader.hidden {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+
+    .loader-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+      padding: 24px;
+    }
+
+    .loader-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      box-shadow: 0 0 24px var(--accent-glow);
+      animation: loader-pulse 1.4s infinite ease-in-out;
+    }
+
+    @keyframes loader-pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 16px var(--accent-glow); }
+      50% { transform: scale(1.06); box-shadow: 0 0 28px var(--accent-glow); }
+    }
+
+    .loader-name {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+
+    .loader-role {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .loader-progress-track {
+      width: 220px;
+      height: 4px;
+      background: var(--border-subtle);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .loader-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: var(--accent-primary);
+      border-radius: var(--radius-pill);
+      animation: loader-fill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes loader-fill {
+      0% { width: 0%; }
+      50% { width: 60%; }
+      100% { width: 100%; }
+    }
+
   </style>
 </head>
 <body>
-
-  <!-- Page Loader Overlay -->
+  <!-- Executive 2-Second Page Loader Overlay -->
   <div id="pageLoader" class="page-loader">
     <div class="loader-card">
       <div class="loader-avatar">MS</div>
       <div class="loader-name">Mostafa Al-Araby Shalaby</div>
-      <div class="loader-role">Supply & Demand Planning Engineer</div>
+      <div class="loader-role">Regional Supply &amp; Demand Planning Engineer</div>
       <div class="loader-progress-track">
         <div class="loader-progress-bar"></div>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Capsule -->
+
+    <!-- Toast Notification Capsule -->
   <div id="toast" class="toast-capsule">
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
     <span id="toast-message">Copied to clipboard!</span>
@@ -2326,12 +3387,12 @@
       <!-- Executive Theme Switcher Modal (Compact 2-Column Design) -->
   <div id="themeModalOverlay" class="theme-modal-overlay">
     <div class="theme-modal-box" role="dialog" aria-modal="true" aria-labelledby="themeModalTitle">
-      <button type="button" class="theme-modal-close" id="themeModalClose" onclick="closeThemeModal()" aria-label="Close Theme Picker">
+      <button type="button" class="theme-modal-close" id="themeModalClose" onclick="closeThemeModal()" aria-label="Close Settings">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
       </button>
 
-      <div style="margin-bottom: 8px; text-align: left;">
-        <h2 style="font-size: 1.05rem; font-weight: 800; color: var(--text-primary); margin: 0;" id="themeModalTitle">Select Visual Theme</h2>
+      <div style="margin-bottom: 10px; text-align: left;">
+        <h2 style="font-size: 1.1rem; font-weight: 800; color: var(--text-primary); margin: 0;" id="themeModalTitle">Settings</h2>
       </div>
 
       <!-- 2-COLUMN THEME OPTIONS GRID -->
@@ -2398,6 +3459,46 @@
         </button>
       </div>
 
+      <!-- Device View Switcher (Desktop View & Mobile View) - UNIFIED GEOMETRY & CARD DESIGN -->
+      <div style="margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 0.72rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; text-align: left;">
+          <span>Device View</span>
+        </div>
+        <div class="theme-options-grid-2col" style="margin-top: 0 !important;">
+          <!-- 1. Desktop View Card -->
+          <button type="button" id="viewModeDesktop" class="theme-card-option active" aria-label="Desktop Fullscreen View">
+            <div class="theme-option-left">
+              <div class="theme-option-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+              </div>
+              <div class="theme-text-wrap">
+                <span class="theme-name">Desktop View</span>
+                
+              </div>
+            </div>
+            <div class="theme-check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </button>
+
+          <!-- 2. Mobile View Card -->
+          <button type="button" id="viewModeMobile" class="theme-card-option" aria-label="Mobile Phone Simulator">
+            <div class="theme-option-left">
+              <div class="theme-option-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              </div>
+              <div class="theme-text-wrap">
+                <span class="theme-name">Mobile View</span>
+                
+              </div>
+            </div>
+            <div class="theme-check-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+          </button>
+        </div>
+      </div>
+
       <div style="display: flex; width: 100%; margin-top: 12px;">
         <button type="button" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 9px 16px; font-size: 0.88rem; font-weight: 700; border-radius: var(--radius-pill);" id="themeModalConfirm" onclick="closeThemeModal()">Done</button>
       </div>
@@ -2406,23 +3507,42 @@
 
     
 
+    <!-- Floating Device View Switcher Capsule (Minimalist 3-Icon Bar: Desktop, Mobile, Close) -->
+  <div class="floating-view-capsule" id="floatingViewCapsule" role="toolbar" aria-label="Device View Switcher">
+    <!-- Desktop View Icon Button -->
+    <button type="button" class="floating-view-btn active" id="floatBtnDesktop" title="Desktop View" aria-label="Desktop View" onclick="setViewMode('desktop')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+    </button>
+    
+    <!-- Mobile View Icon Button -->
+    <button type="button" class="floating-view-btn" id="floatBtnMobile" title="Mobile View" aria-label="Mobile View" onclick="setViewMode('mobile')">
+      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+    </button>
+
+    <div class="floating-view-divider"></div>
+
+    <!-- Dismiss X Button (No Label) -->
+    <button type="button" class="floating-view-btn floating-view-close" id="floatBtnClose" title="Hide View Switcher" aria-label="Hide Switcher" onclick="dismissFloatingViewCapsule()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+  </div>
+
   <div class="app-wrapper">
 
     <!-- NAVIGATION CAPSULE (PIXEL-PERFECT CONTENT ALIGNMENT) -->
     <header class="navbar-wrapper">
       <nav class="navbar-capsule" aria-label="Main Navigation">
         
-        <a href="#overview" class="nav-brand">
+        <a href="#overview" class="nav-brand" title="Mostafa Al-Araby Shalaby — Home">
           <div class="nav-avatar">MS</div>
-          <div class="nav-brand-texts">
-            <div class="nav-brand-name">Mostafa Al-Araby Shalaby</div>
-            <div class="nav-brand-role">Regional Supply & Demand Planning</div>
+          <div class="nav-brand-texts" id="navBrandTexts">
+            <span class="nav-brand-name">Mostafa Al-Araby Shalaby</span>
+            <span class="nav-brand-role">Regional Supply &amp; Demand Planning</span>
           </div>
         </a>
 
         <ul class="nav-links">
-          <li class="nav-item"><a href="#overview" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Overview</a></li>
-          <li class="nav-item"><a href="#personal-info"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a></li>
+          <li class="nav-item"><a href="#overview" class="active"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> Profile</a></li>
           <li class="nav-item"><a href="#experience"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg> Experience</a></li>
           <li class="nav-item"><a href="#training"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg> Training</a></li>
           <li class="nav-item"><a href="#courses"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path><path d="M6 6h10"></path><path d="M6 10h10"></path></svg> Courses</a></li>
@@ -2434,29 +3554,31 @@
         </ul>
 
                 <div class="nav-actions">
-          <!-- Theme Picker Toggle Button -->
-          <button type="button" class="btn btn-icon" id="themeToggle" title="Theme Settings" aria-label="Theme Settings" onclick="openThemeModal()">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="4"></circle>
-              <path d="M12 2v2"></path>
-              <path d="M12 20v2"></path>
-              <path d="m4.93 4.93 1.41 1.41"></path>
-              <path d="m17.66 17.66 1.41 1.41"></path>
-              <path d="M2 12h2"></path>
-              <path d="M20 12h2"></path>
-              <path d="m6.34 17.66-1.41 1.41"></path>
-              <path d="m19.07 4.93-1.41 1.41"></path>
+          <!-- Master Settings & Display Preferences Toggle -->
+          <button type="button" class="btn btn-icon" id="themeToggle" title="Settings & Display" aria-label="Settings & Display" onclick="openThemeModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
             </svg>
           </button>
 
-          <!-- Mobile Hamburger Navigation Menu Toggle -->
-          <button type="button" class="btn btn-icon mobile-menu-toggle" id="mobileNavToggle" title="Open Navigation Menu" aria-label="Toggle Navigation Menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="4" x2="20" y1="6" y2="6"/>
-              <line x1="4" x2="20" y1="12" y2="12"/>
-              <line x1="4" x2="20" y1="18" y2="18"/>
-            </svg>
-          </button>
+          <!-- Interactive Callout Hint Bubble -->
+          <div id="themeCalloutHint" class="theme-callout-hint" onclick="openThemeModal()">
+            <div class="callout-arrow"></div>
+            <div class="callout-content">
+              <span class="callout-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor"></circle>
+                  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor"></circle>
+                  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor"></circle>
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.555C21.992 6.5 17.5 2 12 2z"></path>
+                </svg>
+              </span>
+              <span class="callout-text">Change Theme &amp; View Here!</span>
+              <button type="button" class="callout-close-btn" onclick="event.stopPropagation(); dismissThemeCallout();" aria-label="Close Hint">&times;</button>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -2469,8 +3591,7 @@
         </button>
       </div>
       <ul class="mobile-nav-list">
-        <li><a href="#overview" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg> Overview</a></li>
-        <li><a href="#personal-info" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
+        <li><a href="#overview" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Profile</a></li>
         <li><a href="#experience" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Experience</a></li>
         <li><a href="#training" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> Training</a></li>
         <li><a href="#courses" class="mobile-link"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg> Courses</a></li>
@@ -2497,53 +3618,155 @@
               </span>
             </div>
 
-            <h1 class="hero-title">
-              Regional Supply & Demand <span class="text-gradient">Planning Engineer</span> & Supply Chain Excellence
-            </h1>
+            <!-- Executive Header Block (Name, Role Title & Actions) -->
+            <div class="hero-header-block">
+              <h1 class="hero-name">Mostafa Al-Araby Shalaby</h1>
+              
+              <div class="hero-header-actions">
+                <!-- PDF CV Download -->
+                <a data-link="cv" href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Download PDF CV">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
+                    <path d="M12 12v9"></path>
+                    <path d="m8 17 4 4 4-4"></path>
+                  </svg>
+                  <span>Resume (CV)</span>
+                </a>
 
-            <p class="hero-subtext">
-              Supply &amp; Demand Planning Engineer with 6+ years of experience in S&amp;OP, production scheduling (MPS/MRP), multi-echelon inventory allocation (DRP), SAP ERP (PP/MM), and AI demand forecasting across Egypt and Saudi Arabia.
-            </p>
+                <!-- Drive Cover Letter Download -->
+                <a data-link="cover-letter" href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="View Cover Letter">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                    <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                    <path d="M10 9H8"></path>
+                    <path d="M16 13H8"></path>
+                    <path d="M16 17H8"></path>
+                  </svg>
+                  <span>Cover Letter</span>
+                </a>
 
-            <div class="hero-cta-group">
-              <!-- PDF CV Download -->
-              <a data-link="cv" href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"></path>
-                  <path d="M12 12v9"></path>
-                  <path d="m8 17 4 4 4-4"></path>
-                </svg>
-                <span>Download PDF CV</span>
-              </a>
+                <!-- LinkedIn Profile -->
+                <a data-link="linkedin" href="https://linkedin.com/in/MostafaAShalaby" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Open LinkedIn Profile">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect width="4" height="12" x="2" y="9"></rect>
+                    <circle cx="4" r="2" cy="4"></circle>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
 
-              <!-- Drive Cover Letter Download -->
-              <a data-link="cover-letter" href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
-                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
-                  <path d="M10 9H8"></path>
-                  <path d="M16 13H8"></path>
-                  <path d="M16 17H8"></path>
-                </svg>
-                <span>Cover Letter</span>
-              </a>
+                <!-- Direct Official Email -->
+                <a data-link="email" href="mailto:mostafashalaby@engineer.com" class="btn btn-primary" title="Send Official Email">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                  </svg>
+                  <span>Email</span>
+                </a>
 
-              <!-- Direct Official Email -->
-              <a data-link="email" href="mailto:mostafashalaby@engineer.com" class="btn btn-primary" title="Send Email to Mostafa Shalaby">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-                <span>Email</span>
-              </a>
+                <!-- Direct WhatsApp -->
+                <a data-link="whatsapp" href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" title="Chat on WhatsApp">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                  </svg>
+                  <span>WhatsApp</span>
+                </a>
+              </div>
 
-              <!-- Direct WhatsApp -->
-              <a data-link="whatsapp" href="https://wa.me/201555540680" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
-                </svg>
-                <span>WhatsApp</span>
-              </a>
+              <!-- Subtitle Role Title -->
+              <h2 class="hero-role-title">Regional Supply &amp; Demand <span class="text-gradient">Planning Engineer</span> &amp; Supply Chain Excellence</h2>
+            </div>
+
+            <!-- Executive Competency Chips (Proportional Content Sizing - Strict 2 Rows) -->
+            <div class="hero-competencies-stack">
+              <!-- Row 1: Core Operations (6 chips) -->
+              <div class="hero-competencies-row">
+                <!-- 1. Regional Experience (Globe) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('4+ Yrs Exp (Egypt &amp; KSA)')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                  <span>4+ Yrs Exp (Egypt &amp; KSA)</span>
+                </button>
+
+                <!-- 2. Demand & Accuracy Improvement (Precision Target Scope) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Demand Planning &amp; Accuracy Improvement')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/></svg>
+                  <span>Demand Planning &amp; Accuracy Improvement</span>
+                </button>
+
+                <!-- 3. Production & Material Planning (Industrial Factory Plant) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Production &amp; Material Planning')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></svg>
+                  <span>Production &amp; Material Planning</span>
+                </button>
+
+                <!-- 4. DRP, Safety Stock & ROP (Supply Chain 3D Box) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('DRP, Safety Stock &amp; ROP')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                  <span>DRP, Safety Stock &amp; ROP</span>
+                </button>
+
+                <!-- 5. Master Planning & OEE (Multi-Layer Planning Hierarchy) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('S&amp;OP / MPS / MRP / RCCP')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.9a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.5-8.58 3.9a2 2 0 0 1-1.66 0L2 12.5"/><path d="m22 17.5-8.58 3.9a2 2 0 0 1-1.66 0L2 17.5"/></svg>
+                  <span>S&amp;OP / MPS / MRP / RCCP</span>
+                </button>
+
+                <!-- 6. KPI Governance (Speedometer Metric Gauge) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('KPI Governance (OTIF, OEE, MAPE &amp; WAPE)')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m14 14-3-3"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
+                  <span>KPI Governance</span>
+                </button>
+              </div>
+
+              <!-- Row 2: Systems, Analytics & AI (6 chips) -->
+              <div class="hero-competencies-row">
+                <!-- 7. SAP S/4HANA (Enterprise ERP Database Server) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('SAP S/4HANA (PP &amp; MM)')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+                  <span>SAP S/4HANA (PP &amp; MM)</span>
+                </button>
+
+                <!-- 8. Excel & Power BI Analytics (Analytics Columns & Growth Chart) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Excel &amp; Power BI Analytics')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect width="4" height="7" x="7" y="10" rx="1"/><rect width="4" height="12" x="13" y="5" rx="1"/><rect width="4" height="4" x="19" y="13" rx="1"/></svg>
+                  <span>Excel &amp; Power BI Analytics</span>
+                </button>
+
+                <!-- 9. Process Automation (Automated Engine Gears) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Process Automation')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                  <span>Process Automation</span>
+                </button>
+
+                <!-- 10. AI & Digital Transformation (AI Sparkle / Neural Intelligence) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('AI &amp; Digital Transformation')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+                  <span>AI &amp; Digital Transformation</span>
+                </button>
+
+                <!-- 11. Vibe Coding & AI Prompting (Terminal Code Brackets) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Vibe Coding &amp; AI Prompting')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  <span>Vibe Coding &amp; AI Prompting</span>
+                </button>
+
+                <!-- 12. Fast Learning Curve (Fast Ascent Rocket) -->
+                <button type="button" class="competency-chip-compact" onclick="openKeywordModal('Fast Learning Curve')">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+                  <span>Fast Learning Curve</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- EXECUTIVE PROFESSIONAL SUMMARY CARD -->
+            <div class="hero-summary-card">
+              <div class="hero-summary-header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><line x1="10" x2="8" y1="9" y2="9"/></svg>
+                <span>Executive Professional Summary</span>
+              </div>
+              <p class="hero-summary-text">
+                <strong class="highlight-accent">Supply and Demand Planning Engineer</strong> with end-to-end expertise in <strong class="highlight-accent">Demand Planning</strong>, <strong class="highlight-accent">Supply Planning</strong>, <strong class="highlight-accent">Material Planning</strong>, <strong class="highlight-accent">Inventory Management</strong>, and <strong class="highlight-accent">Production Planning</strong>. Experienced in <span class="highlight-accent">S&amp;OP, MPS, MRP, DRP, RCCP, SAP ERP</span>, forecasting, inventory optimization, procurement planning, and supply chain analytics. Delivered <strong class="highlight-accent">forecast accuracy improvements of up to 20%</strong>, <strong class="highlight-accent">reduced inventory carrying costs by 22%</strong>, and <strong class="highlight-accent">shortened planning cycles by 85%</strong> through <span class="highlight-accent">AI-powered forecasting, automation, and advanced analytics</span>. Proven ability to manage complex supply chains, support material budgets <strong class="highlight-accent">exceeding SAR 380 million</strong>, and drive Supply Chain Excellence through continuous improvement and digital transformation. Consistently exceeded performance expectations while progressing through <strong class="highlight-accent">four planning roles in under three years</strong>.
+              </p>
             </div>
 
             <!-- PERSONAL INFO GRID -->
@@ -2707,7 +3930,7 @@
                 
                 <div class="kpi-card">
                   <div class="kpi-value-row">
-                    <span class="kpi-number">380</span>
+                    <span class="kpi-number" data-target="380">0</span>
                     <span class="kpi-unit">M+ SAR</span>
                   </div>
                   <div class="kpi-title">Material Spend Managed</div>
@@ -2716,7 +3939,7 @@
 
                 <div class="kpi-card">
                   <div class="kpi-value-row">
-                    <span class="kpi-number">85</span>
+                    <span class="kpi-number" data-target="85">0</span>
                     <span class="kpi-unit">%</span>
                   </div>
                   <div class="kpi-title">Cycle Time Reduction</div>
@@ -2725,7 +3948,7 @@
 
                 <div class="kpi-card">
                   <div class="kpi-value-row">
-                    <span class="kpi-number">8,000+</span>
+                    <span class="kpi-number" data-target="8000" data-suffix="+">0</span>
                     <span class="kpi-unit">SKUs</span>
                   </div>
                   <div class="kpi-title">Forecast Optimization</div>
@@ -2734,7 +3957,7 @@
 
                 <div class="kpi-card">
                   <div class="kpi-value-row">
-                    <span class="kpi-number">4</span>
+                    <span class="kpi-number" data-target="4">0</span>
                     <span class="kpi-unit">Roles</span>
                   </div>
                   <div class="kpi-title">Rapid Progression</div>
@@ -4265,6 +5488,18 @@
                 <span>WhatsApp</span>
               </a>
 
+              <!-- Cover Letter -->
+              <a data-link="cover-letter" href="https://drive.google.com/file/d/1TBB90mIzLuGg7VhzfI4UV-a_uoZqhvr7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path>
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4"></path>
+                  <path d="M10 9H8"></path>
+                  <path d="M16 13H8"></path>
+                  <path d="M16 17H8"></path>
+                </svg>
+                <span>Cover Letter</span>
+              </a>
+
               <!-- Download CV -->
               <a data-link="cv" href="https://drive.google.com/file/d/1WlK1ByM3bwJAv2bQNcQl6vdFzhQX5FiK/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -4273,7 +5508,7 @@
                   <path d="M12 18v-6"></path>
                   <path d="m9 15 3 3 3-3"></path>
                 </svg>
-                <span>Download CV</span>
+                <span>Resume (CV)</span>
               </a>
             </div>
           </div>
@@ -4335,21 +5570,7 @@
     window.addEventListener('beforeunload', () => { window.scrollTo(0, 0); });
     window.addEventListener('DOMContentLoaded', () => { window.scrollTo(0, 0); });
 
-    window.addEventListener('load', () => {
-      window.scrollTo(0, 0);
-      setTimeout(() => {
-        window.scrollTo(0, 0);
-        const loader = document.getElementById('pageLoader');
-        if (loader) {
-          loader.classList.add('hidden');
-        }
-        setTimeout(() => {
-          if (typeof openThemeModal === 'function') {
-            openThemeModal();
-          }
-        }, 1800);
-      }, 800);
-    });
+    
 
     const PORTFOLIO_CONFIG = {
       // Live Web Application
@@ -4458,6 +5679,61 @@
     }
 
         const KEYWORD_INFO = [
+  {
+    "match": "4+ yrs exp",
+    "why": "Cross-border supply chain operations across Egypt and Saudi Arabia require managing diverse trade routes, GCC customs compliance, multi-currency dynamics, and multi-tier distribution networks.",
+    "exp": "4+ years of hands-on supply chain excellence spanning Egypt (EGIC, Qmed, Academic Teaching) and KSA (Tahweel Integrated), orchestrating SAR 380M+ spend, 8,000+ SKUs, and cross-border logistics."
+  },
+  {
+    "match": "s&op / mps / mrp / rccp",
+    "why": "Integrated Business Planning synchronizes commercial demand forecasts with plant Overall Equipment Effectiveness (OEE), rough-cut capacity (RCCP), detailed master production scheduling (MPS), and raw material procurement (MRP) to maximize throughput without stockouts.",
+    "exp": "Orchestrated monthly executive S&OP consensus meetings, optimized factory OEE and line capacities across 5 production lines, built weekly Master Production Schedules (MPS), and automated MRP runs at EGIC and Tahweel."
+  },
+  {
+    "match": "production & material plan",
+    "why": "Precision material requirements planning and shop-floor scheduling guarantee continuous factory throughput without machine downtime or excess raw material inventory.",
+    "exp": "Managed end-to-end material planning for 2,500+ SKUs at EGIC and 8,000+ SKUs at Tahweel; scheduled plastic extrusion and injection plants, slashing weekly planning run time from 8 hours to 45 minutes."
+  },
+  {
+    "match": "demand & accuracy improvement",
+    "why": "Accurate demand forecasting drives the entire supply chain, minimizing the bullwhip effect, cutting safety stock holding expenses, and optimizing customer fulfillment service levels.",
+    "exp": "Engineered multi-model statistical and AI forecasting pipelines (Croston, XGBoost, TimeGPT) analyzing 36-month sales histories, boosting regional forecast accuracy by 14% and minimizing stockouts."
+  },
+  {
+    "match": "drp, safety stock & rop",
+    "why": "Distribution Requirements Planning (DRP) and dynamic Safety Stock algorithms optimize regional warehouse replenishment, preventing regional stockouts while minimizing tied-up working capital.",
+    "exp": "Designed dynamic safety stock and Reorder Point (ROP) calculation models factoring in supplier lead-time variance and demand volatility, optimizing inventory across central plants and regional Saudi branches."
+  },
+  {
+    "match": "sap s/4hana (pp & mm)",
+    "why": "SAP S/4HANA is the global gold standard for enterprise resource planning, unifying material management (MM), Bill of Materials (BOM), routings, and production planning (PP) into one live database.",
+    "exp": "Extensive daily operational mastery of SAP S/4HANA (PP & MM): executing MD04, MD01, MD61, MD02, CO01, ME21N, MIGO, maintaining Material Master, Planned Orders, and BOM configurations."
+  },
+  {
+    "match": "kpi governance",
+    "why": "Systematic KPI governance provides executive visibility, enforces operational accountability, and drives continuous performance improvements across manufacturing and distribution.",
+    "exp": "Established automated KPI reporting suites tracking On-Time In-Full (OTIF 96%+), Overall Equipment Effectiveness (OEE), Mean Absolute Percentage Error (MAPE), and Weighted MAPE (WAPE) for executive review."
+  },
+  {
+    "match": "excel & power bi analytics",
+    "why": "Advanced business intelligence transforms raw ERP transactions and warehouse logs into interactive, real-time executive decision dashboards and automated planning models.",
+    "exp": "Built comprehensive Power BI supply chain control towers and advanced Excel engines (Power Query, DAX, XLOOKUP, VBA, dynamic arrays) automating daily inventory health and production tracking."
+  },
+  {
+    "match": "ai & digital transformation",
+    "why": "Leveraging artificial intelligence and automation modernizes legacy supply chain operations, accelerating decision cycles from days to minutes.",
+    "exp": "Pioneered digital transformation by embedding Machine Learning (ML), Foundation Time-Series Models (TimeGPT, TimeFM, DeepAR), and automated ETL pipelines into day-to-day enterprise planning."
+  },
+  {
+    "match": "vibe coding & ai prompting",
+    "why": "Modern AI-assisted engineering and prompt engineering empower technical professionals to rapidly build production-grade web tools, data pipelines, and custom software in record time.",
+    "exp": "Leverages advanced LLM prompt engineering, Codex/Antigravity AI copilots, and vibe coding techniques to rapidly prototype and deploy interactive supply chain web apps, dashboards, and automated scripts."
+  },
+  {
+    "match": "fast learning curve",
+    "why": "Rapid adaptability and continuous self-learning are essential to mastering new ERP architectures, AI algorithms, and industry standards in fast-paced supply chain environments.",
+    "exp": "Demonstrated rapid mastery across diverse engineering domains: earned Mechanical Power B.Sc. with 99% graduation thesis, mastered SAP S/4HANA, Python data science, Power BI DAX, and modern AI forecasting within months."
+  },
       {
             "match": "s&op",
             "why": "Sales & Operations Planning (S&OP) is the monthly executive process that aligns sales demand, factory production, inventory, and finance into one unified business plan.",
@@ -5116,18 +6392,27 @@ function getKeywordInfo(rawText) {
 
     function updateActiveNavOnScroll() {
       const navCapsule = document.querySelector('.navbar-capsule');
+      const overviewEl = document.getElementById('overview');
+      const overviewThreshold = overviewEl ? (overviewEl.offsetTop + overviewEl.offsetHeight - 180) : 380;
+
       if (navCapsule) {
         if (window.scrollY > 20) {
           navCapsule.classList.add('navbar-scrolled');
         } else {
           navCapsule.classList.remove('navbar-scrolled');
         }
+
+        // Show Full Name & Subtitle ONLY when scrolled past Overview
+        if (window.scrollY > overviewThreshold) {
+          navCapsule.classList.add('show-name');
+        } else {
+          navCapsule.classList.remove('show-name');
+        }
       }
 
       // Ordered list of tracked sections
       const sections = [
         { id: 'overview', el: document.getElementById('overview') },
-        { id: 'personal-info', el: document.getElementById('personal-info') },
         { id: 'experience', el: document.getElementById('experience') },
         { id: 'training', el: document.getElementById('training') },
         { id: 'courses', el: document.getElementById('courses') },
@@ -5197,7 +6482,16 @@ function getKeywordInfo(rawText) {
       });
     }
 
-    window.addEventListener('scroll', updateActiveNavOnScroll, { passive: true });
+        let isNavScrollTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!isNavScrollTicking) {
+        window.requestAnimationFrame(() => {
+          updateActiveNavOnScroll();
+          isNavScrollTicking = false;
+        });
+        isNavScrollTicking = true;
+      }
+    }, { passive: true });
     window.addEventListener('load', updateActiveNavOnScroll);
     document.addEventListener('DOMContentLoaded', updateActiveNavOnScroll);
 
@@ -5221,7 +6515,84 @@ function getKeywordInfo(rawText) {
       });
     }
 
+    
+    // ==========================================================================
+    // PROGRESSIVE SCROLL REVEAL ENGINE (EXECUTIVE JOURNEY ANIMATION)
+    // ==========================================================================
+    function initScrollReveal() {
+      const targetSelectors = [
+        '.section-header',
+        '.timeline-row',
+        '.training-card',
+        '.course-card',
+        '.project-card',
+        '.credential-card',
+        '.skill-category-card',
+        '.cover-letter-card',
+        '.contact-terminal',
+        '.hero-summary-card',
+        '.personal-grid-4col .info-card'
+      ];
+
+      const revealElements = document.querySelectorAll(targetSelectors.join(', '));
+      if (!revealElements.length) return;
+
+      revealElements.forEach((el) => {
+        el.classList.add('scroll-reveal');
+        // If element is already in viewport on load, reveal immediately
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 30) {
+          el.classList.add('revealed');
+        }
+      });
+
+      // Add subtle stagger delays for card grids
+      document.querySelectorAll('.training-grid, .courses-grid, .project-triple-grid, .credentials-grid, .skills-grid, .personal-grid-4col').forEach(grid => {
+        const children = grid.querySelectorAll('.scroll-reveal');
+        children.forEach((child, index) => {
+          child.style.transitionDelay = `${(index % 4) * 0.09}s`;
+        });
+      });
+
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.08
+      });
+
+      revealElements.forEach(el => {
+        if (!el.classList.contains('revealed')) {
+          observer.observe(el);
+        }
+      });
+    }
+
+    function showThemeCallout() {
+      const hint = document.getElementById('themeCalloutHint');
+      if (hint) {
+        hint.classList.add('show');
+        setTimeout(() => {
+          dismissThemeCallout();
+        }, 10000);
+      }
+    }
+
+    function dismissThemeCallout() {
+      const hint = document.getElementById('themeCalloutHint');
+      if (hint) {
+        hint.classList.remove('show');
+      }
+    }
+
     function openThemeModal() {
+      dismissThemeCallout();
       const overlay = document.getElementById('themeModalOverlay');
       if (!overlay) return;
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'classic';
@@ -5327,8 +6698,129 @@ function getKeywordInfo(rawText) {
         if (e.target === themeModalOverlay) closeThemeModal();
       });
     }
-  </script>
   
 
+    // High-Performance Unified Device View Mode Controller
+    function setViewMode(mode) {
+      const isMobile = (mode === 'mobile');
+      const body = document.body;
+      const viewModeDesktopBtn = document.getElementById('viewModeDesktop');
+      const viewModeMobileBtn = document.getElementById('viewModeMobile');
+      const floatBtnDesktop = document.getElementById('floatBtnDesktop');
+      const floatBtnMobile = document.getElementById('floatBtnMobile');
+
+      if (isMobile) {
+        body.classList.add('mobile-view-active');
+        if (viewModeMobileBtn) viewModeMobileBtn.classList.add('active');
+        if (viewModeDesktopBtn) viewModeDesktopBtn.classList.remove('active');
+        if (floatBtnMobile) floatBtnMobile.classList.add('active');
+        if (floatBtnDesktop) floatBtnDesktop.classList.remove('active');
+        showToast('Switched to Mobile View (430px)');
+      } else {
+        body.classList.remove('mobile-view-active');
+        if (viewModeDesktopBtn) viewModeDesktopBtn.classList.add('active');
+        if (viewModeMobileBtn) viewModeMobileBtn.classList.remove('active');
+        if (floatBtnDesktop) floatBtnDesktop.classList.add('active');
+        if (floatBtnMobile) floatBtnMobile.classList.remove('active');
+        showToast('Restored Desktop Full View');
+      }
+    }
+
+    function dismissFloatingViewCapsule() {
+      const capsule = document.getElementById('floatingViewCapsule');
+      if (capsule) {
+        capsule.style.opacity = '0';
+        capsule.style.transform = 'translateX(-50%) translateY(20px)';
+        setTimeout(() => {
+          capsule.style.display = 'none';
+        }, 250);
+        sessionStorage.setItem('floatingViewDismissed', 'true');
+      }
+    }
+
+    function toggleQuickDeviceView() {
+      const isCurrentlyMobile = document.body.classList.contains('mobile-view-active');
+      setViewMode(isCurrentlyMobile ? 'desktop' : 'mobile');
+    }
+
+    const vmDeskBtn = document.getElementById('viewModeDesktop');
+    const vmMobBtn = document.getElementById('viewModeMobile');
+    const simExitBtn = document.getElementById('mobileSimExitBtn');
+
+    if (vmDeskBtn) vmDeskBtn.addEventListener('click', () => { setViewMode('desktop'); closeThemeModal(); });
+    if (vmMobBtn) vmMobBtn.addEventListener('click', () => { setViewMode('mobile'); closeThemeModal(); });
+    if (simExitBtn) simExitBtn.addEventListener('click', () => { setViewMode('desktop'); });
+  
+        // ==========================================================================
+    // 2-SECOND EXECUTIVE PAGE LOADER (CLEAN DISMISS)
+    // ==========================================================================
+    // Smooth, Fluid Number Counter Engine
+    let hasAnimatedNumbers = false;
+    function animateNumberCounters() {
+      if (hasAnimatedNumbers) return;
+      hasAnimatedNumbers = true;
+
+      const numberEls = document.querySelectorAll('.kpi-number[data-target]');
+      if (!numberEls.length) return;
+
+      numberEls.forEach(el => {
+        const target = parseFloat(el.getAttribute('data-target'));
+        const suffix = el.getAttribute('data-suffix') || '';
+        const prefix = el.getAttribute('data-prefix') || '';
+        const duration = 1500; // 1.5s smooth count
+        const startTime = performance.now();
+        const hasComma = target >= 1000;
+
+        function easeOutCubic(t) {
+          return (--t) * t * t + 1;
+        }
+
+        function updateCount(now) {
+          const elapsed = now - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const easeVal = easeOutCubic(progress);
+          const currentVal = Math.round(target * easeVal);
+
+          const formatted = hasComma ? currentVal.toLocaleString() : currentVal;
+          el.textContent = `${prefix}${formatted}${suffix}`;
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            const finalFormatted = hasComma ? target.toLocaleString() : target;
+            el.textContent = `${prefix}${finalFormatted}${suffix}`;
+          }
+        }
+
+        requestAnimationFrame(updateCount);
+      });
+    }
+
+    function dismissLoader() {
+      const loader = document.getElementById('pageLoader');
+      if (loader) {
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        loader.classList.add('hidden');
+        setTimeout(() => {
+          loader.style.display = 'none';
+        }, 400);
+      }
+      // Start smooth number counter animation right as page begins
+      setTimeout(animateNumberCounters, 150);
+      // Reliably show Theme & View Callout Hint Popup
+      setTimeout(showThemeCallout, 650);
+      initScrollReveal();
+    }
+
+    // 2-Second Timer
+    setTimeout(dismissLoader, 2000);
+
+    // Instant click to bypass
+    const ldrBox = document.getElementById('pageLoader');
+    if (ldrBox) {
+      ldrBox.addEventListener('click', dismissLoader);
+    }
+  </script>
 </body>
 </html>
